@@ -8,9 +8,11 @@
 
 | জিনিস | ফাইল/ফোল্ডার | যেখানে আছে |
 |---|---|---|
-| Agent (Backend) | `flowboard/agent/` | `C:\Users\Irak\Desktop\AntiBotBrowser\flowboard\agent` |
-| Frontend (UI) | `flowboard/frontend/` | `C:\Users\Irak\Desktop\AntiBotBrowser\flowboard\frontend` |
-| Chrome Extension | `flowboard/extension/` | `C:\Users\Irak\Desktop\AntiBotBrowser\flowboard\extension` |
+| Agent (Backend) | `flowboard/agent/` | repo root এর ভেতরে |
+| Frontend (UI) | `flowboard/frontend/` | repo root এর ভেতরে |
+| Chrome Extension | `flowboard/extension/` | repo root এর ভেতরে |
+
+> **Note:** এই guide এ absolute path দেওয়া হয়নি — তোমার repo যেখানেই clone করো, এই paths সেই অনুযায়ী relative। সব command `flowboard/` folder এর ভেতর থেকে চালাতে হবে।
 
 প্রতিবার Flowboard চালাতে **Agent** + **Frontend** চালু থাকতে হবে। **Extension** শুধু একবার Chrome-এ load করলেই হয়।
 
@@ -39,9 +41,11 @@
 ### 🟦 Terminal 1 — Agent (Backend)
 
 ```bash
-cd "C:\Users\Irak\Desktop\AntiBotBrowser\flowboard\agent"
+cd "flowboard/agent"          # repo root থেকে
 .venv\Scripts\python.exe -m uvicorn flowboard.main:app --port 8101
 ```
+
+(Windows PowerShell/CMD-এ চালাও। macOS/Linux হলে: `source .venv/bin/activate && uvicorn flowboard.main:app --port 8101`)
 
 সফল হলে দেখবে:
 ```
@@ -56,7 +60,7 @@ INFO:     Uvicorn running on http://127.0.0.1:8101
 ### 🟩 Terminal 2 — Frontend (UI)
 
 ```bash
-cd "C:\Users\Irak\Desktop\AntiBotBrowser\flowboard\frontend"
+cd "flowboard/frontend"       # repo root থেকে
 npm run dev
 ```
 
@@ -141,10 +145,14 @@ Flowboard UI তে:
 
 ```batch
 @echo off
-start "Flowboard Agent" cmd /k "cd /d C:\Users\Irak\Desktop\AntiBotBrowser\flowboard\agent && .venv\Scripts\python.exe -m uvicorn flowboard.main:app --port 8101"
+REM Update paths below to match your local repo location
+set "REPO_ROOT=C:\path\to\your\repo"
+start "Flowboard Agent" cmd /k "cd /d %REPO_ROOT%\flowboard\agent && .venv\Scripts\python.exe -m uvicorn flowboard.main:app --port 8101"
 timeout /t 3
-start "Flowboard Frontend" cmd /k "cd /d C:\Users\Irak\Desktop\AntiBotBrowser\flowboard\frontend && npm run dev"
+start "Flowboard Frontend" cmd /k "cd /d %REPO_ROOT%\flowboard\frontend && npm run dev"
 ```
+
+> ⚠️ উপরে `C:\path\to\your\repo` replace করো তোমার actual repo path দিয়ে।
 
 তারপর প্রতিবার শুধু `start_flowboard.bat` double-click করো — ২টা Terminal নিজে থেকেই খুলবে।
 

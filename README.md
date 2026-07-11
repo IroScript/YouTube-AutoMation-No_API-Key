@@ -12,7 +12,7 @@
 
 ### One-time setup
 
-1. Install **Python 3.12** at `C:\Python312` (with stdlib + `python312.zip`)
+1. Install **Python 3.12** (Windows: ensure stdlib is intact — see `flowboard/agent/` for any setup notes)
 2. Install **Node.js 18+**
 3. **Chrome extension**: open `chrome://extensions/` → enable Developer mode → "Load unpacked" → select `flowboard/extension/`
 
@@ -61,7 +61,7 @@ Full guide: see [`FLOWBOARD_GUIDE.md`](FLOWBOARD_GUIDE.md).
 
 ## 🔧 Requirements
 
-- **Python 3.12** with stdlib (Windows: ensure `C:\Python312\python312.zip` exists)
+- **Python 3.12** (with stdlib intact)
 - **Node.js 18+** with `npm`
 - **Chrome / Chromium** browser
 - **Google Flow Pro plan** (for image/video generation; Free tier rejects video)
@@ -77,10 +77,7 @@ If you need to revive archived automation scripts (e.g. `login_bot.py`, `google_
 - Rewrite the browser automation layer using **Playwright** or **Selenium** directly (no stealth wrapper)
 - Tokens/cookies come from the Flowboard Chrome extension instead
 
-Local backups of the deleted CloakBrowser-dependent scripts preserved at:
-```
-~/Desktop/CloakBrowser_Archive/cloak-browser-scripts/
-```
+Local backups of the deleted CloakBrowser-dependent scripts preserved locally (path depends on your OS — e.g. `~/Desktop/...` on Windows, `~/Documents/...` on macOS).
 
 ---
 
