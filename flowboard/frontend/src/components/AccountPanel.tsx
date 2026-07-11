@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   getAuthMe,
   logoutExtension,
@@ -75,6 +75,36 @@ export function AccountPanel({ collapsed = false }: { collapsed?: boolean }) {
       if (timer) clearTimeout(timer);
     };
   }, [setStorePaygateTier, pollNonce]);
+
+  // Auto-detect: when we know the extension is connected (we have an
+  // email) but tier is still null after several polls, automatically
+  // call /api/auth/scan. The scan endpoint nudges the extension over
+  // WebSocket + retries /v1/credits synchronously, so it usually
+  // resolves within one round-trip — no need to bother the user with
+  // the "open Flow and reload" dance anymore.
+  //
+  // Triggers at poll count >= 4 (≈20s after email lands) and again at
+  // count == 8 (≈40s) as a backup, in case the first scan landed while
+  // the extension was momentarily busy. Stops once tier resolves.
+  const autoScanTriggeredRef = useRef<number>(0);
+  useEffect(() => {
+    if (!profile?.email || profile?.paygate_tier) return;
+    if (pollsWithoutTier < 4) return;
+    if (autoScanTriggeredRef.current >= 2) return; // cap to 2 auto-scans
+    if (autoScanTriggeredRef.current >= pollsWithoutTier / 4) return;
+    autoScanTriggeredRef.current = pollsWithoutTier / 4;
+    scanExtension()
+      .then(() => {
+        // Kick the poll loop immediately — scan synchronously updates
+        // /api/auth/me state, so we get fresh data without waiting for
+        // the next 5s tick.
+        setPollNonce((n) => n + 1);
+      })
+      .catch(() => {
+        // Non-fatal: the manual "Re-detect" button is the user's escape
+        // hatch if auto-scan keeps failing.
+      });
+  }, [pollsWithoutTier, profile?.email, profile?.paygate_tier, setPollNonce]);
 
   // Logout: clears agent-side cache + tells extension to drop in-memory
   // identity. Resets local state immediately so the chip flips to the
@@ -316,6 +346,12 @@ export function AccountPanel({ collapsed = false }: { collapsed?: boolean }) {
         // (silently, before v1.1.5) or get a "paygate_tier_unknown"
         // dispatch error with no recovery hint. Surface the gap and
         // give a 1-click path to fix it.
+        //
+        // As of 2026-07-11: the panel auto-triggers /api/auth/scan
+        // (which nudges the extension + retries /v1/credits) every
+        // ~20s, so most users will never see this banner. It only
+        // stays visible if the auto-scan keeps failing — the
+        // "Re-detect" button below is the manual escape hatch.
         <div className="account-panel__tier-warning" role="alert">
           <span className="account-panel__tier-warning-icon" aria-hidden="true">⚠</span>
           <div className="account-panel__tier-warning-body">
@@ -323,17 +359,38 @@ export function AccountPanel({ collapsed = false }: { collapsed?: boolean }) {
               Tier unknown
             </span>
             <span className="account-panel__tier-warning-text">
-              Open Flow once so the extension can detect your plan.
+              {pollsWithoutTier < 6
+                ? "Detecting your plan — this usually clears in a few seconds."
+                : "Auto-detect failed. Click Re-detect, or open Flow once so the extension can pick up your plan."}
             </span>
           </div>
-          <a
-            className="account-panel__tier-warning-cta"
-            href="https://labs.google/fx/tools/flow"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Open Flow ↗
-          </a>
+          <div className="account-panel__tier-warning-actions">
+            <button
+              type="button"
+              className="account-panel__tier-warning-btn"
+              onClick={() => {
+                // Mirror handleScan but with feedback tailored to the
+                // banner: don't switch the button into a global
+                // "no-extension" state — just spin briefly.
+                setScanState("scanning");
+                scanExtension()
+                  .then(() => setPollNonce((n) => n + 1))
+                  .finally(() => setScanState("idle"));
+              }}
+              disabled={scanState === "scanning"}
+              title="Ask the extension to re-detect your Flow plan"
+            >
+              {scanState === "scanning" ? "Detecting…" : "🔄 Re-detect"}
+            </button>
+            <a
+              className="account-panel__tier-warning-cta"
+              href="https://labs.google/fx/tools/flow"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open Flow ↗
+            </a>
+          </div>
         </div>
       )}
       <SettingsPanel

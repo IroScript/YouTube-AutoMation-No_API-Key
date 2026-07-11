@@ -773,6 +773,37 @@ button:disabled {
   text-decoration: underline;
 }
 
+/* Action group inside the banner — houses the manual "Re-detect"
+ * button + "Open Flow" link side by side, so the user has both
+ * an automatic retry and a manual fallback. */
+.account-panel__tier-warning-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.account-panel__tier-warning-btn {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border: 1px solid #f59e0b;
+  border-radius: 4px;
+  background: rgba(245, 158, 11, 0.18);
+  color: #fbbf24;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.15s ease;
+}
+.account-panel__tier-warning-btn:hover:not(:disabled) {
+  background: rgba(245, 158, 11, 0.28);
+}
+.account-panel__tier-warning-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
 @keyframes account-update-pulse {
   0%, 100% {
     box-shadow: 0 2px 10px rgba(197, 118, 255, 0.32);
