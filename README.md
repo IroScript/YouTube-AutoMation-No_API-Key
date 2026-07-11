@@ -5,7 +5,7 @@
 This repo combines two related projects:
 
 1. **Flowboard** (`flowboard/`) — local-only AI media workflow canvas powered by Google Flow (Pro plan). Lets you generate images/videos on a node-based board, with auto-prompt via local LLMs (Claude Code / Codex / Gemini CLI).
-2. **YouTube Automation** (root `.py` files) — automation scripts for YouTube tasks (login, flow explorer, LLM agent, etc.) using Google Flow as backend.
+2. **YouTube Automation** — automation scripts (CloakBrowser-dependent ones now archived). Remaining scripts (`web_tools.py`, `prompt_templates.py`, `env_loader.py`, `diagnose_report.py`) are standalone utilities.
 
 ---
 
@@ -43,16 +43,19 @@ Full guide: see [`FLOWBOARD_GUIDE.md`](FLOWBOARD_GUIDE.md).
 │   ├── frontend/               # React + Vite UI
 │   └── extension/              # Chrome extension (browser-side cookie capture)
 │
-├── google_flow_bot.py          # YouTube automation: Google Flow integration
-├── login_bot.py                # YouTube automation: login flows
-├── llm_agent.py                # LLM agent coordinator
-├── cohere_client.py            # Cohere API wrapper
-├── groq_client.py              # Groq API wrapper
-├── flow_explorer.py            # Google Flow API explorer
-├── web_tools.py                # Web utility functions
-├── prompt_templates.py         # Prompt template library
-├── env_loader.py               # .env loader
-├── diagnose_report.py          # Diagnostic reporting
+├── web_tools.py                # Web utility functions (kept)
+├── prompt_templates.py         # Prompt template library (kept)
+├── env_loader.py               # .env loader (kept; minor cloak-related comment)
+├── diagnose_report.py          # Diagnostic reporting (kept)
+
+# Archived CloakBrowser-dependent scripts (2026-07-11):
+# Local copy: ~/Desktop/CloakBrowser_Archive/cloak-browser-scripts/
+# ├── google_flow_bot.py  (CloakBrowser API → archived)
+# ├── login_bot.py        (CloakBrowser API → archived)
+# ├── llm_agent.py        (CloakBrowser API → archived)
+# ├── cohere_client.py    (CloakBrowser API → archived)
+# ├── groq_client.py      (CloakBrowser API → archived)
+# └── flow_explorer.py    (CloakBrowser API → archived)
 │
 ├── start_flowboard.bat         # One-click launcher (Agent + Frontend)
 ├── stop_flowboard.bat          # One-click stopper
@@ -78,16 +81,17 @@ Full guide: see [`FLOWBOARD_GUIDE.md`](FLOWBOARD_GUIDE.md).
 
 ## 🤖 YouTube Automation Scripts
 
-These scripts interact with Google Flow and YouTube via browser automation. Run individually:
+The remaining scripts (`web_tools.py`, `prompt_templates.py`, `env_loader.py`, `diagnose_report.py`) are standalone — they don't depend on CloakBrowser.
 
-```bash
-python google_flow_bot.py    # Generate content via Google Flow
-python login_bot.py          # Login automation
-python flow_explorer.py      # Explore Flow projects
-python llm_agent.py          # LLM-driven automation
+### Archived CloakBrowser Scripts
+
+The previous CloakBrowser-dependent scripts have been **archived** to:
+
+```
+~/Desktop/CloakBrowser_Archive/cloak-browser-scripts/
 ```
 
-Each script uses environment variables from `.env` (copy `.env.example`).
+These scripts cannot run as-is after the CloakBrowser wrapper removal. To revive them, rewrite the browser automation layer using **Playwright** or **Selenium** directly (no stealth wrapper).
 
 ---
 
