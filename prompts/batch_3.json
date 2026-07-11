@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "image_prompt": "a young woman with silver hair standing in a rain-soaked neon alley, signs flickering above her, vertical cinematic",
+      "video_prompt": "she turns to look over her shoulder, rain intensifies, neon signs flicker through the downpour",
+      "camera_dynamic": "slow orbit from behind + push in",
+      "name": "neon_alley"
+    },
+    {
+      "image_prompt": "a child releasing a paper lantern into a misty river at dusk, dozens of lanterns floating ahead, vertical cinematic",
+      "video_prompt": "the lantern drifts upward, candle flame wavers, mist rolls across the water",
+      "camera_dynamic": "gentle pan up following the lantern",
+      "name": "paper_lantern"
+    },
+    {
+      "image_prompt": "a vintage motorcycle leaning against a weathered concrete wall, vines creeping across the frame, golden hour light, vertical cinematic",
+      "video_prompt": "a leaf detaches and falls past the motorcycle, vines sway in a faint breeze, light shifts",
+      "camera_dynamic": "subtle dolly left to right + rack focus",
+      "name": "vintage_bike"
+    }
+  ]
+}

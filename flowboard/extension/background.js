@@ -239,6 +239,35 @@ function connectToAgent() {
             metrics,
           },
         });
+      } else if (msg.method === 'force_recapture') {
+        // Agent-driven token refresh: the agent's TokenScheduler noticed
+        // the Bearer is older than 50 min and asked us to grab a fresh one.
+        // We delegate to captureTokenFromFlowTab() which fires a
+        // credentialed fetch on the active Flow tab — Google's SPA then
+        // re-issues the Authorization header, the webRequest observer
+        // picks it up, and the new token flows back as a `token_captured`
+        // event over the same WS.
+        //
+        // We ACK with a status result so the agent's _send() future can
+        // resolve. The actual token delivery is asynchronous (handled by
+        // the existing onAuthHeader path), so the agent polls
+        // flow_client._token_captured_at for the real confirmation.
+        const reason = msg.params?.reason ?? 'unspecified';
+        console.log('[Flowboard] force_recapture requested:', reason);
+        captureTokenFromFlowTab()
+          .then(() => {
+            sendToAgent({
+              id: msg.id,
+              result: { ok: true, triggered: true },
+            });
+          })
+          .catch((e) => {
+            console.error('[Flowboard] force_recapture failed:', e);
+            sendToAgent({
+              id: msg.id,
+              result: { ok: false, error: String(e) },
+            });
+          });
       }
     } catch (e) {
       console.error('[Flowboard] Message error:', e);
