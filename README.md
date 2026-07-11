@@ -1,15 +1,14 @@
-# YouTube Automation + Flowboard
+# Flowboard
 
-> **Note (2026-07-11):** CloakBrowser wrapper removed from this repo. Scripts now rely on **Chrome extension** (Flowboard Bridge) for browser-side automation and cookie capture.
+> Local-only AI media workflow canvas. Node-based board for generating images/videos using **Google Flow (Pro plan)** with auto-prompt via local LLMs (Claude Code / Codex / Gemini CLI).
 
-This repo combines two related projects:
+> **Note (2026-07-11):** CloakBrowser wrapper removed. Browser automation now done via the bundled **Chrome extension** (`flowboard/extension/`) which captures cookies/tokens from `labs.google/fx/tools/flow` and forwards them to the local agent.
 
-1. **Flowboard** (`flowboard/`) — local-only AI media workflow canvas powered by Google Flow (Pro plan). Lets you generate images/videos on a node-based board, with auto-prompt via local LLMs (Claude Code / Codex / Gemini CLI).
-2. **YouTube Automation** — automation scripts (CloakBrowser-dependent ones now archived). Remaining scripts (`web_tools.py`, `prompt_templates.py`, `env_loader.py`, `diagnose_report.py`) are standalone utilities.
+> **Note (2026-07-11):** All previous CloakBrowser-era repository state archived to [`archive/`](archive/). This repo is now a single-purpose Flowboard project.
 
 ---
 
-## 🚀 Quick Start — Flowboard
+## 🚀 Quick Start
 
 ### One-time setup
 
@@ -38,33 +37,25 @@ Full guide: see [`FLOWBOARD_GUIDE.md`](FLOWBOARD_GUIDE.md).
 
 ```
 .
-├── flowboard/                  # Flowboard project (local AI media workflow)
+├── flowboard/                  # Flowboard project (the active codebase)
 │   ├── agent/                  # FastAPI backend (Python)
 │   ├── frontend/               # React + Vite UI
 │   └── extension/              # Chrome extension (browser-side cookie capture)
 │
-├── web_tools.py                # Web utility functions (kept)
-├── prompt_templates.py         # Prompt template library (kept)
-├── env_loader.py               # .env loader (kept; minor cloak-related comment)
-├── diagnose_report.py          # Diagnostic reporting (kept)
-
-# Archived CloakBrowser-dependent scripts (2026-07-11):
-# Local copy: ~/Desktop/CloakBrowser_Archive/cloak-browser-scripts/
-# ├── google_flow_bot.py  (CloakBrowser API → archived)
-# ├── login_bot.py        (CloakBrowser API → archived)
-# ├── llm_agent.py        (CloakBrowser API → archived)
-# ├── cohere_client.py    (CloakBrowser API → archived)
-# ├── groq_client.py      (CloakBrowser API → archived)
-# └── flow_explorer.py    (CloakBrowser API → archived)
+├── archive/                    # CloakBrowser-era repo state (preserved, not active)
+│   ├── README inside           # What's in here and why
+│   ├── .dockerignore, .env.example, .gitattributes
+│   ├── CHANGELOG.md, LICENSE, pyproject.toml
+│   └── web_tools.py, prompt_templates.py, env_loader.py, diagnose_report.py
 │
 ├── start_flowboard.bat         # One-click launcher (Agent + Frontend)
 ├── stop_flowboard.bat          # One-click stopper
 ├── FLOWBOARD_GUIDE.md          # Detailed Flowboard setup guide
+├── README.md                   # This file
 │
-├── pyproject.toml              # Python project metadata
-├── CHANGELOG.md                # Changelog
-├── LICENSE                     # MIT License
-└── .env.example                # Environment variables template
+├── Worked.txt                  # Session notes (kept for context)
+├── Google Flow Steps.txt       # Reference notes
+└── ❏ Puku CLI*.txt            # Puku CLI session logs
 ```
 
 ---
@@ -79,22 +70,21 @@ Full guide: see [`FLOWBOARD_GUIDE.md`](FLOWBOARD_GUIDE.md).
 
 ---
 
-## 🤖 YouTube Automation Scripts
+## 📦 Archived content
 
-The remaining scripts (`web_tools.py`, `prompt_templates.py`, `env_loader.py`, `diagnose_report.py`) are standalone — they don't depend on CloakBrowser.
+All CloakBrowser-related history moved to [`archive/`](archive/). See [`archive/README.md`](archive/README.md) for contents.
 
-### Archived CloakBrowser Scripts
+If you need to revive archived automation scripts (e.g. `login_bot.py`, `google_flow_bot.py`):
+- Rewrite the browser automation layer using **Playwright** or **Selenium** directly (no stealth wrapper)
+- Tokens/cookies come from the Flowboard Chrome extension instead
 
-The previous CloakBrowser-dependent scripts have been **archived** to:
-
+Local backups of the deleted CloakBrowser-dependent scripts preserved at:
 ```
 ~/Desktop/CloakBrowser_Archive/cloak-browser-scripts/
 ```
-
-These scripts cannot run as-is after the CloakBrowser wrapper removal. To revive them, rewrite the browser automation layer using **Playwright** or **Selenium** directly (no stealth wrapper).
 
 ---
 
 ## 📝 License
 
-MIT — see [LICENSE](LICENSE).
+MIT — see [`archive/LICENSE`](archive/LICENSE) (moved with the rest of CloakBrowser-era repo state).
