@@ -4,7 +4,7 @@
 
 > **Note (2026-07-11):** CloakBrowser wrapper removed. Browser automation now done via the bundled **Chrome extension** (`flowboard/extension/`) which captures cookies/tokens from `labs.google/fx/tools/flow` and forwards them to the local agent.
 
-> **Note (2026-07-11):** All previous CloakBrowser-era repository state archived to [`archive/`](archive/). This repo is now a single-purpose Flowboard project.
+> **Note (2026-07-11):** All non-essential content (CloakBrowser-era files + reference docs + session logs) moved to [`archive/`](archive/). This repo is now a single-purpose Flowboard project with a clean root.
 
 ---
 
@@ -42,20 +42,19 @@ Full guide: see [`FLOWBOARD_GUIDE.md`](FLOWBOARD_GUIDE.md).
 │   ├── frontend/               # React + Vite UI
 │   └── extension/              # Chrome extension (browser-side cookie capture)
 │
-├── archive/                    # CloakBrowser-era repo state (preserved, not active)
-│   ├── README inside           # What's in here and why
+├── archive/                    # All non-active content (preserved)
+│   ├── README.md               # What's in here and why
 │   ├── .dockerignore, .env.example, .gitattributes
 │   ├── CHANGELOG.md, LICENSE, pyproject.toml
-│   └── web_tools.py, prompt_templates.py, env_loader.py, diagnose_report.py
+│   ├── web_tools.py, prompt_templates.py, env_loader.py, diagnose_report.py
+│   ├── Google Flow Steps.txt   # Reference notes (CloakBrowser era)
+│   ├── Worked.txt              # Session notes
+│   └── ❏ Puku CLI*.txt         # Puku CLI session logs
 │
 ├── start_flowboard.bat         # One-click launcher (Agent + Frontend)
 ├── stop_flowboard.bat          # One-click stopper
 ├── FLOWBOARD_GUIDE.md          # Detailed Flowboard setup guide
-├── README.md                   # This file
-│
-├── Worked.txt                  # Session notes (kept for context)
-├── Google Flow Steps.txt       # Reference notes
-└── ❏ Puku CLI*.txt            # Puku CLI session logs
+└── README.md                   # This file
 ```
 
 ---

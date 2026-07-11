@@ -26,6 +26,10 @@ Files that were at repo root before the restructuring. Most are CloakBrowser-rel
 | `prompt_templates.py` | Prompt template library (no CloakBrowser dependency) |
 | `env_loader.py` | `.env` loader (has a minor cloak-related comment) |
 | `diagnose_report.py` | Diagnostic reporting (no CloakBrowser dependency) |
+| `Google Flow Steps.txt` | Reference notes (CloakBrowser era) |
+| `Worked.txt` | Session notes from project setup |
+| `❏ Puku CLI.txt2.txt` | Puku CLI session log |
+| `❏ puku-cli.txt` | Puku CLI session log |
 
 ## Reviving archived scripts
 
