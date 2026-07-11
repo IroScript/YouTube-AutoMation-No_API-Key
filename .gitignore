@@ -1,18 +1,36 @@
-# Python
+# =============================================================================
+# Flowboard + YouTube Automation — gitignore
+# =============================================================================
+
+# Python venv + cache
+.venv/
+venv/
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
 *.egg-info/
 dist/
 build/
-*.egg
-.eggs/
 
-# Virtual environment
-.venv/
-venv/
-env/
+# Node
+node_modules/
+.npm/
+.pnpm-store/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vite build output
+flowboard/frontend/dist/
+flowboard/frontend/.vite/
+
+# Playwright MCP / browser automation cache
+.playwright-mcp/
+playwright-report/
+test-results/
+.playwright/
 
 # IDE
 .vscode/
@@ -20,57 +38,34 @@ env/
 *.swp
 *.swo
 *~
-
-# OS
 .DS_Store
 Thumbs.db
 
-# Testing
-.pytest_cache/
-.coverage
-htmlcov/
-
-# Binary cache (downloaded chromium)
-.cloakbrowser/
-
-# Claude Code (private project context)
-CLAUDE.md
-.claude/
-
-# JavaScript / Node.js
-js/node_modules/
-js/dist/
-
-# Distribution
-*.tar.gz
-*.whl
-AGENTS.md
-.beads
-result
-
-# Private docs (launch posts, strategy)
-docs/
-
-# Internal test infrastructure (Docker, VPS-specific)
-test-infra/
-
-# Website (deployed separately)
-site/
-
-# Browser profile manager (deployed separately)
-manager/
-
-# Release scripts
-publish.sh
-deploy.sh
+# Env + secrets (NEVER commit)
 .env
-debug
-publish-docker.sh
-captures
-20[0-9][0-9]-[0-9][0-9]-[0-9][0-9]-*.txt
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets.json
 
-# Beads / Dolt files (added by bd init)
-.dolt/
-*.db
-.beads-credential-key
-.antigravitycli
+# Flowboard storage — generated boards, sqlite db, user media
+flowboard/storage/
+flowboard/agent/storage/
+flowboard/agent/data/
+flowboard/agent/*.db
+flowboard/agent/*.sqlite
+flowboard/agent/*.sqlite3
+
+# Logs
+*.log
+flowboard/agent/logs/
+flowboard/storage/logs/
+
+# OS temp
+.tmp/
+.temp/
+
+# CloakBrowser bin (even though we removed the wrapper, defensive)
+bin/
+.cloakbrowser/
