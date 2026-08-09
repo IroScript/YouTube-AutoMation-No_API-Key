@@ -1,58 +1,310 @@
 <#
 .SYNOPSIS
-    Run one image-to-video job through the Flowboard automate endpoint.
+    All-in-one autonomous runner for Flowboard image-to-video generation.
 
 .DESCRIPTION
-    Reads a JSON file containing image_prompt + video_prompt + camera_dynamic,
-    calls POST /api/automate/image-to-video, polls the resulting MP4 URL until
-    the bytes are downloadable, then saves the file to ./output/<name>.mp4.
-
-    The Flowboard agent (uvicorn on :8101) must already be running. The
-    Chrome extension on Profile 6 must be connected (token captured + tier
-    resolved) — the endpoint will refuse with HTTP 503 otherwise.
-
-    Locked pipeline (server-side, NOT overridable from this script):
-      * aspect_ratio = "9:16"
-      * video_model  = "VEO_3_1_LITE"
-      * duration_s   = 8
-      * image_model  = "GEM_PIX_2"
+    1. Checks if Agent (:8101) is running; starts it automatically if not.
+    2. Checks if Frontend (:5173) is running; starts it automatically if not.
+    3. Launches Chrome Profile 4 with Google Flow & Flowboard UI if needed.
+    4. Waits for Extension connection + Token + Paygate Tier to settle.
+    5. Reads prompt JSON file (image_prompt + video_prompt + camera_dynamic).
+    6. Calls POST /api/automate/image-to-video, polls MP4 URL, downloads & saves to ./output/<name>.mp4.
 
 .PARAMETER PromptsFile
-    Path to a JSON file. Schema:
-    {
-      "image_prompt":   "a lone astronaut on a red Martian cliff at golden hour, cinematic",
-      "video_prompt":   "wind picks up dust, two moons rise",
-      "camera_dynamic": "slow dolly forward + tilt up",
-      "name":           "astronaut_cliff"
-    }
+    Path to a JSON file. Default: .\prompts\mystic_floating_island.json
 
 .PARAMETER OutputDir
-    Where to save the resulting MP4. Default: .\output (created if missing).
+    Where to save the resulting MP4. Default: .\output.
 
 .PARAMETER AgentUrl
     Override the agent base URL. Default: http://127.0.0.1:8101.
 
+.PARAMETER VerifyOnly
+    If set, only checks readiness without launching video generation.
+
 .EXAMPLE
-    .\automate_one.ps1 -PromptsFile .\prompts\astronaut.json
-    .\automate_one.ps1 -PromptsFile .\prompts\astronaut.json -OutputDir D:\renders
+    .\automate_one.ps1
+    .\automate_one.ps1 -PromptsFile .\prompts\my_new_prompt.json
+    .\automate_one.ps1 -VerifyOnly
 #>
 param(
     [string]$PromptsFile = ".\prompts\mystic_floating_island.json",
 
     [string]$OutputDir = ".\output",
 
-    [string]$AgentUrl = "http://127.0.0.1:8101"
+    [string]$AgentUrl = "http://127.0.0.1:8101",
+
+    [switch]$VerifyOnly
 )
 
 $ErrorActionPreference = "Stop"
+$RepoRoot = $PSScriptRoot
 
-# ─── Preflight ─────────────────────────────────────────────────────────────
+# ─── 0. Autonomous Environment Startup & Readiness Checks ─────────────────
+Write-Host "============================================================" -ForegroundColor Cyan
+Write-Host " MASTER AUTONOMOUS FLOWBOARD VIDEO RUNNER (automate_one)" -ForegroundColor Cyan
+Write-Host "============================================================" -ForegroundColor Cyan
+Write-Host ""
+
+# --- 1. Check if agent is listening on :8101 ---
+$agentHealthUrl = "$AgentUrl/api/health"
+$agentRunning = $false
+$initialHealth = $null
+try {
+    $initialHealth = Invoke-RestMethod -Uri $agentHealthUrl -TimeoutSec 2 -ErrorAction SilentlyContinue
+    if ($initialHealth.ok) {
+        $agentRunning = $true
+    }
+} catch {}
+
+if (-not $agentRunning) {
+    Write-Host "[1/4] Starting Flowboard Agent on :8101..." -ForegroundColor Yellow
+    $agentDir = Join-Path $RepoRoot "flowboard\agent"
+    $pythonExe = Join-Path $agentDir ".venv\Scripts\python.exe"
+
+    if (-not (Test-Path $pythonExe)) {
+        Write-Host "[FAIL] Python venv not found at $pythonExe" -ForegroundColor Red
+        exit 1
+    }
+
+    Start-Process -FilePath $pythonExe -ArgumentList "-m uvicorn flowboard.main:app --port 8101" -WorkingDirectory $agentDir -WindowStyle Hidden
+    Write-Host "      Waiting for agent to initialize..."
+    for ($i = 1; $i -le 15; $i++) {
+        Start-Sleep -Seconds 1
+        try {
+            $initialHealth = Invoke-RestMethod -Uri $agentHealthUrl -TimeoutSec 2 -ErrorAction SilentlyContinue
+            if ($initialHealth.ok) {
+                $agentRunning = $true
+                Write-Host "      [OK] Agent is up and running! ($i s)" -ForegroundColor Green
+                break
+            }
+        } catch {}
+    }
+    if (-not $agentRunning) {
+        Write-Host "[FAIL] Agent server failed to respond on :8101 within 15s." -ForegroundColor Red
+        exit 1
+    }
+} else {
+    Write-Host "[1/4] Flowboard Agent is already running on :8101." -ForegroundColor Green
+}
+
+# --- 1b. Check if Frontend is running on :5173 ---
+$feUrl = "http://localhost:5173/"
+$feRunning = $false
+try {
+    $feStatus = (Invoke-WebRequest -Uri $feUrl -TimeoutSec 2 -UseBasicParsing -ErrorAction SilentlyContinue).StatusCode
+    if ($feStatus -eq 200) { $feRunning = $true }
+} catch {}
+
+if (-not $feRunning) {
+    Write-Host "[1b/4] Starting Flowboard Frontend (Vite on :5173)..." -ForegroundColor Yellow
+    $frontendDir = Join-Path $RepoRoot "flowboard\frontend"
+    Start-Process "cmd.exe" -ArgumentList "/c cd /d `"$frontendDir`" && npm run dev" -WindowStyle Hidden
+} else {
+    Write-Host "[1b/4] Flowboard Frontend is already running on :5173." -ForegroundColor Green
+}
+
+# --- 2. Check and Launch Chrome if extension/token not already ready ---
+$alreadyReady = $false
+if ($initialHealth) {
+    $extConn = $initialHealth.extension_connected
+    $hasKey = $false
+    if ($initialHealth.ws_stats) {
+        $hasKey = [bool]$initialHealth.ws_stats.flow_key_present
+    }
+    if ($extConn -and $hasKey) {
+        try {
+            $me = Invoke-RestMethod -Uri "$AgentUrl/api/auth/me" -TimeoutSec 3 -ErrorAction SilentlyContinue
+            if ($me.paygate_tier) {
+                $alreadyReady = $true
+            }
+        } catch {}
+    }
+}
+
+if ($alreadyReady) {
+    Write-Host "[2/4] Chrome Extension, Token and Tier are ALREADY ready." -ForegroundColor Green
+} else {
+    # Auto-detect profile with Flowboard extension installed
+    $targetProfile = "Profile 4"
+    try {
+        $runningCmds = (Get-CimInstance Win32_Process -Filter "Name = 'chrome.exe'" -ErrorAction SilentlyContinue).CommandLine
+        $runningProfiles = @()
+        foreach ($cmd in $runningCmds) {
+            if ($cmd -match '--profile-directory="([^"]+)"') {
+                $runningProfiles += $Matches[1]
+            }
+        }
+        $runningProfiles = $runningProfiles | Select-Object -Unique
+
+        $userDataDir = "$env:LOCALAPPDATA\Google\Chrome\User Data"
+        $matchingProfiles = @()
+        if (Test-Path $userDataDir) {
+            $prefFiles = Get-ChildItem -Path $userDataDir -Filter "Preferences" -Recurse -ErrorAction SilentlyContinue
+            foreach ($pref in $prefFiles) {
+                $content = Get-Content $pref.FullName -Raw -ErrorAction SilentlyContinue
+                if ($content -like "*flowboard*") {
+                    $matchingProfiles += $pref.Directory.Name
+                }
+            }
+        }
+
+        if ($matchingProfiles) {
+            $runningMatch = $matchingProfiles | Where-Object { $runningProfiles -contains $_ } | Select-Object -First 1
+            if ($runningMatch) {
+                $targetProfile = $runningMatch
+            } else {
+                $targetProfile = $matchingProfiles[0]
+            }
+        } elseif ($runningProfiles) {
+            $targetProfile = $runningProfiles[0]
+        }
+    } catch {}
+
+    Write-Host "[2/4] Launching Chrome ($targetProfile) to Flowboard UI (localhost:5173) and Google Flow..." -ForegroundColor Yellow
+    try {
+        Start-Process "chrome.exe" -ArgumentList "--profile-directory=`"$targetProfile`" --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding http://localhost:5173/ https://labs.google/fx/tools/flow"
+    } catch {
+        Write-Host "      [WARN] Could not launch chrome.exe directly: $_" -ForegroundColor Red
+    }
+}
+
+# --- 3. Wait for Extension + Token + Paygate Tier (Active Poll Loop) ---
+Write-Host "[3/4] Checking Chrome Extension, Token and Tier status..." -ForegroundColor Yellow
+$ready = $false
+$maxAttempts = 45  # 90 seconds total
+
+try {
+    $pf = Invoke-RestMethod -Uri $agentHealthUrl -TimeoutSec 2 -ErrorAction SilentlyContinue
+    $pfKey = $false
+    if ($pf.ws_stats) { $pfKey = [bool]$pf.ws_stats.flow_key_present }
+    if ($pf.extension_connected -and $pfKey) {
+        $pfMe = Invoke-RestMethod -Uri "$AgentUrl/api/auth/me" -TimeoutSec 3 -ErrorAction SilentlyContinue
+        if ($pfMe.paygate_tier) {
+            $ready = $true
+            $me = $pfMe
+            Write-Host "      [OK] All 3 Readiness Checks Passed! (pre-flight)" -ForegroundColor Green
+            Write-Host "         [OK 1/3] Extension Connected via WS (:9223)" -ForegroundColor Green
+            Write-Host "         [OK 2/3] Bearer Token Captured" -ForegroundColor Green
+            Write-Host "         [OK 3/3] Paygate Tier Resolved ($($me.paygate_tier))" -ForegroundColor Green
+            Write-Host "         Email:   $($me.email)" -ForegroundColor Gray
+            Write-Host "         SKU:     $($me.sku)" -ForegroundColor Gray
+            if ($null -ne $me.credits) {
+                Write-Host "         Credits: $($me.credits)" -ForegroundColor Gray
+            }
+        }
+    }
+} catch {}
+
+for ($attempt = 1; $attempt -le $maxAttempts -and -not $ready; $attempt++) {
+    try {
+        try {
+            Invoke-RestMethod -Method POST -Uri "$AgentUrl/api/auth/scan" -TimeoutSec 3 -ErrorAction SilentlyContinue | Out-Null
+        } catch {}
+
+        if ($attempt -eq 20) {
+            Write-Host "      [RETRY] Attempting force_recapture for fresh token..." -ForegroundColor DarkYellow
+            try {
+                Invoke-RestMethod -Method POST -Uri "$AgentUrl/api/auth/scan" -TimeoutSec 5 -ErrorAction SilentlyContinue | Out-Null
+            } catch {}
+        }
+
+        $health = Invoke-RestMethod -Uri $agentHealthUrl -TimeoutSec 2 -ErrorAction SilentlyContinue
+        $hasKey = $false
+        if ($health.ws_stats) {
+            $hasKey = [bool]$health.ws_stats.flow_key_present
+        }
+        $extConn = [bool]$health.extension_connected
+
+        $hasTier = $false
+        if ($extConn -and $hasKey) {
+            try {
+                $me = Invoke-RestMethod -Uri "$AgentUrl/api/auth/me" -TimeoutSec 3 -ErrorAction SilentlyContinue
+                if ($me.paygate_tier) {
+                    $hasTier = $true
+                }
+            } catch {}
+        }
+
+        if ($extConn -and $hasKey -and $hasTier) {
+            $ready = $true
+            Write-Host "      [OK] All 3 Readiness Checks Passed!" -ForegroundColor Green
+            Write-Host "         [OK 1/3] Extension Connected via WS (:9223)" -ForegroundColor Green
+            Write-Host "         [OK 2/3] Bearer Token Captured" -ForegroundColor Green
+            Write-Host "         [OK 3/3] Paygate Tier Resolved ($($me.paygate_tier))" -ForegroundColor Green
+            Write-Host "         Email:   $($me.email)" -ForegroundColor Gray
+            Write-Host "         SKU:     $($me.sku)" -ForegroundColor Gray
+            if ($null -ne $me.credits) {
+                Write-Host "         Credits: $($me.credits)" -ForegroundColor Gray
+            }
+            break
+        } elseif ($extConn -and $hasKey) {
+            Write-Host "      [WAIT] Token captured, resolving paygate tier... (attempt $attempt/$maxAttempts)" -ForegroundColor Yellow
+        } elseif ($extConn) {
+            Write-Host "      [WAIT] Extension connected, waiting for Bearer token... (attempt $attempt/$maxAttempts)" -ForegroundColor Yellow
+            Write-Host "         NOTE: Token only appears when Flow page has an active Sign-In session." -ForegroundColor DarkYellow
+        } else {
+            Write-Host "      [WAIT] Waiting for Chrome Extension to connect via WS:9223... (attempt $attempt/$maxAttempts)" -ForegroundColor Gray
+        }
+    } catch {}
+    Start-Sleep -Seconds 2
+}
+
+if (-not $ready) {
+    Write-Host ""
+    Write-Host "      -------------------------------------------------------------" -ForegroundColor Red
+    Write-Host "      READINESS CHECK FAILED after $($maxAttempts * 2) seconds" -ForegroundColor Red
+    Write-Host "" -ForegroundColor Red
+
+    $diagExt = $false; $diagKey = $false; $diagTier = $false
+    try {
+        $dh = Invoke-RestMethod -Uri $agentHealthUrl -TimeoutSec 2 -ErrorAction SilentlyContinue
+        $diagExt = [bool]$dh.extension_connected
+        if ($dh.ws_stats) { $diagKey = [bool]$dh.ws_stats.flow_key_present }
+        if ($diagExt -and $diagKey) {
+            $dm = Invoke-RestMethod -Uri "$AgentUrl/api/auth/me" -TimeoutSec 3 -ErrorAction SilentlyContinue
+            if ($dm.paygate_tier) { $diagTier = $true }
+        }
+    } catch {}
+
+    Write-Host "      Diagnostic:" -ForegroundColor Red
+    if ($diagExt) {
+        Write-Host "        [OK] 1/3 Extension Connected via WS (:9223)" -ForegroundColor Green
+    } else {
+        Write-Host "        [FAIL] 1/3 Extension NOT connected" -ForegroundColor Red
+        Write-Host "          -> Install Flowboard Bridge in Profile 4: run install_extension.bat" -ForegroundColor Gray
+        Write-Host "          -> Then load it via chrome://extensions (Load unpacked)" -ForegroundColor Gray
+    }
+    if ($diagKey) {
+        Write-Host "        [OK] 2/3 Bearer Token Captured" -ForegroundColor Green
+    } else {
+        Write-Host "        [FAIL] 2/3 Bearer Token NOT captured" -ForegroundColor Red
+        Write-Host "          -> Open labs.google/fx/tools/flow in Profile 4 and SIGN IN" -ForegroundColor Gray
+    }
+    if ($diagTier) {
+        Write-Host "        [OK] 3/3 Paygate Tier Resolved" -ForegroundColor Green
+    } else {
+        Write-Host "        [FAIL] 3/3 Paygate Tier NOT resolved" -ForegroundColor Red
+        Write-Host "          -> Token may be expired or Google session is invalid" -ForegroundColor Gray
+        Write-Host "          -> Refresh the Flow page (Ctrl+R) and wait 10s, then retry" -ForegroundColor Gray
+    }
+    Write-Host "      -------------------------------------------------------------" -ForegroundColor Red
+    Write-Host ""
+    exit 1
+}
+
+if ($VerifyOnly) {
+    Write-Host ""
+    Write-Host "[4/4] VERIFY ONLY MODE - System is READY for video generation!" -ForegroundColor Green
+    Write-Host "      Run without -VerifyOnly to start generating." -ForegroundColor Gray
+    exit 0
+}
+
+# ─── 4. Preflight & Prompts Resolution ─────────────────────────────────────
 if (-not (Test-Path $PromptsFile)) {
     throw "Prompts file not found: $PromptsFile"
 }
 
-# Resolve output dir relative to current working dir, NOT the script dir,
-# because the user typically cd's into a project folder and runs from there.
 $resolved = Resolve-Path -LiteralPath $OutputDir -ErrorAction SilentlyContinue
 if ($resolved) {
     $OutputDir = $resolved.Path
@@ -67,7 +319,6 @@ $prompts = Get-Content $PromptsFile -Raw | ConvertFrom-Json
 if (-not $prompts.image_prompt) { throw "Prompts file missing required field: image_prompt" }
 if (-not $prompts.video_prompt) { throw "Prompts file missing required field: video_prompt" }
 
-# Default name = file stem, or uuid if absent.
 if ($prompts.name) {
     $name = $prompts.name
 } else {
@@ -75,7 +326,6 @@ if ($prompts.name) {
 }
 
 # ─── Build request body ───────────────────────────────────────────────────
-# Camera dynamic is optional; we pass it through if the user supplied one.
 $body = @{
     image_prompt   = $prompts.image_prompt
     video_prompt   = $prompts.video_prompt
@@ -137,7 +387,7 @@ catch {
     if ($statusCode -eq 503 -or $body_text -like "*Extension is not connected*") {
         Write-Host ""
         Write-Host "[TIP] Chrome Extension is not connected or Token is missing." -ForegroundColor Yellow
-        Write-Host "      Please run: .\start_everything_and_generate.ps1 -PromptsFile $PromptsFile" -ForegroundColor Cyan
+        Write-Host "      Please check Profile 4 Flow tab." -ForegroundColor Cyan
     }
     exit 1
 }
