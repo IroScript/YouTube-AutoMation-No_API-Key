@@ -51,8 +51,9 @@ def test_write_creates_parent_dir(tmp_path: Path, monkeypatch: pytest.MonkeyPatc
 def test_write_sets_mode_0600(tmp_secrets_path: Path):
     """Critical — file must not be group/world readable. API keys live here."""
     secrets.write({"apiKeys": {"openai": "sk-secret"}})
-    mode = stat.S_IMODE(os.stat(tmp_secrets_path).st_mode)
-    assert mode == 0o600, f"expected 0o600 got {oct(mode)}"
+    if os.name != "nt":
+        mode = stat.S_IMODE(os.stat(tmp_secrets_path).st_mode)
+        assert mode == 0o600, f"expected 0o600 got {oct(mode)}"
 
 
 def test_write_is_atomic_no_tmp_leftover(tmp_secrets_path: Path):

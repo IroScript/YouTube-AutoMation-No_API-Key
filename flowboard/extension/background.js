@@ -104,16 +104,18 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
     // /v1/credits refresh loop (one credits GET per poll). The agent
     // side has a defensive dedupe too, but quiet at the source first.
     if (tokenChanged) {
-      console.log('[Flowboard] Bearer token captured');
+      console.log('[Flowboard] Bearer token captured (new token)');
       if (ws?.readyState === WebSocket.OPEN) {
         ws.send(JSON.stringify({ type: 'token_captured', flowKey }));
       }
-      // Resolve the user's identity (email/name/picture) once per token —
-      // saves the popup + AccountPanel from showing "Connected via
-      // extension" placeholders. The token already has the userinfo.email
-      // + userinfo.profile scopes Flow needs anyway, so this is a free
-      // call. Errors are non-fatal and silent.
-      fetchAndPushUserInfo(token);
+      if (!cachedUserInfo) {
+        fetchAndPushUserInfo(token);
+      }
+      // Fetch paygate tier through the browser session (server-side calls
+      // fail with 401 because the ya29.* token is session-bound).
+      if (ws?.readyState === WebSocket.OPEN) {
+        fetchCreditsInfo(token);
+      }
     }
   },
   { urls: ['https://aisandbox-pa.googleapis.com/*', 'https://labs.google/*'] },
@@ -121,6 +123,79 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
 );
 
 let cachedUserInfo = null;
+
+const FLOW_CREDITS_URL = 'https://aisandbox-pa.googleapis.com/v1/credits';
+const FLOW_API_KEY = 'AIzaSyBtrm0o5ab1c-Ec8ZuLcGt3oJAA5VWt3pY';
+
+/**
+ * Fetch paygate tier through the Flow tab's browser session.
+ * The service worker can't access session cookies directly, so
+ * we inject a script into the Flow tab that fetches /v1/credits
+ * with the valid session and sends the result back.
+ */
+async function fetchCreditsInfo(token) {
+  console.log('[Flowboard] fetchCreditsInfo called, token len:', token?.length);
+  try {
+    // Find the active Flow tab
+    const tabs = await chrome.tabs.query({
+      url: ['https://labs.google/fx/tools/flow*', 'https://labs.google/fx/*/tools/flow*'],
+    });
+    if (!tabs.length) {
+      console.warn('[Flowboard] fetchCreditsInfo: no Flow tab found');
+      return;
+    }
+    const tabId = tabs[0].id;
+
+    // Inject a content script that fetches /v1/credits from the Flow tab's
+    // browser context (which has valid session cookies).
+    const results = await chrome.scripting.executeScript({
+      target: { tabId },
+      func: async (creditsUrl, apiKey, bearerToken) => {
+        try {
+          const resp = await fetch(creditsUrl, {
+            method: 'GET',
+            headers: {
+              authorization: `Bearer ${bearerToken}`,
+              origin: 'https://labs.google',
+              referer: 'https://labs.google/',
+            },
+            credentials: 'include',
+          });
+          if (!resp.ok) return { error: resp.status };
+          return await resp.json();
+        } catch (e) {
+          return { error: e.message };
+        }
+      },
+      args: [FLOW_CREDITS_URL, FLOW_API_KEY, token],
+    });
+
+    if (!results || !results[0] || results[0].error) {
+      console.warn('[Flowboard] fetchCreditsInfo: script injection failed', results?.[0]?.error);
+      return;
+    }
+
+    const data = results[0].result;
+    if (data.error) {
+      console.warn('[Flowboard] fetchCreditsInfo: API returned error', data.error);
+      return;
+    }
+
+    const tier = data.userPaygateTier || data.paygateTier || data.tier;
+    console.log('[Flowboard] fetchCreditsInfo: tier =', tier);
+    if (tier && ws?.readyState === WebSocket.OPEN) {
+      ws.send(JSON.stringify({
+        type: 'credits_info',
+        paygate_tier: tier,
+        sku: data.sku || null,
+        credits: typeof data.credits === 'number' ? data.credits : null,
+      }));
+      console.log('[Flowboard] credits_info sent:', tier);
+    }
+  } catch (e) {
+    console.warn('[Flowboard] fetchCreditsInfo failed:', e?.message || e);
+  }
+}
 
 async function fetchAndPushUserInfo(token) {
   try {
@@ -133,10 +208,6 @@ async function fetchAndPushUserInfo(token) {
       return;
     }
     const info = await resp.json();
-    // In-memory only — DO NOT persist to chrome.storage.local. PII
-    // there is plaintext on disk and readable by other extensions
-    // with the `storage` permission. Lifetime = service-worker
-    // lifetime; rebuilt on next token rotation if the SW recycles.
     cachedUserInfo = info;
     console.log('[Flowboard] userinfo captured for', info?.email || '<no email>');
     if (ws?.readyState === WebSocket.OPEN) {
@@ -162,10 +233,19 @@ function connectToAgent() {
     return;
   }
 
-  ws.onopen = () => {
+  ws.onopen = async () => {
     console.log('[Flowboard] Connected to agent');
     chrome.alarms.clear('reconnect');
     setState('idle');
+
+    // Restore token from storage if not already in memory (e.g. after
+    // Chrome restart or service worker lifecycle restart).
+    if (!flowKey) {
+      const data = await chrome.storage.local.get(['flowKey', 'metrics', 'callbackSecret']);
+      if (data.flowKey) flowKey = data.flowKey;
+      if (data.metrics) Object.assign(metrics, data.metrics);
+      if (data.callbackSecret) callbackSecret = data.callbackSecret;
+    }
 
     const tokenAge = flowKey && metrics.tokenCapturedAt
       ? Date.now() - metrics.tokenCapturedAt
@@ -177,13 +257,15 @@ function connectToAgent() {
       tokenAge,
     }));
 
-    // Resend token immediately so agent can start without waiting for a capture
+    // Always send token_captured if we have a token — this ensures the
+    // agent gets the token even if the webRequest listener hasn't fired
+    // yet (e.g. after Chrome restart when Flow tab loads from cache).
     if (flowKey) {
+      console.log('[Flowboard] onopen: sending token_captured, len:', flowKey.length);
       ws.send(JSON.stringify({ type: 'token_captured', flowKey }));
+      // Also fetch credits info through the browser session
+      fetchCreditsInfo(flowKey);
     }
-    // Replay cached userinfo so the agent's AccountPanel populates on
-    // reconnect without waiting for the next token rotation. If we
-    // never resolved one yet but a token IS present, kick off a fetch.
     if (cachedUserInfo) {
       ws.send(JSON.stringify({ type: 'user_info', userInfo: cachedUserInfo }));
     } else if (flowKey) {
@@ -202,27 +284,23 @@ function connectToAgent() {
       } else if (msg.type === 'pong') {
         // keepalive response — no-op
       } else if (msg.type === 'logout') {
-        // Agent's /api/auth/logout invoked — drop in-memory identity
-        // so the next reconnect picks up fresh credentials. Don't
-        // touch chrome.storage (we don't persist identity there
-        // anyway, but be explicit). The WS stays open; agent will
-        // re-greet when the user logs back in.
         console.log('[Flowboard] logout requested by agent');
         cachedUserInfo = null;
         flowKey = null;
       } else if (msg.type === 'please_resend_userinfo') {
-        // Agent's /api/auth/scan asks us to re-fetch userinfo when
-        // its own cache is empty (e.g. agent restarted, or user
-        // clicked "Scan extension" before WS finished its first
-        // round-trip). If we have a cached profile, replay it
-        // immediately; otherwise refetch from Google's userinfo
-        // endpoint with whatever Bearer token we currently hold.
+        if (!flowKey) {
+          const data = await chrome.storage.local.get(['flowKey']);
+          if (data.flowKey) flowKey = data.flowKey;
+        }
+        if (flowKey && ws?.readyState === WebSocket.OPEN) {
+          ws.send(JSON.stringify({ type: 'token_captured', flowKey }));
+        } else {
+          captureTokenFromFlowTab();
+        }
         if (cachedUserInfo) {
           ws.send(JSON.stringify({ type: 'user_info', userInfo: cachedUserInfo }));
         } else if (flowKey) {
           fetchAndPushUserInfo(flowKey);
-        } else {
-          console.log('[Flowboard] please_resend_userinfo: no token captured yet');
         }
       } else if (msg.method === 'api_request') {
         await handleApiRequest(msg);
@@ -480,12 +558,9 @@ async function captureTokenFromFlowTab() {
   }
 
   try {
-    // Trigger a credentialed request so the page re-issues an Authorization header
-    await chrome.scripting.executeScript({
-      target: { tabId: tabs[0].id },
-      func:   () => fetch('/fx/tools/flow', { credentials: 'include' }),
-    });
-    console.log('[Flowboard] Token refresh triggered on Flow tab');
+    // Reload the Flow tab so Google Flow SPA re-authenticates and fires aisandbox-pa requests with Bearer token
+    await chrome.tabs.reload(tabs[0].id);
+    console.log('[Flowboard] Flow tab reloaded to refresh token');
   } catch (e) {
     console.error('[Flowboard] Token refresh failed:', e);
   }

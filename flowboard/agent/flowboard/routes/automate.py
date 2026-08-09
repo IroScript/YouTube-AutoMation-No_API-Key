@@ -193,7 +193,7 @@ def _ensure_extension_connected() -> None:
         raise HTTPException(
             503,
             "Chrome extension is not connected to the agent. "
-            "Open Flow in Profile 6 and reload the Flowboard Bridge "
+            "Open Flow in Profile 4 and reload the Flowboard Bridge "
             "extension, then retry.",
         )
 
@@ -327,7 +327,7 @@ async def automate_image_to_video(body: AutomateOneRequest):
         raise HTTPException(
             503,
             "paygate tier unknown — Chrome extension hasn't yet captured "
-            "the user's Flow plan. Open Flow in Profile 6 once, then retry.",
+            "the user's Flow plan. Open Flow in Profile 4 once, then retry.",
         )
 
     # ── 6. Image gen ────────────────────────────────────────────────────

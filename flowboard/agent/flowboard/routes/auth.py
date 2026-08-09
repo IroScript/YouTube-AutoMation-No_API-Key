@@ -56,6 +56,10 @@ def get_me() -> dict:
         # tier. Both null until the token-captured trigger fires.
         "sku": flow_client.sku,
         "credits": flow_client.credits,
+        # Diagnostic: expose internal token state (not the token itself)
+        "_debug_flow_key_len": len(flow_client._flow_key) if flow_client._flow_key else 0,
+        "_debug_flow_key_present": flow_client._flow_key_present,
+        "_debug_token_captured_at": flow_client._token_captured_at,
     }
 
 

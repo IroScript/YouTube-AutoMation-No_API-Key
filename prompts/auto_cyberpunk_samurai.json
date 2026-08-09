@@ -1,0 +1,6 @@
+{
+  "image_prompt": "a futuristic cyberpunk samurai warrior standing in rainy neo tokyo alleyway, glowing katana sword, dramatic blue and pink neon light, 8k cinematic",
+  "video_prompt": "rain drops fall in slow motion, samurai draws glowing katana, neon light flickers in background",
+  "camera_dynamic": "slow dolly forward + low angle shot",
+  "name": "auto_cyberpunk_samurai"
+}

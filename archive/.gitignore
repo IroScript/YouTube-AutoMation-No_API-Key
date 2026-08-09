@@ -1,0 +1,72 @@
+# =============================================================================
+# Flowboard + YouTube Automation — gitignore
+# =============================================================================
+
+# Python venv + cache
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# Node
+node_modules/
+.npm/
+.pnpm-store/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vite build output
+flowboard/frontend/dist/
+flowboard/frontend/.vite/
+
+# Playwright MCP / browser automation cache
+.playwright-mcp/
+playwright-report/
+test-results/
+.playwright/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Env + secrets (NEVER commit)
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets.json
+
+# Flowboard storage — generated boards, sqlite db, user media
+flowboard/storage/
+flowboard/agent/storage/
+flowboard/agent/data/
+flowboard/agent/*.db
+flowboard/agent/*.sqlite
+flowboard/agent/*.sqlite3
+
+# Logs
+*.log
+flowboard/agent/logs/
+flowboard/storage/logs/
+terminal-logs/
+
+# OS temp
+.tmp/
+.temp/
+
+# CloakBrowser bin (even though we removed the wrapper, defensive)
+bin/
+.cloakbrowser/

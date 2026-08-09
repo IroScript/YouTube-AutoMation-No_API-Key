@@ -143,7 +143,9 @@ class FlowClient:
         only the HTTP status / response shape, never headers.
         """
         if not self._flow_key:
+            logger.warning("fetch_paygate_tier: _flow_key is empty/None, skipping")
             return False
+        logger.info("fetch_paygate_tier: calling /v1/credits with token (len=%d)", len(self._flow_key))
         try:
             async with httpx.AsyncClient(timeout=10.0) as client:
                 resp = await client.get(
@@ -158,6 +160,23 @@ class FlowClient:
         except httpx.HTTPError as exc:
             logger.warning("fetch_paygate_tier transport error: %s", exc)
             return False
+        if resp.status_code == 401:
+            # Log the response body (not the token!) to help diagnose
+            # why Google rejected the token — could be expired, wrong
+            # account, or missing scopes.
+            try:
+                err_body = resp.text[:300]
+            except Exception:
+                err_body = "<unreadable>"
+            logger.warning(
+                "fetch_paygate_tier HTTP 401 — body: %s", err_body
+            )
+            if self._ws:
+                try:
+                    asyncio.create_task(self._ws.send(json.dumps({"method": "force_recapture", "params": {"reason": "expired_401"}})))
+                except Exception:
+                    pass
+            return False
         if resp.status_code != 200:
             logger.warning(
                 "fetch_paygate_tier returned HTTP %s (token may be expired)",
@@ -169,11 +188,12 @@ class FlowClient:
         except Exception:  # noqa: BLE001
             logger.warning("fetch_paygate_tier: response was not JSON")
             return False
-        tier = data.get("userPaygateTier")
-        if tier not in ("PAYGATE_TIER_ONE", "PAYGATE_TIER_TWO"):
+        tier = data.get("userPaygateTier") or data.get("paygateTier") or data.get("tier")
+        ALLOWED_PAYGATE_TIERS = {"PAYGATE_TIER_ONE", "PAYGATE_TIER_TWO"}
+        if not tier or tier not in ALLOWED_PAYGATE_TIERS:
             logger.warning(
-                "fetch_paygate_tier: response missing userPaygateTier (got %r)",
-                tier,
+                "fetch_paygate_tier: response missing or invalid userPaygateTier (got %r, data=%r)",
+                tier, data,
             )
             return False
         self._paygate_tier = tier
@@ -237,6 +257,23 @@ class FlowClient:
                     "user_info captured for %s",
                     self._user_info.get("email") or "<no email>",
                 )
+            return
+        if t == "credits_info":
+            # Credits info fetched by the extension through the browser
+            # session (server-side /v1/credits returns 401 because the
+            # ya29.* token is session-bound). The extension sends this
+            # after capturing a fresh token.
+            tier = data.get("paygate_tier")
+            if tier:
+                if self._paygate_tier != tier:
+                    logger.info("credits_info: tier=%s", tier)
+                self._paygate_tier = tier
+            sku = data.get("sku")
+            if isinstance(sku, str):
+                self._sku = sku
+            credits_val = data.get("credits")
+            if isinstance(credits_val, int):
+                self._credits = credits_val
             return
         if t == "pong":
             return

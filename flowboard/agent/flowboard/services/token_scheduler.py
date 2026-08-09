@@ -115,7 +115,7 @@ class TokenScheduler:
         if not self._flow_client.connected:
             raise TokenRefreshError(
                 "cannot refresh token: Chrome extension is not connected. "
-                "Open Flow in Profile 6 once to restore the WebSocket."
+                "Open Flow in Profile 4 once to restore the WebSocket."
             )
 
         age = self.token_age_s or 0.0

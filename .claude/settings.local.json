@@ -1,7 +1,17 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(git ls-remote *)",
+      "Bash(git fetch *)",
+      "Bash(curl -s https://api.github.com/repos/IroScript/YouTube-AutoMation-No_API-Key/commits/main)",
+      "Bash(Select-String -Pattern '\"sha\"')",
+      "Bash(Select-Object -First 1)",
+      "Read(//c/Users/Irak/.claude/**)",
+      "Bash(pwsh -NoProfile -Command \"echo \\\\$PROFILE; echo '---'; Test-Path \\\\$PROFILE; echo '---'; Get-Content \\\\$PROFILE -ErrorAction SilentlyContinue || echo 'Profile is empty or does not exist'\")",
+      "Bash(pwsh -NoProfile -Command \". 'C:\\\\Users\\\\Irak\\\\Documents\\\\PowerShell\\\\Microsoft.PowerShell_profile.ps1' 2>&1; echo '---PROFILE LOADED OK---'\")"
     ]
   }
 }

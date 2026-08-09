@@ -37,8 +37,7 @@
     .\automate_one.ps1 -PromptsFile .\prompts\astronaut.json -OutputDir D:\renders
 #>
 param(
-    [Parameter(Mandatory = $true)]
-    [string]$PromptsFile,
+    [string]$PromptsFile = ".\prompts\mystic_floating_island.json",
 
     [string]$OutputDir = ".\output",
 
@@ -54,8 +53,10 @@ if (-not (Test-Path $PromptsFile)) {
 
 # Resolve output dir relative to current working dir, NOT the script dir,
 # because the user typically cd's into a project folder and runs from there.
-$OutputDir = (Resolve-Path -LiteralPath $OutputDir -ErrorAction SilentlyContinue)?.Path
-if (-not $OutputDir) {
+$resolved = Resolve-Path -LiteralPath $OutputDir -ErrorAction SilentlyContinue
+if ($resolved) {
+    $OutputDir = $resolved.Path
+} else {
     New-Item -ItemType Directory -Path $OutputDir -Force | Out-Null
     $OutputDir = (Resolve-Path -LiteralPath $OutputDir).Path
 }
@@ -89,6 +90,8 @@ Write-Host "  video_prompt   : $($prompts.video_prompt.Substring(0, [Math]::Min(
 if ($prompts.camera_dynamic) {
     Write-Host "  camera_dynamic : $($prompts.camera_dynamic)"
 }
+Write-Host "[automate_one] Request sent to server. Generating image & 8-second Veo video..." -ForegroundColor Yellow
+Write-Host "              Please wait ~60-120 seconds for completion..." -ForegroundColor DarkYellow
 Write-Host ""
 
 # ─── Call endpoint ────────────────────────────────────────────────────────
@@ -97,13 +100,44 @@ try {
     $response = Invoke-RestMethod -Method POST -Uri $submitUrl -Body $bodyJson -ContentType "application/json" -TimeoutSec 600
 }
 catch {
-    $err = $_.Exception.Response
-    if ($err) {
-        $reader = New-Object System.IO.StreamReader($err.GetResponseStream())
-        $body_text = $reader.ReadToEnd()
-        Write-Host "[FAIL] HTTP $($err.StatusCode.Value__): $body_text" -ForegroundColor Red
+    $statusCode = ""
+    $body_text = ""
+    if ($_.ErrorDetails -and $_.ErrorDetails.Message) {
+        $body_text = $_.ErrorDetails.Message
+    }
+    if ($_.Exception -and $_.Exception.Response) {
+        $resp = $_.Exception.Response
+        try {
+            if ($resp.StatusCode) {
+                $statusCode = [int]$resp.StatusCode
+            }
+        } catch {}
+        if (-not $body_text) {
+            try {
+                if ($resp.Content -and $resp.Content.ReadAsStringAsync) {
+                    $body_text = $resp.Content.ReadAsStringAsync().Result
+                } elseif ($resp.GetType().GetMethod("GetResponseStream")) {
+                    $stream = $resp.GetResponseStream()
+                    if ($stream) {
+                        $reader = New-Object System.IO.StreamReader($stream)
+                        $body_text = $reader.ReadToEnd()
+                    }
+                }
+            } catch {}
+        }
+    }
+    if (-not $body_text) {
+        $body_text = $_.Exception.Message
+    }
+    if ($statusCode) {
+        Write-Host "[FAIL] HTTP ${statusCode}: $body_text" -ForegroundColor Red
     } else {
-        Write-Host "[FAIL] $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host "[FAIL] $body_text" -ForegroundColor Red
+    }
+    if ($statusCode -eq 503 -or $body_text -like "*Extension is not connected*") {
+        Write-Host ""
+        Write-Host "[TIP] Chrome Extension is not connected or Token is missing." -ForegroundColor Yellow
+        Write-Host "      Please run: .\start_everything_and_generate.ps1 -PromptsFile $PromptsFile" -ForegroundColor Cyan
     }
     exit 1
 }

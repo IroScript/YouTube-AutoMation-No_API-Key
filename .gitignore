@@ -61,6 +61,7 @@ flowboard/agent/*.sqlite3
 *.log
 flowboard/agent/logs/
 flowboard/storage/logs/
+terminal-logs/
 
 # OS temp
 .tmp/

@@ -36,8 +36,7 @@
     .\automate_batch.ps1 -PromptsFile .\prompts\batch.json -OutputDir D:\renders
 #>
 param(
-    [Parameter(Mandatory = $true)]
-    [string]$PromptsFile,
+    [string]$PromptsFile = ".\prompts\batch_3.json",
 
     [string]$OutputDir = ".\output",
 
@@ -51,8 +50,10 @@ if (-not (Test-Path $PromptsFile)) {
     throw "Prompts file not found: $PromptsFile"
 }
 
-$OutputDir = (Resolve-Path -LiteralPath $OutputDir -ErrorAction SilentlyContinue)?.Path
-if (-not $OutputDir) {
+$resolved = Resolve-Path -LiteralPath $OutputDir -ErrorAction SilentlyContinue
+if ($resolved) {
+    $OutputDir = $resolved.Path
+} else {
     New-Item -ItemType Directory -Path $OutputDir -Force | Out-Null
     $OutputDir = (Resolve-Path -LiteralPath $OutputDir).Path
 }
@@ -88,13 +89,44 @@ try {
     $batchResp = Invoke-RestMethod -Method POST -Uri $submitUrl -Body $bodyJson -ContentType "application/json" -TimeoutSec 1800
 }
 catch {
-    $err = $_.Exception.Response
-    if ($err) {
-        $reader = New-Object System.IO.StreamReader($err.GetResponseStream())
-        $body_text = $reader.ReadToEnd()
-        Write-Host "[FAIL] HTTP $($err.StatusCode.Value__): $body_text" -ForegroundColor Red
+    $statusCode = ""
+    $body_text = ""
+    if ($_.ErrorDetails -and $_.ErrorDetails.Message) {
+        $body_text = $_.ErrorDetails.Message
+    }
+    if ($_.Exception -and $_.Exception.Response) {
+        $resp = $_.Exception.Response
+        try {
+            if ($resp.StatusCode) {
+                $statusCode = [int]$resp.StatusCode
+            }
+        } catch {}
+        if (-not $body_text) {
+            try {
+                if ($resp.Content -and $resp.Content.ReadAsStringAsync) {
+                    $body_text = $resp.Content.ReadAsStringAsync().Result
+                } elseif ($resp.GetType().GetMethod("GetResponseStream")) {
+                    $stream = $resp.GetResponseStream()
+                    if ($stream) {
+                        $reader = New-Object System.IO.StreamReader($stream)
+                        $body_text = $reader.ReadToEnd()
+                    }
+                }
+            } catch {}
+        }
+    }
+    if (-not $body_text) {
+        $body_text = $_.Exception.Message
+    }
+    if ($statusCode) {
+        Write-Host "[FAIL] HTTP $statusCode: $body_text" -ForegroundColor Red
     } else {
-        Write-Host "[FAIL] $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host "[FAIL] $body_text" -ForegroundColor Red
+    }
+    if ($statusCode -eq 503 -or $body_text -like "*Extension is not connected*") {
+        Write-Host ""
+        Write-Host "[TIP] Chrome Extension is not connected or Token is missing." -ForegroundColor Yellow
+        Write-Host "      Please run: .\start_everything_and_generate.ps1 -PromptsFile $PromptsFile" -ForegroundColor Cyan
     }
     exit 1
 }

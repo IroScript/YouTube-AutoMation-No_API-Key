@@ -1,0 +1,7 @@
+
+    {
+      "image_prompt": "Create an experimental zero-point energy reactor designed by a future physics laboratory. Show an open five-layer reactor architecture with Layer 1 structural containment, Layer 2 superconducting magnetic field generators, Layer 3 ultra-high-vacuum isolation chamber, Layer 4 quantum energy measurement and conversion systems, and Layer 5 a suspended vacuum-energy interaction core. Include realistic scientific instruments, cryogenic systems, diagnostic lasers, control computers and measurement arrays. Every component should appear physically engineered rather than magical. Photorealistic hard science fiction, physically plausible materials, cinematic laboratory lighting, extremely detailed., 8k",
+      "video_prompt": "Use the generated image as the first frame. Exactly 8 seconds. Perform a slow controlled camera movement toward the reactor. Cryogenic systems activate, superconducting magnetic rings synchronize, measurement lasers sweep across the vacuum chamber, scientific instruments begin displaying rapidly changing readings, and the central vacuum interaction core develops a subtle controlled glow. Energy remains contained inside the reactor. Realistic experimental atmosphere, restrained visual effects, physically plausible motion, cinematic photorealism, one continuous shot.",
+      "camera_dynamic": "slow dolly forward + tilt up",
+      "name": "cyberpunk_city"
+    }

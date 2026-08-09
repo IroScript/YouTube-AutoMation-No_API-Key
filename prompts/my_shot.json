@@ -1,0 +1,6 @@
+{
+      "image_prompt": "a glowing golden dragon flying over snowy mountain peaks, cinematic 8k",
+      "video_prompt": "dragon breathes subtle smoke, wings flap slowly, snow drifts past camera",
+      "camera_dynamic": "slow dolly forward + low angle",
+      "name": "golden_dragon"
+    }

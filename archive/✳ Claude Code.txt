@@ -1,0 +1,35 @@
+  │   │       │   └── automate.py            ← নতুন (494 lines)
+  │   │       └── services/
+  │   │           ├── pipeline_defaults.py   ← নতুন (126 lines)
+  │   │           └── token_scheduler.py     ← নতুন (181 lines)
+  │   └── extension/
+  │       └── background.js                  ← আপডেট (+29 lines)
+  ├── automate_one.ps1                       ← নতুন
+  ├── automate_batch.ps1                     ← নতুন
+  ├── AUTOMATION.md                          ← নতুন
+  └── prompts/
+      ├── astronaut_cliff.json               ← নতুন
+      └── batch_3.json                       ← নতুন
+
+  ---
+  🔧 প্রতিটি ফাইলের কাজ
+
+  1. pipeline_defaults.py — 9:16, Veo 3.1 Lite, 8s সেকে ফিক্সডভ্যালু রা (লকড)
+  2. token_scheduler.py — Google Bearer token 50 মিনিপুরো হলেঅটোমে রিফ্রেশকরে
+  3. background.js — force_recapture WS message handler যোগকরে (agent থে token refresh trigger করারজন্য)
+  4. automate.py — /api/automate/image-to-video এবং/api/automate/batch endpoint তৈ করেছে
+  5. main.py — নতুন automate routerকে egister করে
+  6. automate_one.ps1 — একটা ভিডিও জেকরার PowerShell sciptগ
+  7. automate_batch.ps1 — একাধিক ভিডিও সিকোয়েন্সি করার script
+  8. prompts/ — স্যাম্পল prompt files (astronaut_cliff এবংbatch_3)
+  9. AUTOMATION.md — পুরোঅটোমেশন সিস্টেমের ডকুমেন্টেশন
+
+  ---
+  সারমর্ম: Puku CLI মো10টি ফাইল তৈরি/আপডেট করে নতুন Python ফাইল,2টিPowerShell script, 2টিJSON prompt, 1টিMarkdown ডকুমেন্ট,এবং2টিআগেরফাই আপডেট।
+
+✻ Cooked for 26s
+                                                                                         Update available! Run: winget upgrade Anthropic.ClaudeCode
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ⏸ manual mode on · ? for shortcuts · ← for agents

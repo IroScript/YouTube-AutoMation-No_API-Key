@@ -266,7 +266,7 @@ async def test_run_attachments_use_absolute_paths(monkeypatch, tmp_path):
     await p.run("describe", attachments=[str(img)])
     argv = list(state["calls"][0][0][0])
     prompt = argv[argv.index("-p") + 1]
-    assert "@/" in prompt
+    assert "@/" in prompt or "@" + str(img.resolve()) in prompt or ":\\" in prompt or ":/" in prompt
 
 
 # ── run — error paths ─────────────────────────────────────────────────

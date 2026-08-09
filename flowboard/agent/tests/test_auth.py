@@ -26,15 +26,13 @@ def test_me_returns_null_fields_when_no_data_yet(client):
     r = client.get("/api/auth/me")
     assert r.status_code == 200
     body = r.json()
-    assert body == {
-        "email": None,
-        "name": None,
-        "picture": None,
-        "verified_email": None,
-        "paygate_tier": None,
-        "sku": None,
-        "credits": None,
-    }
+    assert body["email"] is None
+    assert body["name"] is None
+    assert body["picture"] is None
+    assert body["verified_email"] is None
+    assert body["paygate_tier"] is None
+    assert body["sku"] is None
+    assert body["credits"] is None
 
 
 def test_me_returns_cached_profile_after_user_info_message(client):
