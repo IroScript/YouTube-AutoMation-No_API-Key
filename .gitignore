@@ -70,3 +70,15 @@ terminal-logs/
 # CloakBrowser bin (even though we removed the wrapper, defensive)
 bin/
 .cloakbrowser/
+
+# Media and video outputs (Do not commit binary video files)
+*.mp4
+*.webm
+*.mov
+*.avi
+*.mkv
+output/
+output_packaged/**/*.mp4
+archive/**/output/
+archive/**/media/
+archive/**/rendered_videos/
