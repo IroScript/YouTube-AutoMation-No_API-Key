@@ -1,0 +1,52 @@
+[
+{
+"id": 1,
+"title": "The Wheat Ocean Harvester",
+"description": "A colossal floating harvest platform spans the entire wheat field, supported by thousands of impossible telescoping legs. Its enormous underside combs, cuts, threshes, and sorts wheat simultaneously, turning the entire field into a moving sea of golden grain."
+},
+{
+"id": 2,
+"title": "Titan Sunwheel Irrigator",
+"description": "A wheel taller than skyscrapers rolls slowly across the wheat field while drawing water from an underground reservoir. Its gigantic rotating arms release perfectly measured curtains of water across miles of crops without disturbing the soil."
+},
+{
+"id": 3,
+"title": "Wheat Field Weather Engine",
+"description": "This mountain-sized machine hovers above the field and controls a localized atmosphere using enormous energy rings. It can summon rain, redirect sunlight, generate cooling clouds, and eliminate damaging storms over the wheat."
+},
+{
+"id": 4,
+"title": "The Infinite Furrow Walker",
+"description": "A colossal mechanical walker crosses the wheat field on legs kilometers long, with each foot containing precision farming machinery. Every step simultaneously aerates soil, removes weeds, plants replacement seeds, and deposits nutrients in perfectly spaced patterns."
+},
+{
+"id": 5,
+"title": "Golden Grain Conveyor City",
+"description": "A megastructure resembling a moving industrial city travels through the wheat field on gigantic continuous tracks. Conveyor belts beneath it harvest grain and transport it through towering internal silos, mills, dryers, and storage towers."
+},
+{
+"id": 6,
+"title": "Wheatfield Solar Crown",
+"description": "A colossal ring-shaped machine encircles the entire field high above the ground, covered in thousands of adjustable solar mirrors. It concentrates sunlight where needed for accelerated growth while harvesting excess solar energy to power the farm."
+},
+{
+"id": 7,
+"title": "The Root Network Excavator",
+"description": "An enormous subterranean machine moves beneath the wheat field like an artificial underground continent. It maps every root, redistributes water and nutrients through microscopic tunnels, and repairs damaged soil from below without removing the crops."
+},
+{
+"id": 8,
+"title": "Wheat Sentinel Colossus",
+"description": "A towering humanoid agricultural robot stands over the field with sensor arrays larger than houses. Its colossal hands can gently inspect entire sections of wheat while its body deploys swarms of tiny maintenance machines to fight pests and disease."
+},
+{
+"id": 9,
+"title": "The Atmospheric Grain Elevator",
+"description": "A vertical megastructure rises from the center of the wheat field into the clouds and connects to enormous vacuum tubes stretching across the farmland. Harvested wheat is lifted through these tubes directly from the field into high-altitude storage chambers."
+},
+{
+"id": 10,
+"title": "Chrono-Harvest Megamachine",
+"description": "This impossible titan occupies the entire wheat field and manipulates localized time around different crop zones. It can accelerate growth, pause drought damage, and synchronize every stalk to mature simultaneously for one gigantic precision harvest."
+}
+]

@@ -1,0 +1,310 @@
+COLOSSAL CORN THRESHER TITAN — 10-Level Escalation System
+LEVEL 1 — BASIC
+IMAGE 01
+
+5-Layer Open Montage Structure
+
+Layer 1 — Subject: A colossal agricultural titan, the Colossal Corn Thresher Titan, towering over a vast cornfield, designed as an enormous futuristic combine harvester with a broad front harvesting assembly, powerful intake funnels, and gigantic mechanical wheels.
+
+Layer 2 — Environment: Endless mature corn rows beneath a dramatic rural sky, thousands of corn stalks bending around the machine, dust and loose corn leaves suspended in the air, distant farmland on the horizon.
+
+Layer 3 — Architecture: Heavy industrial chassis, oversized harvesting blades, rotating intake drums, conveyor belts, shelling chambers, reinforced armor panels, enormous engine housings, visible mechanical joints and hydraulic pistons.
+
+Layer 4 — Energy/Physics: Subtle blue-white power glows around the engine cores and harvesting mechanisms, faint electromagnetic arcs, swirling dust influenced by the machine's enormous airflow, realistic mechanical physics.
+
+Layer 5 — Cinematic Presentation: Ultra-wide low-angle hero shot emphasizing immense scale, photorealistic materials, golden-hour sunlight, volumetric dust, cinematic depth of field, dramatic shadows, physically accurate reflections, hyper-detailed 16K cinematic render.
+
+VIDEO 01
+
+Exactly 8 seconds. Use IMAGE 01 as the first frame/reference image. Photorealistic cinematic animation, smooth continuous motion, no cuts, exactly 8 seconds.
+
+Second 1 [0:00-0:01] — HUD Popup Text: "STEP 1: ENGAGE HARVESTER" — The titan's enormous front harvesting drum powers on and begins rotating through the corn.
+
+Second 2 [0:01-0:02] — HUD Popup Text: "STEP 2: INTAKE STALKS" — Thousands of corn stalks are pulled toward the intake by powerful synchronized mechanical rollers.
+
+Second 3 [0:02-0:03] — HUD Popup Text: "STEP 3: SHELL CORN" — Internal threshing drums accelerate, stripping kernels from the harvested ears.
+
+Second 4 [0:03-0:04] — HUD Popup Text: "STEP 4: SEPARATE GRAIN" — Vibrating separators and conveyors sort kernels from husks and plant debris.
+
+Second 5 [0:04-0:05] — HUD Popup Text: "STEP 5: TRANSFER GRAIN" — A massive articulated grain conveyor carries clean corn into the titan's central storage chamber.
+
+Seconds 6-8 [0:05-0:08]: HUD text fades away as the camera pushes dramatically toward the active threshing mechanism, revealing synchronized gears, flying kernels, and stabilized machine operation in an extreme close-up.
+
+LEVEL 2 — MORE STRUCTURE
+IMAGE 02
+
+5-Layer Open Montage Structure
+
+Layer 1 — Subject: A substantially larger Colossal Corn Thresher Titan, now resembling a mobile agricultural megastructure, with multiple harvesting heads spanning the width of an entire field.
+
+Layer 2 — Environment: A gigantic corn plantation stretching to the horizon, dense rows disappearing beneath the titan, clouds of golden agricultural dust illuminated by sunlight.
+
+Layer 3 — Architecture: Multi-stage harvesting chassis, six enormous intake assemblies, armored processing towers, exposed conveyors, giant shelling cylinders, articulated hydraulic limbs, reinforced wheel modules, elevated grain silos.
+
+Layer 4 — Energy/Physics: Bright cyan energy conduits run through the chassis, electromagnetic fields stabilize the rotating threshers, airflow vortices visibly pull corn inward, glowing engine cores radiate heat distortion.
+
+Layer 5 — Cinematic Presentation: Low aerial three-quarter composition showing the titan's full architecture and field-scale footprint, realistic industrial textures, cinematic sunlight, atmospheric perspective, volumetric haze, sharp mechanical detail, 16K photorealistic render.
+
+VIDEO 02
+
+Exactly 8 seconds. Use IMAGE 02 as the first frame/reference image. Smooth continuous cinematic motion, no cuts.
+
+Second 1 — HUD Popup Text: "STEP 1: DEPLOY HARVEST HEADS" — Six enormous harvesting assemblies unfold across the field and synchronize their rotation.
+
+Second 2 — HUD Popup Text: "STEP 2: DRAW IN CORN" — Intake rollers generate powerful airflow, pulling entire waves of corn stalks into the machine.
+
+Second 3 — HUD Popup Text: "STEP 3: THRESH KERNELS" — Multi-stage drums rapidly rotate, separating kernels from ears and husks.
+
+Second 4 — HUD Popup Text: "STEP 4: FILTER MATERIAL" — Mechanical screens and vibrating separators eject leaves and husks while clean kernels flow inward.
+
+Second 5 — HUD Popup Text: "STEP 5: FILL SILOS" — Multiple conveyors transfer glowing streams of harvested corn into enormous internal storage silos.
+
+Seconds 6-8: HUD fades as the camera dives closer between two harvesting towers, ending on a maximum close-up of rapidly synchronized shelling drums and cascading kernels.
+
+LEVEL 3 — TITANIC
+IMAGE 03
+
+5-Layer Open Montage Structure
+
+Layer 1 — Subject: A mountain-sized Colossal Corn Thresher Titan dominating the landscape, its harvesting span wider than a city block, built as a gigantic autonomous agricultural war-machine aesthetic without weapons.
+
+Layer 2 — Environment: A continental-scale cornfield beneath towering storm clouds, flattened vegetation forming visible harvesting lanes behind the titan, massive dust plumes rising into the atmosphere.
+
+Layer 3 — Architecture: Cathedral-scale mechanical chassis, enormous tracked undercarriage, dozens of harvesting cylinders, elevated processing towers, rotating shelling turbines, kilometer-long conveyor structures, reinforced structural ribs and maintenance platforms.
+
+Layer 4 — Energy/Physics: Pulsing electric-blue power networks, magnetic stabilization rings, visible airflow streams, heat shimmer around engines, kernels moving through high-speed processing chambers with physically accurate trajectories.
+
+Layer 5 — Cinematic Presentation: Extreme low-angle shot from within the cornfield, titan disappearing toward the clouds, dramatic backlighting, atmospheric scale, volumetric clouds, realistic metal weathering, cinematic lens compression, ultra-photorealistic 16K render.
+
+VIDEO 03
+
+Exactly 8 seconds. Use IMAGE 03 as the first frame/reference image.
+
+Second 1 — HUD Popup Text: "STEP 1: LOWER TITAN INTAKES" — Gigantic harvesting arms descend into the corn canopy with controlled hydraulic motion.
+
+Second 2 — HUD Popup Text: "STEP 2: VACUUM THE ROWS" — Massive intake tunnels generate visible airflow vortices that sweep thousands of stalks inward.
+
+Second 3 — HUD Popup Text: "STEP 3: INDUSTRIAL THRESHING" — Multiple turbine-sized threshing chambers spin at extreme speed.
+
+Second 4 — HUD Popup Text: "STEP 4: GRAIN PURIFICATION" — Layered separators isolate kernels while debris is expelled in controlled streams.
+
+Second 5 — HUD Popup Text: "STEP 5: MEGA-STORAGE" — Enormous conveyors elevate harvested corn into towering storage chambers.
+
+Seconds 6-8: HUD disappears while the camera accelerates toward the titan's central processing tower, finishing in an extreme close-up of interlocking industrial machinery.
+
+LEVEL 4 — COLOSSAL
+IMAGE 04
+
+5-Layer Open Montage Structure
+
+Layer 1 — Subject: A skyscraper-scale Colossal Corn Thresher Titan, an agricultural megastructure with multiple vertically stacked harvesting and processing levels.
+
+Layer 2 — Environment: An immense corn basin surrounded by distant mountains, atmospheric haze, turbulent clouds, enormous harvesting trails, and golden dust illuminated by shafts of sunlight.
+
+Layer 3 — Architecture: Vertical processing towers, gigantic articulated harvesting mandibles, rotating intake turbines, transparent armored processing chambers, hundreds of conveyors, autonomous maintenance drones, colossal tracked foundations.
+
+Layer 4 — Energy/Physics: Luminous cyan plasma-like energy circulating through transparent power conduits, magnetic rings around threshing turbines, localized gravity-like airflow effects, sparks and electromagnetic arcs.
+
+Layer 5 — Cinematic Presentation: Epic aerial perspective transitioning visually from field level to tower height, high dynamic range lighting, physically based materials, realistic atmospheric scattering, deep cinematic perspective, spectacular scale, 16K photorealism.
+
+VIDEO 04
+
+Exactly 8 seconds. Use IMAGE 04 as the first frame/reference image.
+
+Second 1 — HUD Popup Text: "STEP 1: AWAKEN THE CORE" — Central power systems illuminate from bottom to top as harvesting systems activate.
+
+Second 2 — HUD Popup Text: "STEP 2: OPEN THE MANDIBLES" — Gigantic articulated intake structures unfold and sweep through the corn.
+
+Second 3 — HUD Popup Text: "STEP 3: ACCELERATE THRESHERS" — Multiple luminous threshing turbines rapidly reach operating speed.
+
+Second 4 — HUD Popup Text: "STEP 4: MAGNETIC SEPARATION" — Energy-assisted separators direct kernels and agricultural waste into different channels.
+
+Second 5 — HUD Popup Text: "STEP 5: ASCEND THE GRAIN" — Vertical conveyors launch harvested corn upward through the processing tower.
+
+Seconds 6-8: HUD fades as the camera rockets toward a transparent processing chamber, ending with an intense close-up of kernels flowing through glowing machinery.
+
+LEVEL 5 — MEGA LEVEL
+IMAGE 05
+
+5-Layer Open Montage Structure
+
+Layer 1 — Subject: A colossal planetary-scale agricultural titan, the Colossal Corn Thresher Titan now approaching the size of a mountain range, with an enormous continuous harvesting front.
+
+Layer 2 — Environment: An endless ocean of corn stretching across the visible landscape, immense weather systems above, agricultural dust forming towering atmospheric columns behind the machine.
+
+Layer 3 — Architecture: Gigantic segmented chassis, hundreds of harvesting modules, massive cylindrical shelling reactors, continent-spanning conveyor networks, rotating storage drums, autonomous processing towers and enormous structural arches.
+
+Layer 4 — Energy/Physics: Vast luminous energy lattice beneath the chassis, magnetic field arcs connecting harvesting modules, gravitational-looking airflow distortions, particles and kernels following controlled electromagnetic trajectories.
+
+Layer 5 — Cinematic Presentation: Satellite-like cinematic perspective mixed with a dramatic foreground close-up, extreme scale contrast, realistic atmospheric curvature, powerful sunlight, volumetric clouds, cinematic color grading, extraordinary mechanical detail, 16K photorealistic render.
+
+VIDEO 05
+
+Exactly 8 seconds. Use IMAGE 05 as the first frame/reference image.
+
+Second 1 — HUD Popup Text: "STEP 1: FIELD-SCALE DEPLOYMENT" — Hundreds of harvesting modules simultaneously unfold across the corn ocean.
+
+Second 2 — HUD Popup Text: "STEP 2: ATMOSPHERIC INTAKE" — Vast airflow channels sweep enormous quantities of corn toward the processing front.
+
+Second 3 — HUD Popup Text: "STEP 3: MULTI-TURBINE THRESHING" — Giant shelling turbines activate in synchronized waves.
+
+Second 4 — HUD Popup Text: "STEP 4: QUANTUM-GRADE SORTING" — Energy-assisted separation channels rapidly distinguish kernels, husks, leaves, and debris.
+
+Second 5 — HUD Popup Text: "STEP 5: CONTINENTAL STORAGE" — Massive streams of corn disappear into gigantic cylindrical storage structures.
+
+Seconds 6-8: HUD fades as the camera plunges from the machine's exterior into the processing architecture, reaching a maximum close-up of microscopic kernel separation within colossal machinery.
+
+LEVEL 6 — HYPER TITAN
+IMAGE 06
+
+5-Layer Open Montage Structure
+
+Layer 1 — Subject: A hyper-dimensional Colossal Corn Thresher Titan, vastly larger than conventional megastructures, with an almost futuristic city-like silhouette and a harvesting front resembling a mechanical horizon.
+
+Layer 2 — Environment: Corn fields spanning an enormous planetary plain, strange luminous agricultural dust, turbulent skies, gigantic shadows cast across kilometers of crops.
+
+Layer 3 — Architecture: Layer upon layer of mechanical processing decks, colossal rotating intake rings, suspended harvesting platforms, kilometer-scale conveyors, enormous shelling reactors, autonomous maintenance swarms and structural megabridges.
+
+Layer 4 — Energy/Physics: Bright quantum-blue energy cores, magnetic confinement rings, visible quantum particle streams, localized gravitational distortions, glowing field boundaries bending dust and corn trajectories.
+
+Layer 5 — Cinematic Presentation: Monumental low-angle perspective with impossible depth, foreground corn stalks towering over the viewer, distant machine architecture fading into atmospheric haze, photorealistic lighting, cinematic volumetrics, extreme detail, 16K render.
+
+VIDEO 06
+
+Exactly 8 seconds. Use IMAGE 06 as the first frame/reference image.
+
+Second 1 — HUD Popup Text: "STEP 1: QUANTUM POWER-UP" — The titan's energy cores ignite and illuminate its enormous harvesting architecture.
+
+Second 2 — HUD Popup Text: "STEP 2: GRAVITY INTAKE" — Controlled gravitational airflow bends the surrounding corn toward the machine.
+
+Second 3 — HUD Popup Text: "STEP 3: HYPER-THRESHING" — Multi-ring threshers rotate at impossible apparent speed while remaining mechanically believable.
+
+Second 4 — HUD Popup Text: "STEP 4: FIELD SEPARATION" — Magnetic fields guide kernels through separate luminous processing streams.
+
+Second 5 — HUD Popup Text: "STEP 5: QUANTUM STORAGE" — Harvested corn flows into enormous glowing storage chambers.
+
+Seconds 6-8: HUD fades as the camera moves through the machine's energy lattice and reaches an extreme close-up of the central quantum threshing assembly.
+
+LEVEL 7 — PLANETARY
+IMAGE 07
+
+5-Layer Open Montage Structure
+
+Layer 1 — Subject: A planetary-scale Colossal Corn Thresher Titan whose body extends beyond the horizon, combining agricultural machinery with a vast mobile megastructure.
+
+Layer 2 — Environment: Entire continents covered in perfectly organized corn fields, planetary cloud systems, massive harvesting corridors, atmospheric dust spirals and distant oceans.
+
+Layer 3 — Architecture: Horizon-spanning harvesting wings, mountain-sized threshing engines, orbital-looking elevator conveyors, enormous rotating processing rings, distributed storage towers and autonomous mechanical swarms.
+
+Layer 4 — Energy/Physics: Planetary magnetic fields visibly interacting with the titan, enormous blue energy arcs, gravitational compression zones, quantum particle streams and luminous field geometry surrounding the harvesting system.
+
+Layer 5 — Cinematic Presentation: Epic orbital perspective showing the titan relative to the curvature of the planet, cinematic sunlight along the horizon, atmospheric scattering, realistic cloud shadows, immense depth, photorealistic science-fiction aesthetic, 16K cinematic render.
+
+VIDEO 07
+
+Exactly 8 seconds. Use IMAGE 07 as the first frame/reference image.
+
+Second 1 — HUD Popup Text: "STEP 1: PLANETARY ALIGNMENT" — Distributed harvesting wings rotate into synchronized alignment across the landscape.
+
+Second 2 — HUD Popup Text: "STEP 2: GLOBAL INTAKE" — Atmospheric airflow and mechanical intake systems draw corn toward hundreds of processing zones.
+
+Second 3 — HUD Popup Text: "STEP 3: PLANETARY THRESHING" — Mountain-scale threshing engines activate in a wave across the field.
+
+Second 4 — HUD Popup Text: "STEP 4: ENERGY SEPARATION" — Magnetic and quantum fields sort the harvested material with extraordinary precision.
+
+Second 5 — HUD Popup Text: "STEP 5: ORBITAL STORAGE" — Grain streams travel through gigantic vertical conveyors toward elevated storage rings.
+
+Seconds 6-8: HUD fades as the camera descends from orbital scale toward one active threshing reactor, ending in an extreme close-up of its rotating internal mechanism.
+
+LEVEL 8 — COSMIC LEVEL
+IMAGE 08
+
+5-Layer Open Montage Structure
+
+Layer 1 — Subject: A cosmic Colossal Corn Thresher Titan, an impossible agricultural megastructure spanning an enormous portion of a planet, with harvesting structures resembling gigantic mechanical continents.
+
+Layer 2 — Environment: Planetary corn oceans, enormous storm systems, glowing atmospheric layers, distant moons and a star-filled sky visible beyond the horizon.
+
+Layer 3 — Architecture: Vast harvesting rings, city-sized threshing chambers, continent-scale conveyor systems, colossal energy reactors, floating processing platforms and enormous mechanical arches extending into the sky.
+
+Layer 4 — Energy/Physics: Quantum energy rivers, magnetic field webs, gravitational lensing around the machine, luminous plasma conduits, particle streams and localized spacetime distortions around the processing cores.
+
+Layer 5 — Cinematic Presentation: Cosmic wide shot with the titan silhouetted against space, then strong foreground mechanical detail, physically accurate star illumination, atmospheric glow, cinematic HDR, extreme depth and photorealistic materials, 16K maximum-detail render.
+
+VIDEO 08
+
+Exactly 8 seconds. Use IMAGE 08 as the first frame/reference image.
+
+Second 1 — HUD Popup Text: "STEP 1: COSMIC HARVEST DEPLOYMENT" — Giant harvesting rings unfold across the planetary corn fields.
+
+Second 2 — HUD Popup Text: "STEP 2: ATMOSPHERIC VACUUM" — Controlled atmospheric currents funnel massive quantities of corn toward the titan.
+
+Second 3 — HUD Popup Text: "STEP 3: QUANTUM THRESHING" — Energy rings accelerate around gigantic shelling chambers.
+
+Second 4 — HUD Popup Text: "STEP 4: PARTICLE SORTING" — Quantum fields separate kernels from agricultural matter at extraordinary speed.
+
+Second 5 — HUD Popup Text: "STEP 5: COSMIC STORAGE" — Vast streams of harvested kernels travel through glowing megaconduits into planetary storage structures.
+
+Seconds 6-8: HUD text fades completely as the camera dives through a luminous processing ring and locks onto the central threshing core in maximum close-up.
+
+LEVEL 9 — TRANSCENDENT
+IMAGE 09
+
+5-Layer Open Montage Structure
+
+Layer 1 — Subject: A transcendent Colossal Corn Thresher Titan whose architecture appears to exceed planetary engineering, transforming from agricultural machine into a vast self-organizing harvesting intelligence.
+
+Layer 2 — Environment: A surreal planetary corn landscape beneath auroras and cosmic skies, enormous agricultural patterns visible from space, atmospheric energy storms surrounding the titan.
+
+Layer 3 — Architecture: Impossible interlocking mechanical megastructures, rotating planetary harvesting rings, floating threshing towers, recursive conveyor networks, self-reconfiguring shelling chambers and vast geometric storage complexes.
+
+Layer 4 — Energy/Physics: Quantum fields visibly folding around the machine, luminous magnetic geometry, controlled gravitational wells, spacetime ripples, energy particles traveling through impossible pathways, kernels temporarily suspended in field matrices.
+
+Layer 5 — Cinematic Presentation: Monumental cosmic cinematography, impossible perspective, enormous scale contrast, photorealistic metal and agricultural textures, dramatic rim lighting, deep atmospheric perspective, physically plausible particle effects despite the fantastical technology, 16K ultra-cinematic render.
+
+VIDEO 09
+
+Exactly 8 seconds. Use IMAGE 09 as the first frame/reference image.
+
+Second 1 — HUD Popup Text: "STEP 1: SELF-ASSEMBLE" — The titan's harvesting structures dynamically rearrange themselves into optimal field-processing formations.
+
+Second 2 — HUD Popup Text: "STEP 2: DIMENSIONAL INTAKE" — Corn stalks are drawn into enormous luminous intake portals surrounded by controlled field distortions.
+
+Second 3 — HUD Popup Text: "STEP 3: TRANSCENDENT THRESHING" — Rotating shelling structures fold through impossible geometric paths while processing the harvest.
+
+Second 4 — HUD Popup Text: "STEP 4: QUANTUM PURIFICATION" — Kernels pass through layered energy matrices while unwanted material is separated with microscopic precision.
+
+Second 5 — HUD Popup Text: "STEP 5: INFINITE STORAGE" — Harvested corn flows through glowing megaconduits into seemingly endless internal storage architecture.
+
+Seconds 6-8: HUD fades as the camera dives through several layers of impossible machinery, finally locking onto a single kernel moving through the central quantum processor in an extreme macro-mechanical close-up.
+
+LEVEL 10 — ALIEN LEVEL / MAXIMUM
+IMAGE 10
+
+5-Layer Open Montage Structure
+
+Layer 1 — Subject: The ultimate Colossal Corn Thresher Titan, an incomprehensibly gigantic alien agricultural megastructure spanning planetary and orbital scale, simultaneously resembling a colossal combine harvester, mechanical continent, cosmic processing organism, and impossible industrial titan; countless harvesting appendages sweep across entire corn continents.
+
+Layer 2 — Environment: A vast alien world completely dominated by endless corn fields, multiple atmospheric layers, gigantic storms, luminous auroras, distant moons, orbital debris, enormous shadows, and glowing agricultural landscapes extending beyond the horizon.
+
+Layer 3 — Architecture: Impossible biomechanical-mechanical chassis, planetary harvesting mandibles, orbital threshing rings, mountain-sized shelling reactors, self-repairing conveyors, floating processing towers, recursive mechanical structures, gigantic transparent storage chambers and thousands of autonomous harvesting units.
+
+Layer 4 — Energy/Physics: Reality-bending quantum energy fields, planetary magnetic webs, gravitational wells, luminous plasma rivers, spacetime ripples, dimensional portals, quantum particle storms, electromagnetic arcs and millions of corn kernels suspended momentarily within synchronized field matrices; energy behaves consistently and remains physically cinematic rather than abstract.
+
+Layer 5 — Cinematic Presentation: Maximum-scale cinematic composition beginning at ground level with a single corn stalk in the foreground and the titan rising beyond the atmosphere, transitioning visually toward orbital scale, extreme volumetric lighting, realistic atmospheric scattering, spectacular reflections, microscopic mechanical detail, cosmic HDR lighting, enormous depth of field, photorealistic alien-industrial aesthetic, 16K ultra-photorealistic maximum-detail cinematic render.
+
+VIDEO 10
+
+Exactly 8 seconds. Use IMAGE 10 as the first frame/reference image. The generated image is the first frame/reference image. Photorealistic cinematic render, smooth continuous motion, no cuts, physically coherent motion, exactly 8 seconds.
+
+Second 1 [0:00-0:01] — HUD Popup Text: "STEP 1: AWAKEN THE TITAN" — The entire planetary megastructure activates simultaneously; alien-mechanical harvesting appendages unfold across the corn continents while colossal energy cores ignite from the ground to orbit.
+
+Second 2 [0:01-0:02] — HUD Popup Text: "STEP 2: PLANETARY VACUUM" — Gigantic intake fields generate controlled atmospheric vortices, drawing enormous waves of corn stalks toward thousands of synchronized harvesting mouths.
+
+Second 3 [0:02-0:03] — HUD Popup Text: "STEP 3: QUANTUM THRESHING" — Planetary shelling reactors accelerate, their rotating rings processing vast streams of corn while luminous quantum fields separate kernels from ears, husks, and stalks.
+
+Second 4 [0:03-0:04] — HUD Popup Text: "STEP 4: DIMENSIONAL SEPARATION" — Harvested material travels through layered magnetic and quantum processing fields; clean kernels follow precise glowing trajectories while unwanted biomass exits through controlled channels.
+
+Second 5 [0:04-0:05] — HUD Popup Text: "STEP 5: COSMIC GRAIN STORAGE" — Enormous streams of clean corn race through planetary and orbital megaconduits into colossal transparent storage chambers, filling them with glowing golden grain.
+
+Seconds 6-8 [0:05-0:08]: All HUD text smoothly fades away. The camera performs one uninterrupted, accelerating cinematic push from planetary scale toward the titan's central processor, passing gigantic gears, magnetic rings, quantum conduits, flying kernels, microscopic shelling mechanisms, and luminous energy fields, ultimately achieving a maximum extreme close-up of a single corn kernel being perfectly separated inside the alien threshing core while the entire machine stabilizes into a seamless synchronized operating state. No cuts, no transitions, no text after 0:05, smooth continuous motion, photorealistic cinematic lighting, realistic physics, extreme detail, exactly 8 seconds.

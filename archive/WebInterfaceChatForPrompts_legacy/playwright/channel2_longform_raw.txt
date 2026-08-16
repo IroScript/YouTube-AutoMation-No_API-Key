@@ -1,0 +1,306 @@
+[
+{
+"shot_number": 1,
+"time_start_sec": 0,
+"time_end_sec": 6,
+"shot_title": "Cosmic Rice Titan Emergence",
+"image_prompt": "Subject: an alien-level Rice Titan Harvester larger than a planet, living-mechanical agricultural intelligence; Environment: deep cosmic space with distant galaxies and a small blue-green planet beneath it; Architecture: colossal biomechanical shell, continents of machinery, enormous segmented harvesting limbs; Energy/Physics: gravitational waves, blue plasma veins, orbital debris bending toward the titan; Cinematic Presentation: ultra-wide 16:9 establishing shot, monumental scale, photorealistic sci-fi, cinematic volumetric lighting, extreme detail.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera begins far beyond the titan and slowly pushes forward through stars toward its immense silhouette. 0:01 distant galaxies drift behind the colossal body; 0:02 the titan rotates imperceptibly; 0:03 planetary-scale armor plates illuminate; 0:04 gravitational distortion ripples across space; 0:05 harvesting limbs unfold; 0:06 the full cosmic-scale Rice Titan dominates the frame."
+},
+{
+"shot_number": 2,
+"time_start_sec": 6,
+"time_end_sec": 12,
+"shot_title": "Planetary Scale Revelation",
+"image_prompt": "Subject: Rice Titan towering over a complete Earth-sized planet; Environment: starfield, nebulae, orbital clouds and satellites; Architecture: ring-like agricultural machinery encircling the titan; Energy/Physics: immense gravity field warping starlight; Cinematic Presentation: dramatic side profile, high contrast, deep-space scale comparison, 16:9 cinematic composition.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera tracks sideways along the titan's curved hull while the planet passes beneath it. 0:01 planetary horizon appears; 0:02 the titan eclipses half the planet; 0:03 colossal rings rotate; 0:04 atmospheric clouds spiral under gravitational influence; 0:05 distant stars bend around the structure; 0:06 camera reveals the impossible scale."
+},
+{
+"shot_number": 3,
+"time_start_sec": 12,
+"time_end_sec": 18,
+"shot_title": "Living Mechanical Core",
+"image_prompt": "Subject: gigantic organic-mechanical core pulsing like a living brain; Environment: interior chamber spanning thousands of kilometers; Architecture: metallic ribs, vascular conduits, crystalline processors and biomechanical tissue; Energy/Physics: synchronized electromagnetic pulses and luminous neural pathways; Cinematic Presentation: sweeping interior perspective, eerie alien beauty, cinematic blue-gold illumination, ultra-detailed 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera flies through the titan's internal neural cathedral. 0:01 glowing conduits pulse; 0:02 biomechanical membranes flex; 0:03 crystalline processors awaken sequentially; 0:04 energy races through neural pathways; 0:05 the central core contracts like a heartbeat; 0:06 a massive pulse illuminates the chamber."
+},
+{
+"shot_number": 4,
+"time_start_sec": 18,
+"time_end_sec": 24,
+"shot_title": "Planetary Stabilization Towers",
+"image_prompt": "Subject: immense stabilization towers rising from the titan's surface; Environment: an entire planet beneath the machinery; Architecture: needle-like biomechanical towers connected by luminous orbital bridges; Energy/Physics: gravity-control beams anchoring tectonic plates and atmosphere; Cinematic Presentation: low-angle monumental shot, storm clouds, radiant beams, epic sci-fi realism, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera ascends beside one stabilization tower from cloud level to orbit. 0:01 tower activates; 0:02 blue energy climbs its spine; 0:03 adjacent towers ignite; 0:04 beams connect across the planet; 0:05 atmospheric storms calm beneath the field; 0:06 the global stabilization network becomes visible."
+},
+{
+"shot_number": 5,
+"time_start_sec": 24,
+"time_end_sec": 30,
+"shot_title": "Global Agricultural Command Network",
+"image_prompt": "Subject: continent-sized command lattice controlling agricultural ecosystems; Environment: planetary surface covered in rice fields; Architecture: luminous geometric networks spanning continents; Energy/Physics: orbital signals and energy pulses synchronizing harvest cycles; Cinematic Presentation: orbital view, glowing agricultural grid, cinematic atmospheric depth, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera sweeps around the planet as the agricultural network activates. 0:01 first continent glows; 0:02 signal spreads across rice fields; 0:03 neighboring continents illuminate; 0:04 orbital nodes synchronize; 0:05 harvest zones pulse in sequence; 0:06 the entire planet becomes a coordinated agricultural system."
+},
+{
+"shot_number": 6,
+"time_start_sec": 30,
+"time_end_sec": 36,
+"shot_title": "Wormhole Grain Intake",
+"image_prompt": "Subject: gigantic wormhole intake portal built into the titan's side; Environment: interstellar void with a distant rice-growing planet aligned behind it; Architecture: concentric biomechanical rings surrounding a dimensional gateway; Energy/Physics: spiraling spacetime, blue-white wormhole energy and streams of grain; Cinematic Presentation: frontal cosmic shot, surreal scale, dramatic lens effects, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera approaches the intake portal as spacetime twists around it. 0:01 rings rotate; 0:02 wormhole opens; 0:03 stars stretch into luminous trails; 0:04 harvested rice grains begin streaming through; 0:05 the grain stream becomes a colossal torrent; 0:06 the portal stabilizes at maximum intensity."
+},
+{
+"shot_number": 7,
+"time_start_sec": 36,
+"time_end_sec": 42,
+"shot_title": "Dimensional Harvest Corridor",
+"image_prompt": "Subject: endless tunnel carrying rice through folded dimensions; Environment: abstract hyperspace filled with floating rice grains; Architecture: biomechanical tunnel walls with rotating rings and organic machinery; Energy/Physics: warped spacetime currents guiding grain particles; Cinematic Presentation: high-speed forward perspective, luminous tunnel, cinematic motion depth, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera races through the dimensional corridor alongside the grain stream. 0:01 rice grains accelerate; 0:02 tunnel rings pass overhead; 0:03 dimensional walls ripple; 0:04 streams merge into larger currents; 0:05 energy pulses propel the harvest; 0:06 the tunnel opens toward the titan's interior."
+},
+{
+"shot_number": 8,
+"time_start_sec": 42,
+"time_end_sec": 48,
+"shot_title": "Planetary Rice Intake Mouth",
+"image_prompt": "Subject: enormous alien harvesting mouth consuming fields of rice; Environment: endless rice plains beneath atmospheric clouds; Architecture: layered mechanical jaws, organic cutting teeth and conveyor membranes; Energy/Physics: controlled wind vortices and luminous field-sensing particles; Cinematic Presentation: low aerial perspective, colossal machinery, golden rice against dark metal, cinematic realism, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera flies just above rice fields toward the gigantic intake mouth. 0:01 rice waves bend toward the machine; 0:02 harvesting teeth descend; 0:03 fields sweep inward; 0:04 golden grain becomes a flowing river; 0:05 conveyor membranes accelerate the harvest; 0:06 camera enters the intake."
+},
+{
+"shot_number": 9,
+"time_start_sec": 48,
+"time_end_sec": 54,
+"shot_title": "Biomechanical Harvesting Limb",
+"image_prompt": "Subject: continent-length harvesting arm with articulated alien joints; Environment: planetary atmosphere above rice plains; Architecture: layered armor, rotating harvest blades, flexible organic-metal tendons; Energy/Physics: magnetic field stabilizers and glowing energy channels; Cinematic Presentation: dynamic tracking shot, immense scale, golden-hour atmosphere, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera tracks alongside the harvesting limb as it sweeps across the landscape. 0:01 joints unfold; 0:02 blades rotate; 0:03 arm descends; 0:04 rice fields bend in synchronized waves; 0:05 the limb sweeps upward carrying enormous grain volumes; 0:06 it retracts toward the titan."
+},
+{
+"shot_number": 10,
+"time_start_sec": 54,
+"time_end_sec": 60,
+"shot_title": "Atmospheric Field Control",
+"image_prompt": "Subject: titan controlling planetary weather around agricultural zones; Environment: massive rice-growing continent with storms and clouds; Architecture: atmospheric towers and hovering field regulators; Energy/Physics: ionized blue grids redirecting winds and rainfall; Cinematic Presentation: aerial cinematic panorama, storm-to-calm transition, spectacular volumetric clouds, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera flies through a storm toward the titan's control grid. 0:01 lightning flashes; 0:02 atmospheric nodes activate; 0:03 wind spirals reorganize; 0:04 clouds separate over rice fields; 0:05 controlled rain descends; 0:06 sunlight breaks through over the stabilized harvest zone."
+},
+{
+"shot_number": 11,
+"time_start_sec": 60,
+"time_end_sec": 66,
+"shot_title": "Quantum Grain Scanner",
+"image_prompt": "Subject: enormous quantum scanning array examining individual rice grains; Environment: interior agricultural laboratory; Architecture: crystalline arches, floating sensor rings and biomechanical inspection chambers; Energy/Physics: holographic particle fields measuring moisture, density and genetic signatures; Cinematic Presentation: macro-to-macrocosmic composition, cyan holograms, scientific alien aesthetic, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera glides through the scanning chamber toward a single illuminated grain. 0:01 sensor rings rotate; 0:02 grain floats upward; 0:03 holographic layers appear; 0:04 genetic patterns expand across the chamber; 0:05 quality metrics synchronize; 0:06 the grain is classified and released."
+},
+{
+"shot_number": 12,
+"time_start_sec": 66,
+"time_end_sec": 72,
+"shot_title": "Rice Sorting Megastructure",
+"image_prompt": "Subject: colossal automated rice sorting facility inside the titan; Environment: vast industrial cavern; Architecture: thousands of conveyor streams, robotic separators and crystalline sorting towers; Energy/Physics: gravity-based separation fields and laser identification grids; Cinematic Presentation: symmetrical wide shot, immense depth, glowing machinery, cinematic industrial sci-fi, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera moves down the central conveyor corridor. 0:01 rice streams enter; 0:02 scanning lasers sweep across them; 0:03 sorting gates redirect grain; 0:04 defective particles separate; 0:05 premium grain streams merge; 0:06 synchronized conveyors carry the harvest deeper inside."
+},
+{
+"shot_number": 13,
+"time_start_sec": 72,
+"time_end_sec": 78,
+"shot_title": "Living Conveyor Arteries",
+"image_prompt": "Subject: organic-metal arteries transporting rice through the titan; Environment: gigantic internal biological-mechanical body; Architecture: translucent conduits, muscular walls and glowing junctions; Energy/Physics: rhythmic contractions propel grain like a circulatory system; Cinematic Presentation: close tracking shot inside a translucent conduit, surreal biomechanical realism, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera follows rice grains traveling through a living conveyor artery. 0:01 grains enter; 0:02 walls contract; 0:03 luminous energy follows the flow; 0:04 grains accelerate; 0:05 branching conduits redirect them; 0:06 camera exits into a vast processing chamber."
+},
+{
+"shot_number": 14,
+"time_start_sec": 78,
+"time_end_sec": 84,
+"shot_title": "Cosmic Dehydration Chamber",
+"image_prompt": "Subject: planetary-scale grain drying chamber; Environment: immense spherical processing vault; Architecture: concentric heating rings, vapor collectors and suspended grain platforms; Energy/Physics: controlled stellar-like heat fields evaporating moisture; Cinematic Presentation: grand interior shot, orange-gold energy contrasting blue machinery, cinematic volumetric haze, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera circles suspended grain platforms as the drying system activates. 0:01 heating rings glow; 0:02 grain begins rotating; 0:03 moisture vapor rises; 0:04 vapor condenses into collectors; 0:05 heat intensity stabilizes; 0:06 dried grain flows onward."
+},
+{
+"shot_number": 15,
+"time_start_sec": 84,
+"time_end_sec": 90,
+"shot_title": "Rice Refinement Reactor",
+"image_prompt": "Subject: alien reactor refining harvested rice at molecular precision; Environment: deep interior reactor hall; Architecture: floating circular platforms, energy coils and crystalline refinement chambers; Energy/Physics: controlled molecular fields polishing and separating grain; Cinematic Presentation: dramatic centered composition, white-blue plasma, intricate detail, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera slowly rotates around the refinement reactor. 0:01 raw grain enters; 0:02 energy rings activate; 0:03 molecular fields surround the grain; 0:04 impurities dissolve into separate streams; 0:05 polished grains glow briefly; 0:06 refined rice exits in perfect formation."
+},
+{
+"shot_number": 16,
+"time_start_sec": 90,
+"time_end_sec": 96,
+"shot_title": "Miniature Universe Belly Factory",
+"image_prompt": "Subject: impossible miniature universe contained inside the titan's belly factory; Environment: pocket cosmos with galaxies, stars and tiny planetary systems; Architecture: enormous biomechanical chamber surrounding the miniature universe; Energy/Physics: controlled cosmic expansion powers agricultural processing; Cinematic Presentation: awe-inspiring wide interior, cosmic colors, surreal scale, photorealistic sci-fi, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera pulls back from a galaxy to reveal it contained inside the titan's belly. 0:01 stars swirl; 0:02 galaxy rotates; 0:03 camera retreats; 0:04 multiple galaxies appear; 0:05 the chamber walls emerge; 0:06 the miniature universe is revealed as the factory's power core."
+},
+{
+"shot_number": 17,
+"time_start_sec": 96,
+"time_end_sec": 102,
+"shot_title": "Universe-Powered Processing",
+"image_prompt": "Subject: miniature galaxies feeding energy into rice-processing machinery; Environment: cosmic factory interior; Architecture: star-fed conduits, orbital processors and giant grain reactors; Energy/Physics: stellar plasma converted into stable agricultural energy; Cinematic Presentation: sweeping cosmic-industrial composition, vivid nebulae, cinematic contrast, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera travels along a luminous conduit from a miniature star toward the processing machinery. 0:01 stellar plasma erupts; 0:02 energy enters conduit; 0:03 conduits pulse; 0:04 reactors illuminate; 0:05 grain processing accelerates; 0:06 the entire factory synchronizes."
+},
+{
+"shot_number": 18,
+"time_start_sec": 102,
+"time_end_sec": 108,
+"shot_title": "Cosmic Grain Reservoir",
+"image_prompt": "Subject: gigantic internal reservoir holding mountains of refined rice; Environment: cavern larger than a solar system; Architecture: stacked spherical silos, floating storage platforms and colossal gates; Energy/Physics: gravity fields suspend grain masses in organized layers; Cinematic Presentation: extreme wide shot, golden grain mountains, blue structural lighting, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera descends into the reservoir from a high overlook. 0:01 storage gates open; 0:02 grain cascades downward; 0:03 floating piles stabilize; 0:04 gravity fields shimmer; 0:05 storage platforms rotate into alignment; 0:06 camera reveals endless reserves."
+},
+{
+"shot_number": 19,
+"time_start_sec": 108,
+"time_end_sec": 114,
+"shot_title": "Autonomous Repair Swarm",
+"image_prompt": "Subject: trillions of tiny alien repair machines surrounding the titan; Environment: damaged exterior armor in deep space; Architecture: microscopic drones rebuilding biomechanical plating; Energy/Physics: nanofabrication beams and self-organizing metallic particles; Cinematic Presentation: macro cinematic detail transitioning to planetary scale, glowing swarm, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera starts close on a damaged armor plate and pulls outward. 0:01 repair drones arrive; 0:02 particles assemble; 0:03 fractures close; 0:04 new plating grows; 0:05 swarm expands across the surface; 0:06 camera reveals millions of repairs happening simultaneously."
+},
+{
+"shot_number": 20,
+"time_start_sec": 114,
+"time_end_sec": 120,
+"shot_title": "Self-Aware Agricultural Brain",
+"image_prompt": "Subject: central artificial consciousness represented as a gigantic luminous alien neural sphere; Environment: cathedral-like computational chamber; Architecture: branching neural towers and rotating data rings; Energy/Physics: vast streams of agricultural data flowing like stars; Cinematic Presentation: symmetrical frontal shot, majestic intelligence aesthetic, cyan-gold lighting, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera slowly approaches the central consciousness. 0:01 neural sphere pulses; 0:02 data streams appear; 0:03 thousands of nodes activate; 0:04 agricultural maps rotate around it; 0:05 the sphere brightens; 0:06 a synchronized command pulse radiates outward."
+},
+{
+"shot_number": 21,
+"time_start_sec": 120,
+"time_end_sec": 126,
+"shot_title": "Global Harvest Prediction",
+"image_prompt": "Subject: AI projecting a planetary harvest simulation; Environment: holographic Earth surrounded by future agricultural timelines; Architecture: enormous floating prediction rings; Energy/Physics: probability fields and glowing data trajectories; Cinematic Presentation: futuristic command-center panorama, holographic realism, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera circles the holographic planet. 0:01 weather patterns appear; 0:02 crop growth accelerates in simulation; 0:03 harvest probabilities branch; 0:04 optimal paths highlight; 0:05 unwanted outcomes fade; 0:06 one perfect global harvest trajectory remains."
+},
+{
+"shot_number": 22,
+"time_start_sec": 126,
+"time_end_sec": 132,
+"shot_title": "Planetary Rice Wave",
+"image_prompt": "Subject: synchronized harvest rippling across an entire planet; Environment: continents covered in golden rice fields; Architecture: colossal harvesting machines moving along orbital paths; Energy/Physics: coordinated energy pulses sweep across fields; Cinematic Presentation: orbital cinematic view, golden planetary surface, epic scale, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera orbits the planet as a luminous harvest wave travels around it. 0:01 first continent activates; 0:02 wave crosses oceans; 0:03 fields transform into flowing grain streams; 0:04 second hemisphere activates; 0:05 global harvest converges; 0:06 the planet glows with synchronized agricultural activity."
+},
+{
+"shot_number": 23,
+"time_start_sec": 132,
+"time_end_sec": 138,
+"shot_title": "Orbital Harvest Rings",
+"image_prompt": "Subject: multiple colossal orbital harvesting rings surrounding the planet; Environment: deep space with the Rice Titan looming beyond; Architecture: concentric mechanical rings covered in intake ports; Energy/Physics: gravity-assisted grain transfer lanes; Cinematic Presentation: majestic orbital panorama, dramatic scale, crisp sci-fi realism, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera flies between rotating orbital rings. 0:01 first ring turns; 0:02 harvesting pods activate; 0:03 grain streams rise from the planet; 0:04 streams enter orbital channels; 0:05 rings synchronize rotation; 0:06 grain is redirected toward the titan."
+},
+{
+"shot_number": 24,
+"time_start_sec": 138,
+"time_end_sec": 144,
+"shot_title": "Gravity Grain Elevator",
+"image_prompt": "Subject: vertical gravity elevator transporting rice from planet to titan; Environment: atmospheric boundary extending into orbit; Architecture: luminous elevator shaft with enormous stabilization anchors; Energy/Physics: anti-gravity fields lifting continuous grain columns; Cinematic Presentation: vertical perspective from clouds to stars, epic depth, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera races upward beside the gravity elevator. 0:01 grain begins rising; 0:02 clouds fall below; 0:03 atmosphere thins; 0:04 stars appear; 0:05 grain column accelerates toward orbit; 0:06 titan machinery fills the horizon."
+},
+{
+"shot_number": 25,
+"time_start_sec": 144,
+"time_end_sec": 150,
+"shot_title": "Alien Grain Forge",
+"image_prompt": "Subject: colossal forge converting refined rice into ultra-durable stored food material; Environment: volcanic-looking internal factory; Architecture: molten channels, crystalline molds and mechanical press towers; Energy/Physics: controlled plasma heating and molecular compression; Cinematic Presentation: fiery industrial epic, orange-blue contrast, cinematic haze, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera moves toward the central forge. 0:01 rice enters molten channels; 0:02 plasma ignites; 0:03 molecular compression begins; 0:04 material forms into uniform grains; 0:05 cooling fields activate; 0:06 finished product streams into containers."
+},
+{
+"shot_number": 26,
+"time_start_sec": 150,
+"time_end_sec": 156,
+"shot_title": "Infinite Packaging Array",
+"image_prompt": "Subject: endless alien packaging machines preparing harvested rice; Environment: vast factory floor disappearing into darkness; Architecture: thousands of robotic packaging towers and luminous containers; Energy/Physics: autonomous magnetic handling and precision energy seals; Cinematic Presentation: symmetrical tracking shot, futuristic industrial grandeur, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera glides down a central aisle. 0:01 empty containers arrive; 0:02 rice fills them; 0:03 robotic arms seal packages; 0:04 labels illuminate with alien symbols; 0:05 finished packages move onto conveyors; 0:06 endless production lines stretch into the distance."
+},
+{
+"shot_number": 27,
+"time_start_sec": 156,
+"time_end_sec": 162,
+"shot_title": "Dimensional Storage Vault",
+"image_prompt": "Subject: storage vault containing rice reserves in folded dimensions; Environment: black cosmic chamber with portals to parallel storage spaces; Architecture: floating vault doors and geometric containment structures; Energy/Physics: pocket dimensions holding impossible quantities of grain; Cinematic Presentation: mysterious wide shot, dark cosmic palette with golden highlights, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera approaches a vault door as it unfolds into multiple dimensions. 0:01 geometric locks rotate; 0:02 portal opens; 0:03 endless grain warehouses appear beyond; 0:04 additional portals activate; 0:05 storage dimensions multiply; 0:06 camera looks into an apparently infinite reserve."
+},
+{
+"shot_number": 28,
+"time_start_sec": 162,
+"time_end_sec": 168,
+"shot_title": "Wormhole Distribution Gate",
+"image_prompt": "Subject: enormous distribution gateway connecting the titan to distant worlds; Environment: interstellar space filled with wormhole destinations; Architecture: ring-shaped portal station with alien navigation towers; Energy/Physics: stable wormholes opening toward multiple inhabited planets; Cinematic Presentation: wide cosmic vista, multicolored portals, cinematic spectacle, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera rotates around the distribution gate. 0:01 first portal opens; 0:02 second portal ignites; 0:03 distant planets appear inside portals; 0:04 grain shipments launch; 0:05 multiple wormholes synchronize; 0:06 the network becomes a glowing cosmic web."
+},
+{
+"shot_number": 29,
+"time_start_sec": 168,
+"time_end_sec": 174,
+"shot_title": "Planetary Seed Deployment",
+"image_prompt": "Subject: titan deploying microscopic agricultural seed capsules across barren worlds; Environment: alien planet with deserts and rocky continents; Architecture: orbital deployment arrays and hovering agricultural pods; Energy/Physics: precision atmospheric entry trajectories and terraforming pulses; Cinematic Presentation: orbital-to-surface cinematic composition, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera follows seed capsules descending from orbit. 0:01 capsules launch; 0:02 atmospheric entry begins; 0:03 heat shields glow; 0:04 capsules land across barren terrain; 0:05 terraforming pulses spread; 0:06 tiny green agricultural zones emerge."
+},
+{
+"shot_number": 30,
+"time_start_sec": 174,
+"time_end_sec": 180,
+"shot_title": "Alien Rice Ecosystem",
+"image_prompt": "Subject: flourishing alien rice ecosystem created by the titan; Environment: vast emerald fields under unusual twin suns; Architecture: biomechanical irrigation towers integrated into the landscape; Energy/Physics: luminous water cycles and atmospheric stabilization fields; Cinematic Presentation: sweeping landscape shot, vibrant colors, cinematic naturalism blended with sci-fi, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera flies low over the newly established rice ecosystem. 0:01 water channels activate; 0:02 seedlings sway; 0:03 fields rapidly expand; 0:04 irrigation towers pulse; 0:05 twin suns illuminate mature rice; 0:06 the landscape becomes a vast productive agricultural world."
+},
+{
+"shot_number": 31,
+"time_start_sec": 180,
+"time_end_sec": 186,
+"shot_title": "Titanic Harvesting Mandibles",
+"image_prompt": "Subject: enormous mandible-like harvesting structures opening around a planetary field; Environment: atmospheric clouds and golden rice plains; Architecture: layered alien jaws with rotating cutting mechanisms; Energy/Physics: localized gravity compression and aerodynamic field control; Cinematic Presentation: dramatic low-angle shot, terrifyingly majestic machinery, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera pulls backward as the gigantic harvesting mandibles open. 0:01 mechanical jaws separate; 0:02 internal blades spin; 0:03 atmospheric pressure shifts; 0:04 rice fields bend inward; 0:05 mandibles close around the harvest zone; 0:06 harvested grain erupts into intake channels."
+},
+{
+"shot_number": 32,
+"time_start_sec": 186,
+"time_end_sec": 192,
+"shot_title": "Planetary Harvest Compression",
+"image_prompt": "Subject: massive processing chamber compressing astronomical quantities of rice; Environment: spherical mechanical interior; Architecture: enormous pistons, containment rings and grain reservoirs; Energy/Physics: gravity compression fields shaping grain flow; Cinematic Presentation: kinetic industrial close-wide shot, glowing gold and blue, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera circles the compression chamber. 0:01 grain floods inward; 0:02 pistons descend; 0:03 gravity fields intensify; 0:04 grain streams compress into dense currents; 0:05 pistons retract; 0:06 processed grain launches into high-speed conduits."
+},
+{
+"shot_number": 33,
+"time_start_sec": 192,
+"time_end_sec": 198,
+"shot_title": "Cosmic Agricultural Synchronization",
+"image_prompt": "Subject: Rice Titan synchronizing countless agricultural worlds; Environment: galaxy-scale panorama containing multiple planets; Architecture: luminous wormhole network linking worlds to the titan; Energy/Physics: synchronized command pulses crossing interstellar distances; Cinematic Presentation: epic cosmic wide shot, glowing network geometry, cinematic depth, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera pulls outward from one planet to reveal dozens of connected worlds. 0:01 first world pulses; 0:02 signal jumps through wormhole; 0:03 second world activates; 0:04 more worlds synchronize; 0:05 network expands across the galaxy; 0:06 titan becomes the central node."
+},
+{
+"shot_number": 34,
+"time_start_sec": 198,
+"time_end_sec": 204,
+"shot_title": "Stellar Power Harvest",
+"image_prompt": "Subject: titan absorbing controlled energy from surrounding stars; Environment: dense starfield and nebula; Architecture: gigantic energy collectors extending like wings; Energy/Physics: stellar plasma streams converted into clean power; Cinematic Presentation: majestic silhouette against multiple stars, radiant energy, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera arcs around the titan as stellar collectors deploy. 0:01 collector panels unfold; 0:02 stars brighten behind them; 0:03 plasma streams curve inward; 0:04 energy enters collector channels; 0:05 the titan's veins illuminate; 0:06 the entire machine glows with stellar power."
+},
+{
+"shot_number": 35,
+"time_start_sec": 204,
+"time_end_sec": 210,
+"shot_title": "Full Titan Activation",
+"image_prompt": "Subject: fully awakened Rice Titan Harvester at maximum operational power; Environment: cosmic panorama with planets, wormholes and galaxies; Architecture: every tower, ring, limb and intake fully deployed; Energy/Physics: enormous gravitational, plasma and dimensional fields synchronized; Cinematic Presentation: ultimate heroic wide shot, spectacular scale, photorealistic cinematic sci-fi, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera rapidly pulls back to reveal the entire active titan. 0:01 towers ignite; 0:02 rings accelerate; 0:03 wormholes open; 0:04 harvesting limbs spread; 0:05 planetary fields synchronize; 0:06 the titan reaches maximum luminous power."
+},
+{
+"shot_number": 36,
+"time_start_sec": 210,
+"time_end_sec": 216,
+"shot_title": "The Galaxy Harvest Network",
+"image_prompt": "Subject: Rice Titan commanding a galaxy-wide agricultural network; Environment: spiral galaxy filled with connected agricultural planets; Architecture: dimensional routes radiating from the titan; Energy/Physics: synchronized wormhole currents and gravitational communication pulses; Cinematic Presentation: enormous galactic-scale composition, cosmic grandeur, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera zooms from the titan outward across the galaxy. 0:01 nearby planets connect; 0:02 distant wormholes ignite; 0:03 agricultural worlds pulse; 0:04 network branches across spiral arms; 0:05 the entire galaxy becomes interconnected; 0:06 the titan remains visible at the center."
+},
+{
+"shot_number": 37,
+"time_start_sec": 216,
+"time_end_sec": 222,
+"shot_title": "Beyond Planetary Agriculture",
+"image_prompt": "Subject: Rice Titan transcending conventional planetary agriculture and becoming a cosmic agricultural intelligence; Environment: vast universe with galaxies and dimensional horizons; Architecture: titan surrounded by infinite stabilization towers and portal structures; Energy/Physics: spacetime folds into orderly agricultural geometries; Cinematic Presentation: transcendent cosmic finale setup, surreal realism, deep blacks and radiant gold-blue energy, 16:9.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera retreats continuously from the titan into larger cosmic scales. 0:01 planet-sized details disappear; 0:02 entire star systems become visible; 0:03 galaxies surround the titan; 0:04 dimensional structures emerge; 0:05 spacetime bends into geometric patterns; 0:06 the titan appears as a cosmic agricultural intelligence."
+},
+{
+"shot_number": 38,
+"time_start_sec": 222,
+"time_end_sec": 228,
+"shot_title": "Infinite Rice Titan",
+"image_prompt": "Subject: the ultimate alien-level Rice Titan Harvester, larger than worlds and embodying an infinite living agricultural intelligence; Environment: endless cosmic expanse containing galaxies, wormholes, planets and miniature universes; Architecture: planetary stabilization towers, colossal harvesting limbs, wormhole intakes and universe-scale belly factory all visible as one integrated organism; Energy/Physics: gravitational waves, stellar plasma, dimensional portals and synchronized cosmic energy forming a radiant halo; Cinematic Presentation: final ultra-wide 16:9 masterpiece, overwhelming sense of scale, majestic photorealistic science fiction, dramatic volumetric light, deep cosmic atmosphere, awe-inspiring finale.",
+"video_prompt": "8-Second 16:9 Video Prompt: Camera performs a final slow pullback while the Rice Titan reaches absolute maximum operation. 0:01 every stabilization tower illuminates; 0:02 wormholes bloom around the titan; 0:03 planetary harvesting networks activate; 0:04 miniature-universe factory glows through the translucent core; 0:05 galaxies and grain streams orbit in synchronized motion; 0:06 the titan emits one immense cosmic pulse and becomes a luminous silhouette against the infinite universe."
+}
+]

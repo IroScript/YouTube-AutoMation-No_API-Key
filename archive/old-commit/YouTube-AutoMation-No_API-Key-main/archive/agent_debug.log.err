@@ -1,0 +1,168 @@
+INFO:     Started server process [9760]
+INFO:     Waiting for application startup.
+2026-08-05 00:26:52,505 [INFO] flowboard.main: flowboard agent started (ws:9223 + worker)
+2026-08-05 00:26:52,516 [INFO] flowboard.worker.processor: worker started
+INFO:     Application startup complete.
+2026-08-05 00:26:52,518 [INFO] websockets.server: server listening on 127.0.0.1:9223
+2026-08-05 00:26:52,518 [INFO] flowboard.services.ws_server: WebSocket server listening on ws://127.0.0.1:9223
+INFO:     Uvicorn running on http://127.0.0.1:8101 (Press CTRL+C to quit)
+2026-08-05 00:26:53,086 [INFO] websockets.server: connection open
+2026-08-05 00:26:53,087 [INFO] flowboard.services.ws_server: extension connected from ('127.0.0.1', 54385)
+2026-08-05 00:26:53,090 [INFO] flowboard.services.flow_client: extension_ready flowKeyPresent=True
+2026-08-05 00:26:53,091 [INFO] flowboard.services.flow_client: token_captured (len=414)
+2026-08-05 00:26:53,092 [INFO] flowboard.services.flow_client: fetch_paygate_tier: calling /v1/credits with token (len=414)
+2026-08-05 00:26:54,586 [INFO] httpx: HTTP Request: GET https://aisandbox-pa.googleapis.com/v1/credits?key=AIzaSyBtrm0o5ab1c-Ec8ZuLcGt3oJAA5VWt3pY "HTTP/1.1 401 Unauthorized"
+2026-08-05 00:26:54,591 [WARNING] flowboard.services.flow_client: fetch_paygate_tier HTTP 401 — body: {
+  "error": {
+    "code": 401,
+    "message": "Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+2026-08-05 00:27:24,418 [INFO] flowboard.services.ws_server: extension disconnected
+2026-08-05 00:27:30,161 [INFO] websockets.server: connection open
+2026-08-05 00:27:30,162 [INFO] flowboard.services.ws_server: extension connected from ('127.0.0.1', 54424)
+2026-08-05 00:27:30,302 [INFO] flowboard.services.flow_client: extension_ready flowKeyPresent=False
+2026-08-05 00:29:21,573 [INFO] flowboard.services.ws_server: extension disconnected
+2026-08-05 00:29:27,018 [INFO] websockets.server: connection open
+2026-08-05 00:29:27,020 [INFO] flowboard.services.ws_server: extension connected from ('127.0.0.1', 54503)
+2026-08-05 00:29:27,048 [INFO] flowboard.services.flow_client: extension_ready flowKeyPresent=True
+2026-08-05 00:29:27,049 [INFO] flowboard.services.flow_client: fetch_paygate_tier: calling /v1/credits with token (len=414)
+2026-08-05 00:29:29,399 [INFO] httpx: HTTP Request: GET https://aisandbox-pa.googleapis.com/v1/credits?key=AIzaSyBtrm0o5ab1c-Ec8ZuLcGt3oJAA5VWt3pY "HTTP/1.1 401 Unauthorized"
+2026-08-05 00:29:29,399 [WARNING] flowboard.services.flow_client: fetch_paygate_tier HTTP 401 — body: {
+  "error": {
+    "code": 401,
+    "message": "Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+2026-08-05 00:32:06,242 [INFO] flowboard.services.ws_server: extension disconnected
+2026-08-05 00:32:11,828 [INFO] websockets.server: connection open
+2026-08-05 00:32:11,830 [INFO] flowboard.services.ws_server: extension connected from ('127.0.0.1', 54537)
+2026-08-05 00:32:11,875 [INFO] flowboard.services.flow_client: extension_ready flowKeyPresent=True
+2026-08-05 00:32:11,881 [INFO] flowboard.services.flow_client: fetch_paygate_tier: calling /v1/credits with token (len=414)
+2026-08-05 00:32:13,609 [INFO] httpx: HTTP Request: GET https://aisandbox-pa.googleapis.com/v1/credits?key=AIzaSyBtrm0o5ab1c-Ec8ZuLcGt3oJAA5VWt3pY "HTTP/1.1 401 Unauthorized"
+2026-08-05 00:32:13,617 [WARNING] flowboard.services.flow_client: fetch_paygate_tier HTTP 401 — body: {
+  "error": {
+    "code": 401,
+    "message": "Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+2026-08-05 01:17:51,089 [INFO] flowboard.services.ws_server: extension disconnected
+2026-08-05 01:18:32,264 [INFO] websockets.server: connection open
+2026-08-05 01:18:32,264 [INFO] flowboard.services.ws_server: extension connected from ('127.0.0.1', 54671)
+2026-08-05 01:18:32,301 [INFO] flowboard.services.flow_client: extension_ready flowKeyPresent=False
+2026-08-05 01:19:15,528 [INFO] flowboard.services.ws_server: extension disconnected
+2026-08-05 01:19:15,707 [INFO] websockets.server: connection open
+2026-08-05 01:19:15,708 [INFO] flowboard.services.ws_server: extension connected from ('127.0.0.1', 54684)
+2026-08-05 01:19:15,715 [INFO] flowboard.services.flow_client: extension_ready flowKeyPresent=True
+2026-08-05 01:19:15,716 [INFO] flowboard.services.flow_client: fetch_paygate_tier: calling /v1/credits with token (len=414)
+2026-08-05 01:19:16,890 [INFO] flowboard.services.ws_server: extension disconnected
+2026-08-05 01:19:16,943 [INFO] websockets.server: connection open
+2026-08-05 01:19:16,943 [INFO] flowboard.services.ws_server: extension connected from ('127.0.0.1', 54696)
+2026-08-05 01:19:16,968 [INFO] flowboard.services.flow_client: extension_ready flowKeyPresent=True
+2026-08-05 01:19:16,969 [INFO] flowboard.services.flow_client: fetch_paygate_tier: calling /v1/credits with token (len=414)
+2026-08-05 01:19:17,842 [INFO] flowboard.services.ws_server: extension disconnected
+2026-08-05 01:19:18,053 [INFO] websockets.server: connection open
+2026-08-05 01:19:18,054 [INFO] flowboard.services.ws_server: extension connected from ('127.0.0.1', 54701)
+2026-08-05 01:19:18,060 [INFO] flowboard.services.flow_client: extension_ready flowKeyPresent=True
+2026-08-05 01:19:18,061 [INFO] flowboard.services.flow_client: fetch_paygate_tier: calling /v1/credits with token (len=414)
+2026-08-05 01:19:18,897 [INFO] httpx: HTTP Request: GET https://aisandbox-pa.googleapis.com/v1/credits?key=AIzaSyBtrm0o5ab1c-Ec8ZuLcGt3oJAA5VWt3pY "HTTP/1.1 401 Unauthorized"
+2026-08-05 01:19:18,897 [INFO] httpx: HTTP Request: GET https://aisandbox-pa.googleapis.com/v1/credits?key=AIzaSyBtrm0o5ab1c-Ec8ZuLcGt3oJAA5VWt3pY "HTTP/1.1 401 Unauthorized"
+2026-08-05 01:19:18,913 [WARNING] flowboard.services.flow_client: fetch_paygate_tier HTTP 401 — body: {
+  "error": {
+    "code": 401,
+    "message": "Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+2026-08-05 01:19:18,913 [WARNING] flowboard.services.flow_client: fetch_paygate_tier HTTP 401 — body: {
+  "error": {
+    "code": 401,
+    "message": "Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+2026-08-05 01:19:19,290 [INFO] httpx: HTTP Request: GET https://aisandbox-pa.googleapis.com/v1/credits?key=AIzaSyBtrm0o5ab1c-Ec8ZuLcGt3oJAA5VWt3pY "HTTP/1.1 401 Unauthorized"
+2026-08-05 01:19:19,297 [WARNING] flowboard.services.flow_client: fetch_paygate_tier HTTP 401 — body: {
+  "error": {
+    "code": 401,
+    "message": "Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+2026-08-05 01:20:55,640 [INFO] flowboard.services.claude_cli: claude_cli: SUCCESS - found claude at C:\Users\Irak\AppData\Local\Microsoft\WinGet\Links\claude.EXE
+2026-08-05 01:20:55,640 [INFO] flowboard.services.claude_cli: claude_cli: available=True
+2026-08-05 01:21:01,674 [WARNING] flowboard.services.llm.gemini: gemini: probe timed out
+2026-08-05 01:21:01,674 [INFO] flowboard.services.llm.gemini: gemini: available=False
+2026-08-05 01:21:01,709 [WARNING] flowboard.services.llm.cli_utils: codex: not found in PATH or npm locations, falling back to 'codex'
+2026-08-05 01:21:01,766 [INFO] flowboard.services.flow_client: fetch_paygate_tier: calling /v1/credits with token (len=414)
+2026-08-05 01:21:03,027 [INFO] httpx: HTTP Request: GET https://aisandbox-pa.googleapis.com/v1/credits?key=AIzaSyBtrm0o5ab1c-Ec8ZuLcGt3oJAA5VWt3pY "HTTP/1.1 401 Unauthorized"
+2026-08-05 01:21:03,034 [WARNING] flowboard.services.flow_client: fetch_paygate_tier HTTP 401 — body: {
+  "error": {
+    "code": 401,
+    "message": "Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+2026-08-05 01:22:15,104 [INFO] flowboard.services.ws_server: extension disconnected
+2026-08-05 01:22:15,181 [INFO] websockets.server: connection open
+2026-08-05 01:22:15,181 [INFO] flowboard.services.ws_server: extension connected from ('127.0.0.1', 55050)
+2026-08-05 01:22:15,195 [INFO] flowboard.services.flow_client: extension_ready flowKeyPresent=True
+2026-08-05 01:22:15,195 [INFO] flowboard.services.flow_client: fetch_paygate_tier: calling /v1/credits with token (len=414)
+2026-08-05 01:22:16,202 [INFO] flowboard.services.ws_server: extension disconnected
+2026-08-05 01:22:16,319 [INFO] websockets.server: connection open
+2026-08-05 01:22:16,319 [INFO] flowboard.services.ws_server: extension connected from ('127.0.0.1', 55052)
+2026-08-05 01:22:16,328 [INFO] flowboard.services.flow_client: extension_ready flowKeyPresent=True
+2026-08-05 01:22:16,333 [INFO] flowboard.services.flow_client: fetch_paygate_tier: calling /v1/credits with token (len=414)
+2026-08-05 01:22:17,158 [INFO] httpx: HTTP Request: GET https://aisandbox-pa.googleapis.com/v1/credits?key=AIzaSyBtrm0o5ab1c-Ec8ZuLcGt3oJAA5VWt3pY "HTTP/1.1 401 Unauthorized"
+2026-08-05 01:22:17,174 [WARNING] flowboard.services.flow_client: fetch_paygate_tier HTTP 401 — body: {
+  "error": {
+    "code": 401,
+    "message": "Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+2026-08-05 01:22:17,661 [INFO] httpx: HTTP Request: GET https://aisandbox-pa.googleapis.com/v1/credits?key=AIzaSyBtrm0o5ab1c-Ec8ZuLcGt3oJAA5VWt3pY "HTTP/1.1 401 Unauthorized"
+2026-08-05 01:22:17,670 [WARNING] flowboard.services.flow_client: fetch_paygate_tier HTTP 401 — body: {
+  "error": {
+    "code": 401,
+    "message": "Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+2026-08-05 01:22:17,846 [INFO] flowboard.services.ws_server: extension disconnected
+2026-08-05 01:22:18,346 [INFO] websockets.server: connection open
+2026-08-05 01:22:18,346 [INFO] flowboard.services.ws_server: extension connected from ('127.0.0.1', 55057)
+2026-08-05 01:22:18,354 [INFO] flowboard.services.flow_client: extension_ready flowKeyPresent=True
+2026-08-05 01:22:18,355 [INFO] flowboard.services.flow_client: fetch_paygate_tier: calling /v1/credits with token (len=414)
+2026-08-05 01:22:19,631 [INFO] httpx: HTTP Request: GET https://aisandbox-pa.googleapis.com/v1/credits?key=AIzaSyBtrm0o5ab1c-Ec8ZuLcGt3oJAA5VWt3pY "HTTP/1.1 401 Unauthorized"
+2026-08-05 01:22:19,636 [WARNING] flowboard.services.flow_client: fetch_paygate_tier HTTP 401 — body: {
+  "error": {
+    "code": 401,
+    "message": "Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+2026-08-05 01:22:39,869 [INFO] flowboard.services.flow_client: fetch_paygate_tier: calling /v1/credits with token (len=414)
+2026-08-05 01:22:40,787 [INFO] httpx: HTTP Request: GET https://aisandbox-pa.googleapis.com/v1/credits?key=AIzaSyBtrm0o5ab1c-Ec8ZuLcGt3oJAA5VWt3pY "HTTP/1.1 401 Unauthorized"
+2026-08-05 01:22:40,793 [WARNING] flowboard.services.flow_client: fetch_paygate_tier HTTP 401 — body: {
+  "error": {
+    "code": 401,
+    "message": "Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+2026-08-05 01:26:50,031 [INFO] flowboard.services.ws_server: extension disconnected

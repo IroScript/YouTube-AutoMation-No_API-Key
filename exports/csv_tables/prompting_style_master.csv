@@ -1,0 +1,56 @@
+﻿id,uuid,stage_name,target_hierarchy_level,style_title,system_role,system_instruction,prompt_template,output_format,model_target,rules_and_constraints,is_active,version,created_at,updated_at
+1,40f3bfc0-f3e7-48a1-bfe0-50918ca51bfd,STAGE_1_ELEMENT_GENERATION,Level 1 -> 2 (Category to New Element #101+),Universal Cosmic & Nature Element Generator,Senior SciFi Worldbuilder & Megastructure Architect,"Generate creative, highly visual theme/element names suitable for giant impossible machines. Must return strict JSON.","Give me 1 creative, highly visual theme/element name (like 'Dark Matter Core', 'Neutron Star Forge', 'Cybernetic Hive', 'Liquid Crystal Glacier') suitable for generating giant impossible machines in the category '{category_name}'.
+Return strictly JSON format:
+{{
+  ""name"": ""Element Name"",
+  ""group_type"": ""Group (Nature/Tech/Environment/Energy/Space)""
+}}",JSON_OBJECT,ChatGPT-4o / Playwright,1. Must return strict JSON object with 'name' and 'group_type'. 2. Must be visually unique and scalable for giant engineering.,1,1,2026-08-16 16:03:19.041465,2026-08-16 16:03:19.041465
+2,ef21da17-523e-4366-9467-0e1a737eb7ef,STAGE_2_IDEA_GENERATION,Level 2 -> 3 (Element to 10 Machine Ideas),10-Titan Impossible Megastructure Ideation Engine,Colossal SciFi Machine Engineer & Visual Concept Designer,"Generate exactly 10 distinct, impossible giant machine ideas for a given element. Each must be colossal/titan scale. Return strictly JSON array.","Give me 10 creative impossible machine ideas related to {element_name} (Category/Group: {element_group}).
+Primary feature: Each machine MUST be giant in size (colossal megastructures, titan-scale, impossible engineering).
+
+CRITICAL FORMATTING INSTRUCTION:
+Please return the 10 ideas strictly as a JSON array of 10 objects. Do not include markdown conversational text.
+
+JSON Schema:
+[
+  {{
+    ""id"": 1,
+    ""title"": ""Machine Title"",
+    ""description"": ""Short 2-3 sentence description of how the giant machine operates on {element_name}.""
+  }}
+]",JSON_ARRAY,ChatGPT-4o / Playwright,1. Return strict JSON array of 10 objects. 2. Every machine must be colossal/planetary scale. 3. Short 2-3 sentence description per idea.,1,1,2026-08-16 16:03:19.049464,2026-08-16 16:03:19.049464
+3,ba714c0e-04a7-473d-a657-effb2738a8c5,STAGE_3_PROMPT_ESCALATION_MASTER,Level 3 -> 4 (Idea to 10-Level Escalation Prompts),10-Level Escalation Master Prompt Architecture (Basic to Alien Level),Master SciFi Cinematographer & Prompt Escalation Architect,Build 10 escalating levels from Level 1 (BASIC) to Level 10 (ALIEN LEVEL / MAXIMUM). Each level has 1 Image Prompt (5-Layer Open Montage) + 1 Video Prompt (8-Second 5-Step HUD Popups). Total 20 prompts.,"Given the following Impossible Machine Idea:
+Title: {idea_title}
+Topic/Element: {topic}
+Concept: {description}
+
+Please build a complete 10-level escalation prompting system (10 Image Prompts + 10 Video Prompts = 20 Prompts total) evolving from Level 1 (BASIC) to Level 10 (ALIEN LEVEL / MAXIMUM).
+
+STRICT RULES:
+1. IMAGE PROMPT: 5-Layer Open Montage (Subject, Environment, Architecture, Energy/Physics, Cinematic Presentation 16k).
+2. VIDEO PROMPT (EXACTLY 8 SECONDS): 5-step HUD text popups during seconds 1-5 (e.g. 'STEP 1: [Name]'), camera maximum close-up seconds 6-8. Smooth continuous cinematic motion.
+
+Generate all 10 Levels numbered 1 to 10 in English:
+LEVEL 1 — BASIC
+IMAGE 01: [5-Layer Image Prompt]
+VIDEO 01: [8s Video Prompt with 5-step HUD popups]
+...
+LEVEL 10 — ALIEN LEVEL / MAXIMUM
+IMAGE 10: [5-Layer Image Prompt]
+VIDEO 10: [8s Video Prompt with 5-step HUD popups]",STRUCTURED_TEXT,ChatGPT-4o / Playwright,1. Exactly 10 levels. 2. 20 prompts (10 Image + 10 Video). 3. Image prompts use 5-Layer Open Montage. 4. Video prompts are exactly 8 seconds with 5-step HUD popups.,1,1,2026-08-16 16:03:19.051462,2026-08-16 16:03:19.051462
+4,12d1380e-c9b6-4f53-bf4a-8902d5d33cdf,STAGE_4_IMAGE_5LAYER_BLUEPRINT,Level 4 (Image Prompt Layer Structure),5-Layer Open Montage Image Blueprint,Cinematic Visual Prompt Engineer,5 distinct visual layers: Layer 1 (Subject Titan) + Layer 2 (Landscape/Environment) + Layer 3 (Chassis/Materials) + Layer 4 (Quantum Energy Glows) + Layer 5 (16k Photorealistic Framing).,Layer 1: Core {idea_title} titan subject. Layer 2: {topic} environment. Layer 3: Titanic chassis architecture. Layer 4: Quantum energy field glows. Layer 5: 16k photorealistic cinematic camera framing.,STRUCTURED_TEXT,Imagen 3 / Midjourney / DALL-E 3,Must contain all 5 layers explicitly separated for maximum visual depth and photorealism.,1,1,2026-08-16 16:03:19.053500,2026-08-16 16:03:19.053500
+5,eac54959-0b72-4869-8ab1-67f3312d5a3d,STAGE_5_VIDEO_8S_HUD_BLUEPRINT,Level 4 (Video Prompt Structure - 1Video10Sec / Veo),8-Second 5-Step HUD Popup Video Blueprint,Cinematic Motion & Video Director,8-second continuous cinematic shot. Seconds 1-5 display 5-step HUD text popups. Seconds 6-8 perform maximum close-up pan and stabilization.,STEP 1: Core Startup | STEP 2: Harvester Deployment | STEP 3: Intake Acceleration | STEP 4: Processing Wave | STEP 5: Full Output Stabilization. Camera smoothly pans across {idea_title} for 8 seconds.,STRUCTURED_TEXT,Google Veo 2 / 1Video10Sec,1. Exactly 8 seconds duration. 2. 5-step HUD overlays during seconds 1-5. 3. Smooth cinematic movement in seconds 6-8.,1,1,2026-08-16 16:03:19.056471,2026-08-16 16:03:19.056471
+6,b0b0f4e2-6ce3-4e19-9a74-5c1d0444e10e,STAGE_6_YOUTUBE_METADATA,Level 5 (Output Package & YouTube SEO),High-CTR YouTube Metadata & SEO Optimizer,Viral YouTube Growth & SEO Strategist,"Generate viral, curiosity-driven YouTube Title (<80 chars + 1 emoji), 3-paragraph SEO description with timestamps and 5 hashtags, and 10-15 search tags in JSON.","Given the following AI-generated impossible giant machine video:
+Video Subject: {idea_title}
+Topic/Element: {topic}
+Escalation Level: {level_info}
+
+Please generate a professional YouTube metadata package in strict JSON format:
+{{
+  ""title"": ""A high-CTR, curiosity-driven YouTube video title (under 80 chars, with 1 emoji)"",
+  ""seo_description"": ""A 3-paragraph SEO-rich video description with timecodes, storyline breakdown, and 5 hashtags (#AI #Megastructure #Veo #SciFi #ImpossibleEngineering)"",
+  ""tags"": [""10-15 viral search tags as array of strings""],
+  ""category"": ""Science & Technology"",
+  ""default_language"": ""en""
+}}
+Return ONLY the raw JSON object.",JSON_OBJECT,ChatGPT-4o / Playwright,1. High-CTR title with emoji. 2. 3-paragraph description with timestamps. 3. 5 viral hashtags. 4. Strict JSON format.,1,1,2026-08-16 16:03:19.059495,2026-08-16 16:03:19.059495

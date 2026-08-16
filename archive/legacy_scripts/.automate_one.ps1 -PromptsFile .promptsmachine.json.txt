@@ -1,0 +1,3 @@
+.\automate_one.ps1 -PromptsFile .\prompts\mega_reactor_activation_1.json
+
+ekhane prompt naame folder ase,,,,,,oikhane ei json bosate hobe

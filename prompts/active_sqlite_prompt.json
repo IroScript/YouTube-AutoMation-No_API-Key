@@ -1,0 +1,7 @@
+{
+  "name": "Idea_3_Rice-Field_Spider_Colossus",
+  "idea_id": 3,
+  "image_prompt": "Create a futuristic giant machine for Rice-Field Spider Colossus. 5-Layer Open Montage Structure: Subject, Environment, Architecture, Energy, Cinematic.",
+  "video_prompt": "Use generated image as first frame. 8-second video of Rice-Field Spider Colossus with 5 HUD step popups sequentially appearing.",
+  "camera_dynamic": "Slow forward push with 5-step HUD text popups"
+}

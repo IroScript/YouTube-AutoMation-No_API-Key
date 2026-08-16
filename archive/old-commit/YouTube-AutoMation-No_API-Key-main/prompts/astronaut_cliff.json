@@ -1,0 +1,6 @@
+{
+  "image_prompt": "a lone astronaut on a red Martian cliff at golden hour, dust swirling at their feet, two moons faint in the sky, cinematic vertical composition",
+  "video_prompt": "wind picks up the dust around the astronaut's boots, suit visor catches the low sun, one moon rises above the horizon",
+  "camera_dynamic": "slow dolly forward + tilt up to the moons",
+  "name": "astronaut_cliff"
+}

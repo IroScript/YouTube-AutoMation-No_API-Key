@@ -1,0 +1,343 @@
+PowerShell 7.6.3
+
+   A new PowerShell stable release is available: v7.6.4
+   Upgrade now, or check out the release page at:
+     https://aka.ms/PowerShell-Release?tag=v7.6.4
+
+PS C:\Users\Irak\Desktop\AntiBotBrowser> agy
+
+      ▄▀▀▄        Antigravity CLI 1.1.10
+     ▀▀▀▀▀▀       mainuddinh297@gmail.com (Google AI Ultra)
+    ▀▀▀▀▀▀▀▀      Gemini 3.6 Flash (High)
+   ▄▀▀    ▀▀▄     ~/Desktop/AntiBotBrowser
+  ▄▀▀      ▀▀▄
+
+> /model
+  ⎿  Model set to Gemini 3.6 Flash (High)
+
+────────────────────────────────────────────────────────────
+> hi
+
+  হাই ইরাক ভাইয়া! কেমন আছেন? কীভাবে আপনাকে সাহায্য করতে পারি?
+
+────────────────────────────────────────────────────────────
+> mul uddesso holo
+
+  complete automation including stopped chrome reopen, server chalu korte hobe,,,,,3 ta tick chinno aschhe kina seta
+  dekhte hobe
+
+  "C:\Users\Irak\Desktop\AntiBotBrowser\CWINDOWSsystem32cmd.exe .txt1.txt"
+
+  ami chrome e extension plus logged in korsi
+
+  but server chalu na thakay WS_ERROR error dekhasse
+
+  ===========================================================
+   MASTER AUTONOMOUS FLOWBOARD VIDEO RUNNER
+  ============================================================
+
+  [1/4] Flowboard Agent is already running on :8101.
+  [2/4] Launching Chrome Profile 4 minimized to Google Flow...
+  [3/4] Checking Chrome Extension, Token and Tier status...
+        [WAIT] Extension connected, waiting for Bearer token... (attempt 1/30)
+           NOTE: Token only appears when Flow page has an active Sign-In session.
+        [WAIT] Extension connected, waiting for Bearer token... (attempt 2/30)
+           NOTE: Token only appears when Flow page has an active Sign-In session.
+        [WAIT] Extension connected, waiting for Bearer token... (attempt 3/30)
+           NOTE: Token only appears when Flow page has an active Sign-In session.
+        [WAIT] Extension connected, waiting for Bearer token... (attempt 4/30)
+           NOTE: Token only appears when Flow page has an active Sign-In session.
+        [WAIT] Extension connected, waiting for Bearer token... (attempt 5/30)
+           NOTE: Token only appears when Flow page has an active Sign-In session.
+        [WAIT] Extension connected, waiting for Bearer token... (attempt 6/30)
+           NOTE: Token only appears when Flow page has an active Sign-In session.
+        [WAIT] Extension connected, waiting for Bearer token... (attempt 7/30)
+           NOTE: Token only appears when Flow page has an active Sign-In session.
+        [WAIT] Extension connected, waiting for Bearer token... (attempt 8/30)
+           NOTE: Token only appears when Flow page has an active Sign-In session.
+        [WAIT] Extension connected, waiting for Bearer token... (attempt 9/30)
+           NOTE: Token only appears when Flow page has an active Sign-In session.
+
+● ListDir(C:/Users/Irak/Desktop/AntiBotBrowser)
+● ListDir(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard)
+● ListDir(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/agent)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/FLOWBOARD_GUIDE.md)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/start_everything_and_generate.ps1)
+● Search(Grep search for WS_ERROR)
+● ListDir(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/extension)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/extension/background.js)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/extension/popup.html)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/CWINDOWSsystem32cmd.exe .txt1.txt) (ctrl+o to expand)
+
+▸ Thought for 3s, 1.2k tokens
+  Analyzing the Automation Goal
+
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/automate_one.ps1)
+● Bash(Get-NetTCPConnection -LocalPort 8101, 9223 -ErrorAction SilentlyContinue | Format-Table LocalAddress,
+LocalPort...)
+● Bash(Invoke-RestMethod -Uri "http://127.0.0.1:8101/api/health" | ConvertTo-Json -Depth 5)
+● Search(Search for scan in agent directory)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/agent/flowboard/routes/auth.py)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/extension/background.js)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/extension/background.js)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/extension/background.js)
+● Search(Grep search captureTokenFromFlowTab)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/extension/background.js)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/extension/background.js)
+● Search(Grep search function captureTokenFromFlowTab)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/extension/background.js)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/extension/background.js) (ctrl+o to expand)
+
+▸ Thought for 4s, 1.0k tokens
+  Analyzing Token Capture
+● Bash(Invoke-RestMethod -Method POST -Uri "http://127.0.0.1:8101/api/auth/scan" | ConvertTo-Json -Depth 5)
+● Bash(Get-WmiObject Win32_Process -Filter "name = 'chrome.exe'" | Select-Object ProcessId, CommandLine | Format-List)
+● Bash(Get-CimInstance Win32_Process -Filter "name = 'chrome.exe'" | Select-Object ProcessId, CommandLine | Format-
+Lis...)
+● Bash(powershell.exe -ExecutionPolicy Bypass -File .\start_everything_and_generate.ps1 -VerifyOnly)
+● ManageTask(status ddf12cfe-5823-444a-95f6-074aa9ec4068/task-60) (ctrl+o to expand)
+▸ Thought for 4s, 1.4k tokens
+  Analyzing Token Acquisition
+
+● Search(Grep search Profile in all project files)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/AUTOMATION.md)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/start_flowboard.bat)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/force_dev_mode.ps1)
+● Bash(Get-ChildItem "$env:LOCALAPPDATA\Google\Chrome\User Data" -Directory | Where-Object { $_.Name -like "Profile*"
+...)
+● Bash(Get-ChildItem "$env:LOCALAPPDATA\Google\Chrome\User Data" -Directory | Where-Object { $_.Name -like "Profile*"
+...)
+● Bash(Get-ChildItem "$env:LOCALAPPDATA\Google\Chrome\User Data" -Directory | Where-Object { $_.Name -like "Profile*"
+...)
+● Bash(Start-Process "chrome.exe" -ArgumentList '--profile-directory="Profile 4" https://labs.google/fx/tools/flow')
+● Bash(Start-Sleep -Seconds 3; Invoke-RestMethod -Uri "http://127.0.0.1:8101/api/health" | ConvertTo-Json -Depth 5)
+● Bash(Start-Process "chrome.exe" -ArgumentList '--profile-directory="Profile 6" https://labs.google/fx/tools/flow')
+● Bash(Start-Sleep -Seconds 3; Invoke-RestMethod -Uri "http://127.0.0.1:8101/api/health" | ConvertT...) (ctrl+o to
+expand)
+
+▸ Thought for 2s, 3.3k tokens
+  Analyzing Readiness Failure
+
+● Bash(Get-ChildItem "$env:LOCALAPPDATA\Google\Chrome\User Data" -Directory | Where-Object { $_.Name -like "Profile*"
+...)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/extension/background.js)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/agent/flowboard/services/flow_client.py)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/agent/flowboard/services/flow_client.py)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/agent/flowboard/services/flow_client.py) (ctrl+o to expand)
+
+▸ Thought for 1s, 2.0k tokens
+  Analyzing Flow State
+
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/extension/background.js) (ctrl+o to expand)
+
+▸ Thought for 5s, 896 tokens
+  Refining Robustness Strategies
+
+● Edit(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/extension/background.js)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/extension/background.js)
+● Edit(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/extension/background.js)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/start_everything_and_generate.ps1)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/stop_flowboard.bat)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/start_everything_and_generate.ps1)
+● Edit(C:/Users/Irak/Desktop/AntiBotBrowser/start_everything_and_generate.ps1)
+● Bash(Get-CimInstance Win32_Process -Filter "name = 'chrome.exe'" | ForEach-Object { Stop-Process -Id $_.ProcessId -
+F...)
+● Bash(Start-Sleep -Seconds 3; powershell.exe -ExecutionPolicy Bypass -File .\start_everything_and_generate.ps1 -
+Verif...)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/start_everything_and_generate.ps1)
+● Edit(C:/Users/Irak/Desktop/AntiBotBrowser/start_everything_and_generate.ps1)
+● Bash(powershell.exe -ExecutionPolicy Bypass -File .\start_everything_and_generate.ps1 -VerifyOnly)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/start_everything_and_generate.ps1)
+● Edit(C:/Users/Irak/Desktop/AntiBotBrowser/start_everything_and_generate.ps1)
+● Bash(powershell.exe -ExecutionPolicy Bypass -File .\start_everything_and_generate.ps1 -VerifyOnly)
+● ManageTask(status ddf12cfe-5823-444a-95f6-074aa9ec4068/task-127)
+● ManageTask(status ddf12cfe-5823-444a-95f6-074aa9ec4068/task-127)
+● Bash(Invoke-RestMethod -Uri "http://127.0.0.1:8101/api/auth/me" | ConvertTo-Json -Depth 5)
+● Bash(cd flowboard\agent; .venv\Scripts\python.exe -c ")
+● Bash(Invoke-RestMethod -Method POST -Uri "http://127.0.0.1:8101/api/auth/scan" | ConvertTo-Json -Depth 5)
+● Search(Find WebSocket server startup in agent)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/agent/flowboard/services/ws_server.py)
+● Bash(Get-CimInstance Win32_Process -Filter "name = 'chrome.exe'" | ForEach-Object { Stop-Process -Id $_.ProcessId -
+F...)
+● Bash(Start-Sleep -Seconds 3; Invoke-RestMethod -Uri "http://127.0.0.1:8101/api/auth/me" | ConvertTo-Json -Depth 5)
+● Bash(Invoke-RestMethod -Uri "http://127.0.0.1:8101/api/health" | ConvertTo-Json -Depth 5)
+● Bash(Invoke-RestMethod -Uri "http://127.0.0.1:8101/api/auth/me" | ConvertTo-Json -Depth 5)
+● Bash(Invoke-RestMethod -Method POST -Uri "http://127.0.0.1:8101/api/auth/scan" | ConvertTo-Json -Depth 5)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/agent/flowboard/services/flow_client.py)
+● Edit(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/agent/flowboard/services/flow_client.py)
+● Bash(Get-NetTCPConnection -LocalPort 8101 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id
+$_.Ownin...)
+○ Bash(powershell.exe -ExecutionPolicy Bypass -File .\start_everything_and_generate.ps1 -VerifyOnly)
+● ManageTask(status ddf12cfe-5823-444a-95f6-074aa9ec4068/task-161)
+● ManageTask(status ddf12cfe-5823-444a-95f6-074aa9ec4068/task-161)
+● Bash(Invoke-RestMethod -Uri "http://127.0.0.1:8101/api/auth/me" | ConvertTo-Json -Depth 5) (ctrl+o to expand)
+
+▸ Thought for 4s, 716 tokens
+  Investigating Paygate Tier
+
+● Edit(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/agent/flowboard/services/flow_client.py)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/agent/flowboard/routes/auth.py)
+● Edit(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/agent/flowboard/routes/auth.py)
+● Bash(Invoke-RestMethod -Method POST -Uri "http://127.0.0.1:8101/api/auth/scan" | ConvertTo-Json -Depth 5)
+● Bash(Get-NetTCPConnection -LocalPort 8101 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id
+$_.Ownin...)
+● Bash(powershell.exe -ExecutionPolicy Bypass -File .\start_everything_and_generate.ps1 -VerifyOnly)
+● ManageTask(status ddf12cfe-5823-444a-95f6-074aa9ec4068/task-178)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/agent/flowboard/services/flow_client.py)
+● Bash(Invoke-RestMethod -Method POST -Uri "http://127.0.0.1:8101/api/auth/scan" | ConvertTo-Json -Depth 5)
+● Bash(Invoke-RestMethod -Method POST -Uri "http://127.0.0.1:8101/api/auth/scan" | ConvertTo-Json -Depth 5)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/agent/flowboard/services/flow_client.py)
+● Edit(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/agent/flowboard/services/flow_client.py)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/agent/flowboard/services/flow_client.py)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/agent/flowboard/services/flow_client.py)
+● Edit(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/agent/flowboard/services/flow_client.py)
+● Bash(Get-NetTCPConnection -LocalPort 8101 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id
+● Edit(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/agent/flowboard/services/flow_client.py)
+● Bash(Get-NetTCPConnection -LocalPort 8101 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id
+$_.Ownin...)
+● Bash(powershell.exe -ExecutionPolicy Bypass -File .\start_everything_and_generate.ps1 -VerifyOnly)
+● Bash(powershell.exe -ExecutionPolicy Bypass -File .\start_everything_and_generate.ps1 -VerifyOnly)
+● ManageTask(status ddf12cfe-5823-444a-95f6-074aa9ec4068/task-193)e-RestMethod -Method POST -Uri "http://127.0.0.1:8101/
+● Bash(Get-NetTCPConnection -LocalPort 8101 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id
+$_.Ownin...)
+● Bash(powershell.exe -ExecutionPolicy Bypass -File .\start_everything_and_generate.ps1 -VerifyOnly)
+● ManageTask(status ddf12cfe-5823-444a-95f6-074aa9ec4068/task-193)
+● ManageTask(status ddf12cfe-5823-444a-95f6-074aa9ec4068/task-193)
+● Bash(Invoke-RestMethod -Method POST -Uri "http://127.0.0.1:8101/api/auth/scan" | ConvertTo-Json -Depth 5)ry="Profile 6
+● Bash(powershell.exe -ExecutionPolicy Bypass -File .\start_everything_and_generate.ps1 -VerifyOnly)
+● Bash(powershell.exe -ExecutionPolicy Bypass -File .\start_everything_and_generate.ps1 -VerifyOnly)
+● ManageTask(status ddf12cfe-5823-444a-95f6-074aa9ec4068/task-193)
+● Bash(Invoke-RestMethod -Method POST -Uri "http://127.0.0.1:8101/api/auth/scan" | ConvertTo-Json -Depth 5)
+● ManageTask(status ddf12cfe-5823-444a-95f6-074aa9ec4068/task-193)
+● Bash(Invoke-RestMethod -Method POST -Uri "http://127.0.0.1:8101/api/auth/scan" | ConvertTo-Json -Depth 5) "http://127.
+● ManageTask(status ddf12cfe-5823-444a-95f6-074aa9ec4068/task-193)
+● Bash(Invoke-RestMethod -Method POST -Uri "http://127.0.0.1:8101/api/auth/scan" | ConvertTo-Json -Depth 5)
+● Bash(Start-Process "chrome.exe" -ArgumentList '--profile-directory="Profile 6" https://labs.google/fx/tools/flow')
+● Bash(Start-Sleep -Seconds 3; Invoke-RestMethod -Method POST -Uri "http://127.0.0.1:8101/api/auth/scan" | ConvertTo-
+  2. Flowboard Agent সার্ভার (flow_client.py):
+      • Google /v1/credits API থেকে 401 (Unauthenticated/Expired) রেসপন্স আসলে এজেন্ট স্বয়ংক্রিয়ভাবে Extension-কে force_recapture সিগন্যাল ers/Irak/Desktop/AntiBotBrowser/flowboard/agent/flowboard/services/flow_client.py)
+      পাঠিয়ে ব্যাকগ্রাউন্ডে Tab Refresh করে নতুন টোকেন সংগ্রহ করে।         /Users/Irak/Desktop/AntiBotBrowser/flowboard/agent/flowboard/routes/auth.py)
+  3. Master Autonomous Runner (start_everything_and_generate.ps1):
+      • ১. Server Auto-Start: Agent বন্ধ থাকলে নিজে থেকেই ব্যাকগ্রাউন্ডে চালু করে।
+● Bash(Invoke-RestMethod -Method POST -Uri "http://127.0.0.1:8101/api/auth/scan" | ConvertTo-Json -Depth 5)
+● Bash(Start-Process "chrome.exe" -ArgumentList '--profile-directory="Profile 6" https://labs.google/fx/tools/flow')
+● Bash(Start-Sleep -Seconds 3; Invoke-RestMethod -Method POST -Uri "http://127.0.0.1:8101/api/auth/scan" | ConvertTo-
+J...)
+● Bash(Invoke-RestMethod -Method POST -Uri "http://127.0.0.1:8101/api/auth/scan" | ConvertTo-Json -Depth 5)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/agent/flowboard/services/flow_client.py)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/agent/flowboard/routes/auth.py)
+● Edit(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/agent/flowboard/routes/auth.py)
+● Read(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/agent/flowboard/services/flow_client.py)
+● Edit(C:/Users/Irak/Desktop/AntiBotBrowser/flowboard/agent/flowboard/services/flow_client.py) (ctrl+o to expand)
+
+▸ Thought for 5s, 636 tokens
+  Revising User Rules
+  ইরাক ভাইয়া, সমস্যার মূল কারণ চিহ্নিত করে সম্পূর্ণ সিস্টেমটি অটোমেটেড ও ফিক্স করে দেওয়া হয়েছে।
+  ──────
+  ### 🔍 সমস্যার মূল কারণ (Root Cause)
+
+  1. WS_ERROR কারণ: Agent Server (Port :8101 এবং WebSocket :9223) বন্ধ থাকা অবস্থায় Chrome চালু থাকায় Extension কানেক্ট করতেনা পেরে
+  WS_ERROR দেখাচ্ছিল।
+  2. Bearer Token আটকে থাকা: Agent Server পরে চালু হলেও Extension-এর আগের Memory Cache-এর কারণে Token Re-emit হতো না, ফলে স্ক্রিপ্টটি
+  [WAIT] Extension connected, waiting for Bearer token... লুপে আটকে যেত।
+  3. Expired Token (HTTP 401): টোকেন মেয়াদোত্তীর্ণ (expire) হয়ে গেলে auto-reload হতো না।
+  ──────
+  ### 🛠️ আমরা যা যা ফিক্স ও ডেভেলপ করেছি
+
+  1. Chrome Extension আপডেট (background.js):
+      • Agent এর সাথে WebSocket (ws:9223) কানেক্ট হওয়ার সাথে সাথে Storage থেকে টোকেন উদ্ধার করে Agent-কে প্রো-অ্যাক্টিভলি token_captured বার্তা পাঠানোর
+      ব্যবস্থা করা হয়েছে।
+      • Nudge / Scan সংকেত পেলেই Google Flow Tab কে reload করে নতুন Authorization: Bearer ya29... টোকেন ক্যাপচার নিশ্চিত করাহয়েছে।
+  2. Flowboard Agent সার্ভার (flow_client.py):
+      • Google /v1/credits API থেকে 401 (Unauthenticated/Expired) রেসপন্স আসলে এজেন্ট স্বয়ংক্রিয়ভাবে Extension-কে force_recapture সিগন্যাল
+      পাঠিয়ে ব্যাকগ্রাউন্ডে Tab Refresh করে নতুন টোকেন সংগ্রহ করে।
+  3. Master Autonomous Runner (start_everything_and_generate.ps1):
+      • ১. Server Auto-Start: Agent বন্ধ থাকলে নিজে থেকেই ব্যাকগ্রাউন্ডে চালু করে।
+      • ২. Chrome Auto-Reopen: Chrome Profile 4 বন্ধ বা মিনিমাইজড থাকলেও অটো-লঞ্চ ও Flow URL ওপেন করে।
+      পাঠিয়ে ব্যাকগ্রাউন্ডে Tab Refresh করে নতুন টোকেন সংগ্রহ করে।
+  3. Master Autonomous Runner (start_everything_and_generate.ps1):
+  2. Flowboard Agent সার্ভার (flow_client.py):
+      • Google /v1/credits API থেকে 401 (Unauthenticated/Expired) রেসপন্স আসলে এজেন্ট স্বয়ংক্রিয়ভাবে Extension-কে force_recapture সিগন্যাল
+  3. Master Autonomous Runner (start_everything_and_generate.ps1):
+      • ১. Server Auto-Start: Agent বন্ধ থাকলে নিজে থেকেই ব্যাকগ্রাউন্ডে চালু করে।
+      • ২. Chrome Auto-Reopen: Chrome Profile 4 বন্ধ বা মিনিমাইজড থাকলেও অটো-লঞ্চ ও Flow URL ওপেন করে।
+      • ৩. ৩টি টিক চিহ্ন (3 Checkmarks) ভ্যালিডেশন:
+          • [OK 1/3] Extension Connected via WS (:9223)
+      পাঠিয়ে ব্যাকগ্রাউন্ডে Tab Refresh করে নতুন টোকেন সংগ্রহ করে।
+  3. Master Autonomous Runner (start_everything_and_generate.ps1):
+        ১. Server Auto-Start: Agent বন্ধ থাকলে নিজে থেকেই ব্যাকগ্রাউন্ডে চালু করে।
+      পাঠিয়ে ব্যাকগ্রাউন্ডে Tab Refresh করে নতুন টোকেন সংগ্রহ করে।
+  3. Master Autonomous Runner (start_everything_and_generate.ps1):
+      • ১. Server Auto-Start: Agent বন্ধ থাকলে নিজে থেকেই ব্যাকগ্রাউন্ডে চালু করে।
+      • ২. Chrome Auto-Reopen: Chrome Profile 4 বন্ধ বা মিনিমাইজড থাকলেও অটো-লঞ্চ ও Flow URL ওপেন করে।
+      • ৩. ৩টি টিক চিহ্ন (3 Checkmarks) ভ্যালিডেশন:
+          • [OK 1/3] Extension Connected via WS (:9223)
+          • [OK 2/3] Bearer Token Captured
+      • ২. Chrome Auto-Reopen: Chrome Profile 4 বন্ধ বা মিনিমাইজড থাকলেও অটো-লঞ্চ ও Flow URL ওপেন করে।
+        ৩. ৩টি টিক চিহ্ন (3 Checkmarks) ভ্যালিডেশন:
+                 • [OK 1/3] Extension Connected via WS (:9223)
+  3. Master Autonomous Runner (start_everything_and_generate.ps1):
+      • ১. Server Auto-Start: Agent বন্ধ থাকলে নিজে থেকেই ব্যাকগ্রাউন্ডে চালু করে।
+      • ২. Chrome Auto-Reopen: Chrome Profile 4 বন্ধ বা মিনিমাইজড থাকলেও অটো-লঞ্চ ও Flow URL ওপেন করে।
+      • ৩. ৩টি টিক চিহ্ন (3 Checkmarks) ভ্যালিডেশন:
+          • [OK 1/3] Extension Connected via WS (:9223)
+          • [OK 2/3] Bearer Token Captured
+          • [OK 3/3] Paygate Tier Resolved (Pro/Ultra)
+
+
+  ──────
+  ### 🚀৩. ৩টি টিক চিহ্ন (3 Checkmarks) ভ্যালিডেশন:
+                 • [OK 1/3] Extension Connected via WS (:9223)
+                2/3] Bearer Token Captured
+  1. Chrome Prof3/3] Paygate Tier Resolved (Pro/Ultra)google/fx/tools/flow একবার ওপেন করে আপনার Pro account দিয়ে Log In
+করা
+  আছে     • [OK 1/3] Extension Connected via WS (:9223)
+  ──────        2/3] Bearer Token Captured
+  ### 🚀 আপনি কী3/3] Paygate Tier Resolved (Pro/Ultra)  সিস্টেম স্বয়ংক্রিয়ভাবে ৩টি টিক চিহ্ন ভ্যালিডেট করে রান হবে:
+
+  1. Chrome Profile 4-এ Google Flow Page https://labs.google/fx/tools/flow একবার ওপেন করে আপনার Pro account দিয়ে Log In
+      • ২. Chrome Auto-Reopen: Chrome Profile 4 বন্ধ বা মিনিমাইজড থাকলেও অটো-লঞ্চ ও Flow URL ওপেন করে।
+      • ৩. ৩টি টিক চিহ্ন (3 Checkmarks) ভ্যালিডেশন:
+          • [OK 1/3] Extension Connected via WS (:9223)
+          • [OK 2/3] Bearer Token Captured
+          • [OK 3/3] Paygate Tier Resolved (Pro/Ultra)
+
+
+  ──────
+  ### 🚀 আপনি কীভাবে চালাবেন
+
+  1. C    • [OK 1/3] Extension Connected via WS (:9223)oogle/fx/tools/flow একবার ওপেন করে আপনার Pro account দিয়ে Log In
+করা             2/3] Bearer Token Captured
+  আছে কিনা নিশ্চিত3/3] Paygate Tier Resolved (Pro/Ultra)
+
+  2. Terminal / PowerShell থেকে নিচের কমান্ডটি দিলেই পুরো সিস্টেম স্বয়ংক্রিয়ভাবে ৩টি টিক চিহ্ন ভ্যালিডেট করে রান হবে:
+      • ৩. ৩টি টিক চিহ্ন (3 Checkmarks) ভ্যালিডেশন:
+          • [OK 1/3] Extension Connected via WS (:9223)
+          • [OK 2/3] Bearer Token Captured
+          • [OK 3/3] Paygate Tier Resolved (Pro/Ultra)
+
+
+  ──────
+  ### 🚀 আপনি কীভাবে চালাবেন
+
+  1. Chrome Profile 4-এ Google Flow Page https://labs.google/fx/tools/flow একবার ওপেন করে আপনার Pro account দিয়ে Log Inকরা
+  আছে কিনা নিশ্চিত করুন।
+  2. Terminal / PowerShell থেকে নিচের কমান্ডটি দিলেই পুরো সিস্টেম স্বয়ংক্রিয়ভাবে ৩টি টিক চিহ্ন ভ্যালিডেট করে রান হবে:
+
+    powershell -ExecutionPolicy Bypass -File .\start_everything_and_generate.ps1
+
+  (লগইন সক্রিয় থাকলে ৩টি সবুজ টিক চিহ্ন চলে আসবে এবং কোনো মানুষের হাত দেওয়া ছাড়াই ভিডিও জেনারেশন শুরু হয়ে যাবে!)
+
+  ইরাক ভাইয়া, ব্যাকগ্রাউন্ড টাস্কটির মেসেজ আপডেট পাওয়া গেছে।
+
+  আপনার ক্রোমে labs.google/fx/tools/flow পেজে একবার সাইন-ইন নিশ্চিত করা থাকলে powershell.exe -ExecutionPolicy Bypass -File
+  .\start_everything_and_generate.ps1 দিলেই ৩টি টিক মার্ক পেয়ে অটোমেশন সম্পূর্ণ চালু হয়ে যাবে!
+
+  ধন্যবাদ ইরাক ভাইয়া! আগের সমস্ত ব্যাকগ্রাউন্ড টেস্ট সম্পন্ন হয়েছে।
+
+  আপনি ক্রোমে labs.google/fx/tools/flow পেজে লগ��                                        ইন নিশ্চিত করে রান দিন, কোনো প্রশ্ন বা সাহায্য লাগলে আমাকে জানাবেন!
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+>
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+? for shortcuts                                                                                  Gemini 3.6 Flash · high
