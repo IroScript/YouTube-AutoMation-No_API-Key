@@ -64,7 +64,7 @@ JSON Schema:
         "target_hierarchy_level": "Level 3 -> 4 (Idea to 10-Level Escalation Prompts)",
         "style_title": "10-Level Escalation Master Prompt Architecture (Basic to Alien Level)",
         "system_role": "Master SciFi Cinematographer & Prompt Escalation Architect",
-        "system_instruction": "Build 10 escalating levels from Level 1 (BASIC) to Level 10 (ALIEN LEVEL / MAXIMUM). Each level has 1 Image Prompt (5-Layer Open Montage) + 1 Video Prompt (8-Second 5-Step HUD Popups). Total 20 prompts.",
+        "system_instruction": "Build 10 escalating levels from Level 1 (BASIC) to Level 10 (ALIEN LEVEL / MAXIMUM). Each level has 1 Image Prompt (5-Layer Open Montage: Subject, Environment, Architecture, Energy/Physics, Cinematic Presentation 16k) + 1 Video Prompt (Exactly 8 seconds, 9:16 vertical ratio, 5-step HUD text popups for seconds 1-5, continuous close-up descent for seconds 6-8). Total 20 prompts. Return strictly JSON array.",
         "prompt_template": """Given the following Impossible Machine Idea:
 Title: {idea_title}
 Topic/Element: {topic}
@@ -72,43 +72,89 @@ Concept: {description}
 
 Please build a complete 10-level escalation prompting system (10 Image Prompts + 10 Video Prompts = 20 Prompts total) evolving from Level 1 (BASIC) to Level 10 (ALIEN LEVEL / MAXIMUM).
 
-STRICT RULES:
-1. IMAGE PROMPT: 5-Layer Open Montage (Subject, Environment, Architecture, Energy/Physics, Cinematic Presentation 16k).
-2. VIDEO PROMPT (EXACTLY 8 SECONDS): 5-step HUD text popups during seconds 1-5 (e.g. 'STEP 1: [Name]'), camera maximum close-up seconds 6-8. Smooth continuous cinematic motion.
+STRICT RULES & ARCHITECTURE:
+1. IMAGE PROMPT (5-Layer Open Montage Structure, 9:16 vertical aspect ratio, 16K photorealistic render):
+   Layer 1 — Subject: Colossal titan machine silhouette, scale, harvesting arms/claws, autonomous drones, sensor crowns.
+   Layer 2 — Environment: Continental landscape, thousands of fields/features, tiny vehicles/workers showing scale, atmospheric depth.
+   Layer 3 — Architecture: Multi-level torso, processing chambers, threshing cylinders, cyclone separators, drying reactors, storage vaults.
+   Layer 4 — Energy/Physics: High-voltage plasma conduits, electromagnetic fields, glowing thermal loops, magnetic suspension.
+   Layer 5 — Cinematic Presentation: Dramatic low-angle cinematic framing, 9:16 vertical composition, volumetric lighting, wet-surface reflections, 16K render.
 
-Generate all 10 Levels numbered 1 to 10 in English:
-LEVEL 1 — BASIC
-IMAGE 01: [5-Layer Image Prompt]
-VIDEO 01: [8s Video Prompt with 5-step HUD popups]
-...
-LEVEL 10 — ALIEN LEVEL / MAXIMUM
-IMAGE 10: [5-Layer Image Prompt]
-VIDEO 10: [8s Video Prompt with 5-step HUD popups]""",
-        "output_format": "STRUCTURED_TEXT",
+2. VIDEO PROMPT (EXACTLY 8 SECONDS, 9:16 VERTICAL ASPECT RATIO, NO CUTS):
+   Must follow this EXACT second-by-second timeline:
+   "Exactly 8 seconds, 9:16 vertical aspect ratio, photorealistic cinematic render, smooth continuous motion, no cuts, maximum cinematic realism.
+
+   Second 1 [0:00-0:01] — HUD Popup Text: \\"STEP 1: [ACTION NAME]\\" — [Detailed description of core activation, sensor halos, and systems].
+
+   Second 2 [0:01-0:02] — HUD Popup Text: \\"STEP 2: [ACTION NAME]\\" — [Detailed description of harvesting arms deploying and gathering crops/matter].
+
+   Second 3 [0:02-0:03] — HUD Popup Text: \\"STEP 3: [ACTION NAME]\\" — [Detailed description of processing/threshing streams entering internal belly factories].
+
+   Second 4 [0:03-0:04] — HUD Popup Text: \\"STEP 4: [ACTION NAME]\\" — [Detailed description of quantum/electromagnetic purification, gravity separation, and drying].
+
+   Second 5 [0:04-0:05] — HUD Popup Text: \\"STEP 5: [ACTION NAME]\\" — [Detailed description of cascading storage into vast glowing reservoirs].
+
+   Seconds 6-8 [0:05-0:08]: HUD text completely fades; the camera performs a continuous impossible-scale descent from the cosmic titan into its belly, through alien processing architecture, and finally reaches a maximum close-up of a single harvested particle/grain suspended beside a colossal quantum mechanism, with the surrounding machinery stabilizing into a mesmerizing continuous harvesting rhythm, no cuts, no scene transition, exactly 8 seconds."
+
+CRITICAL FORMATTING INSTRUCTION:
+Return strictly a JSON array of 10 objects. Do NOT include markdown conversation outside the JSON.
+
+JSON Schema:
+[
+  {{
+    "level": 1,
+    "level_name": "Level 1 - Basic Prototype",
+    "image_prompt": "5-Layer Open Montage Structure\\n\\nLayer 1 — Subject: ...\\n\\nLayer 2 — Environment: ...\\n\\nLayer 3 — Architecture: ...\\n\\nLayer 4 — Energy/Physics: ...\\n\\nLayer 5 — Cinematic Presentation: ...",
+    "video_prompt": "Exactly 8 seconds, 9:16 vertical aspect ratio, photorealistic cinematic render, smooth continuous motion, no cuts, maximum cinematic realism.\\n\\nSecond 1 [0:00-0:01] — HUD Popup Text: \\"STEP 1: ...\\" — ...\\n\\nSecond 2 [0:01-0:02] — HUD Popup Text: \\"STEP 2: ...\\" — ...\\n\\nSecond 3 [0:02-0:03] — HUD Popup Text: \\"STEP 3: ...\\" — ...\\n\\nSecond 4 [0:03-0:04] — HUD Popup Text: \\"STEP 4: ...\\" — ...\\n\\nSecond 5 [0:04-0:05] — HUD Popup Text: \\"STEP 5: ...\\" — ...\\n\\nSeconds 6-8 [0:05-0:08]: HUD text completely fades; the camera performs a continuous impossible-scale descent from the titan into its belly, through processing architecture, reaching a maximum close-up beside the mechanism, stabilizing into continuous rhythm, no cuts, exactly 8 seconds."
+  }}
+]""",
+        "output_format": "JSON_ARRAY",
         "model_target": "ChatGPT-4o / Playwright",
-        "rules_and_constraints": "1. Exactly 10 levels. 2. 20 prompts (10 Image + 10 Video). 3. Image prompts use 5-Layer Open Montage. 4. Video prompts are exactly 8 seconds with 5-step HUD popups."
+        "rules_and_constraints": "1. Strict JSON array of 10 level objects. 2. Exactly 20 prompts (10 Image + 10 Video). 3. All video prompts are 9:16 vertical aspect ratio, exactly 8 seconds, no cuts, with Second 1-5 HUD popups and Seconds 6-8 continuous descent close-up. 4. All image prompts use 5-Layer Open Montage."
     },
     {
         "stage_name": "STAGE_4_IMAGE_5LAYER_BLUEPRINT",
         "target_hierarchy_level": "Level 4 (Image Prompt Layer Structure)",
-        "style_title": "5-Layer Open Montage Image Blueprint",
+        "style_title": "5-Layer Open Montage Image Blueprint (9:16 Vertical)",
         "system_role": "Cinematic Visual Prompt Engineer",
-        "system_instruction": "5 distinct visual layers: Layer 1 (Subject Titan) + Layer 2 (Landscape/Environment) + Layer 3 (Chassis/Materials) + Layer 4 (Quantum Energy Glows) + Layer 5 (16k Photorealistic Framing).",
-        "prompt_template": "Layer 1: Core {idea_title} titan subject. Layer 2: {topic} environment. Layer 3: Titanic chassis architecture. Layer 4: Quantum energy field glows. Layer 5: 16k photorealistic cinematic camera framing.",
+        "system_instruction": "5 distinct visual layers: Layer 1 (Subject Titan) + Layer 2 (Landscape/Environment) + Layer 3 (Chassis/Materials) + Layer 4 (Quantum Energy Glows) + Layer 5 (16k Photorealistic Framing). 9:16 vertical ratio.",
+        "prompt_template": """5-Layer Open Montage Structure
+
+Layer 1 — Subject: Colossal {idea_title} titan machine towering above the terrain, massive articulated harvesting claws, autonomous drone arrays, and multi-sensor crown.
+
+Layer 2 — Environment: Vast continental {topic} landscape extending to horizon, atmospheric clouds, tiny vehicles and structures emphasizing astronomical scale.
+
+Layer 3 — Architecture: Heavy armored chassis, multi-tier belly processing complex, stacked threshing drums, cyclone separation vaults, and glowing modular silos.
+
+Layer 4 — Energy/Physics: Brilliant plasma conduits, electromagnetic flux fields, thermal radiation loops, and localized gravity distortion around mechanical joints.
+
+Layer 5 — Cinematic Presentation: Low-angle IMAX perspective, 9:16 vertical framing, photorealistic volumetric lighting, wet-surface reflections, deep atmospheric depth, 16K render.""",
         "output_format": "STRUCTURED_TEXT",
         "model_target": "Imagen 3 / Midjourney / DALL-E 3",
-        "rules_and_constraints": "Must contain all 5 layers explicitly separated for maximum visual depth and photorealism."
+        "rules_and_constraints": "Must contain all 5 layers explicitly separated for maximum visual depth and photorealism in 9:16 vertical aspect ratio."
     },
     {
         "stage_name": "STAGE_5_VIDEO_8S_HUD_BLUEPRINT",
         "target_hierarchy_level": "Level 4 (Video Prompt Structure - 1Video10Sec / Veo)",
-        "style_title": "8-Second 5-Step HUD Popup Video Blueprint",
+        "style_title": "8-Second 5-Step HUD Popup Video Blueprint (9:16 Vertical)",
         "system_role": "Cinematic Motion & Video Director",
-        "system_instruction": "8-second continuous cinematic shot. Seconds 1-5 display 5-step HUD text popups. Seconds 6-8 perform maximum close-up pan and stabilization.",
-        "prompt_template": "STEP 1: Core Startup | STEP 2: Harvester Deployment | STEP 3: Intake Acceleration | STEP 4: Processing Wave | STEP 5: Full Output Stabilization. Camera smoothly pans across {idea_title} for 8 seconds.",
+        "system_instruction": "8-second continuous cinematic shot. 9:16 vertical ratio. Seconds 1-5 display 5-step HUD text popups. Seconds 6-8 perform continuous descent and maximum close-up stabilization. No cuts.",
+        "prompt_template": """Exactly 8 seconds, 9:16 vertical aspect ratio, photorealistic cinematic render, smooth continuous motion, no cuts, maximum cinematic realism.
+
+Second 1 [0:00-0:01] — HUD Popup Text: "STEP 1: AWAKEN THE TITAN" — The agricultural intelligence activates, illuminating sensor halos and planetary-scale systems across {idea_title}.
+
+Second 2 [0:01-0:02] — HUD Popup Text: "STEP 2: HARVEST REALITY" — Innumerable colossal arms sweep across {topic} terrain and gather resources with synchronized mechanical precision.
+
+Second 3 [0:02-0:03] — HUD Popup Text: "STEP 3: TRANSDIMENSIONAL THRESH" — Entire crop streams enter internal intakes and emerge inside the titan's impossible belly factory.
+
+Second 4 [0:03-0:04] — HUD Popup Text: "STEP 4: QUANTUM PURIFICATION" — Harvested matter floats through gravitational separators, magnetic fields, and drying reactors.
+
+Second 5 [0:04-0:05] — HUD Popup Text: "STEP 5: STORE THE HARVEST UNIVERSE" — Finished yield cascades into an infinite-dimensional storage chamber containing vast glowing reserves.
+
+Seconds 6-8 [0:05-0:08]: HUD text completely fades; the camera performs a continuous impossible-scale descent from the cosmic titan into its belly, through alien processing architecture, and finally reaches a maximum close-up of a single harvested unit suspended beside a colossal quantum mechanism, with the surrounding machinery stabilizing into a mesmerizing continuous harvesting rhythm, no cuts, no scene transition, exactly 8 seconds.""",
         "output_format": "STRUCTURED_TEXT",
         "model_target": "Google Veo 2 / 1Video10Sec",
-        "rules_and_constraints": "1. Exactly 8 seconds duration. 2. 5-step HUD overlays during seconds 1-5. 3. Smooth cinematic movement in seconds 6-8."
+        "rules_and_constraints": "1. Exactly 8 seconds duration. 2. 9:16 vertical aspect ratio. 3. 5-step HUD overlays during seconds 1-5. 4. Smooth continuous descent in seconds 6-8. 5. Zero cuts or scene transitions."
     },
     {
         "stage_name": "STAGE_6_YOUTUBE_METADATA",
@@ -164,9 +210,13 @@ def seed_prompting_styles():
                 session.add(record)
                 inserted_count += 1
             else:
-                existing.prompt_template = item["prompt_template"]
+                existing.style_title = item["style_title"]
+                existing.target_hierarchy_level = item["target_hierarchy_level"]
                 existing.system_role = item["system_role"]
                 existing.system_instruction = item["system_instruction"]
+                existing.prompt_template = item["prompt_template"]
+                existing.output_format = item["output_format"]
+                existing.model_target = item["model_target"]
                 existing.rules_and_constraints = item["rules_and_constraints"]
                 session.add(existing)
 

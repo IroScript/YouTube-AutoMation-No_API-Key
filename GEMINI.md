@@ -13,9 +13,11 @@
 2. **FORCEFUL EXECUTION & WORKFLOW INTEGRITY:** Execute exactly what the user requests, test and verify fulfillment, and ensure total user workflow remains perfectly intact.
 3. **RESPONSE LANGUAGE:** Always reply using Bangla script (সর্বদা বাংলা লিপি ব্যবহার করে উত্তর দাও, কোনো বাংলিশ নয়।).
 4. **USER SALUTATION:** Always call the user **"ইরাক ভাইয়া"** when responding.
-5. **FULL FILE PATH REQUIREMENT (NEVER USE RELATIVE PATHS OR SHORT FILENAMES):**
-   - ALWAYS mention, write, and reference the complete absolute file path starting from drive letter (e.g., `C:\Users\Irak\Desktop\AntiBotBrowser\flowboard\agent\flowboard\db\models.py` or `file:///C:/Users/Irak/...`).
-   - NEVER output relative paths (like `flowboard/agent/...`) or standalone filenames (like `models.py` or `models.py:178-518`) under any circumstances.
+5. **FULL FILE PATH MANDATE (NEVER USE RELATIVE PATHS, SHORT FILENAMES, OR BASENAME LINKS):**
+   - ALWAYS mention, write, and reference the complete absolute file path starting from the drive letter (e.g., `C:\Users\Irak\Desktop\AntiBotBrowser\flowboard\agent\flowboard\db\models.py` or `file:///C:/Users/Irak/...`).
+   - NEVER output relative paths (like `flowboard/agent/...` or `database/models.py`) under any circumstances.
+   - NEVER output standalone filenames or basenames (like `models.py`, `start_automation.bat`, or `run_prompt_fillup.bat`) under any circumstances.
+   - NEVER use short filenames / basenames inside Markdown links (e.g., `[start_automation.bat](file:///...)` is STRICTLY PROHIBITED). Both the visible link text AND the target URI must contain the full absolute path (e.g., `[`file:///C:/Users/Irak/Desktop/Youtube%20Pipeline/video/1Video10Sec/start_automation.bat`](file:///C:/Users/Irak/Desktop/Youtube%20Pipeline/video/1Video10Sec/start_automation.bat)` or `C:\Users\Irak\Desktop\Youtube Pipeline\video\1Video10Sec\start_automation.bat`).
 6. **GIT PUSH RULES (STRICT USER CONTROL):**
    - NEVER make the decision to push on your own.
    - NEVER question the user's command to push.

@@ -1,0 +1,18 @@
+{
+  "idea_id": 112,
+  "idea_title": "Solar Bloom Clock",
+  "idea_topic": "Sunflower Field",
+  "element_id": 11,
+  "idea_index_in_element": 10,
+  "target_generation": "10-Second Veo Video",
+  "escalation_level": 10,
+  "level_name": "Level 10 - ALIEN LEVEL / MAXIMUM",
+  "primary_video_prompt_used": "EXACTLY 8 SECONDS. One uninterrupted, perfectly smooth cinematic shot with no cuts. Seconds 1–5 HUD text popups: 1s — “STEP 1: ALIEN CLOCK AWAKENS”; 2s — “STEP 2: STAR SYSTEMS ALIGN”; 3s — “STEP 3: GRAVITY IRRIGATION”; 4s — “STEP 4: DIMENSIONAL POLLINATION”; 5s — “STEP 5: UNIVERSAL BLOOM.” Camera begins outside the observable scale of the machine and continuously accelerates through stars, planetary sunflower fields, orbital mirror forests, enormous rotating gears, gravitational water streams, and billions of synchronized pollination drones. At exactly 5 seconds, every clock hand aligns and a golden wave erupts across the cosmos. Seconds 6–8: camera performs an extreme maximum close-up, plunging through a single sunflower petal into microscopic alien cellular machinery, then revealing an entire miniature universe reflected inside one pollen grain as the flower reaches perfect bloom. Smooth continuous cinematic motion, physically coherent particles, realistic gravitational effects, dynamic depth of field, volumetric golden light, extreme macro-to-cosmic scale transition, no cuts, no teleportation, no abrupt camera changes, final image overwhelmingly majestic and alien.",
+  "video_prompt_title": "Solar Bloom Clock - Level 10 - ALIEN LEVEL / MAXIMUM (Video 8s)",
+  "model": "Veo 3.1 Lower Priority / 1Video10Sec",
+  "duration": "8s",
+  "aspect_ratio": "9:16",
+  "reference_image_prompt": "5-Layer Open Montage: Subject: The Solar Bloom Clock reaches impossible alien maximum scale: an incomprehensibly colossal living-machine intelligence shaped like a cosmic clock-flower, its hands spanning star systems and coordinating every sunflower bloom across countless worlds. Environment: Infinite alien sunflower megafields covering planets, moons, orbital habitats, floating continents, and impossible landscapes, all arranged around a radiant interstellar clock nexus. Architecture: Alien biomechanical architecture fused with impossible clockwork—planet-sized gears, fractal clock faces, crystalline machine roots, kilometer-wide mechanical petals, self-assembling mirror forests, gravitational irrigation cannons, autonomous pollination constellations, and harvest structures extending beyond the horizon. Energy/Physics: Stars feed directly into the clock core; gravity bends into visible spirals; rivers of water flow through space; sunlight folds through higher-dimensional mirrors; pollen becomes intelligent golden constellations; time visibly ripples outward from every gear; billions of flowers bloom simultaneously, generating a universe-scale golden wave. Cinematic Presentation 16k: ABSOLUTE MAXIMUM 16K photoreal cinematic spectacle, impossible alien engineering, cosmic scale beyond comprehension, hyper-detailed biomechanical surfaces, infinite depth, gravitational lensing, volumetric stellar light, golden energy storms, surreal dimensional geometry, monumental sense of awe, premium science-fiction concept art, physically rich textures, breathtaking final-frame composition.",
+  "source_pipeline": "PromptDatabase Hierarchical Chain (SQLite Verified)",
+  "exported_from_sqlite_at": "2026-08-18T08:15:49.221407+00:00"
+}

@@ -1,0 +1,227 @@
+======================================================================
+          AUTONOMOUS PROMPT FILLUP LOOP ENGINE (PART 1)
+======================================================================
+
+Running continuous backward dependency loop (Fresh Chrome per cycle)...
+Press Ctrl+C at any time to stop gracefully.
+
+================================================================================
+       🚀 AUTONOMOUS PROMPT FILLUP LOOP ENGINE (PART 1)
+================================================================================
+  • Initial Database Stats: 100 Elements | 132 Ideas | 440 Prompts
+  • Mode:                   Continuous Autonomous Loop
+  • Browser Mode:           Fresh Chrome per Cycle
+  • Cycle Delay:            3 seconds
+================================================================================
+
+################################################################################
+▶ [CYCLE #1 | 2026-08-22 16:49:39] PROMPT FILLUP ENGINE: Resolving Next Dependency...
+################################################################################
+======================================================================
+BACKWARD DEPENDENCY CHAIN CHECK: SEQUENTIAL HIERARCHY (ELEMENTS 1 -> 100)
+======================================================================
+
+[Hierarchy: Element #3 'Giant Tree' -> Idea #44 'Rootway Titan' has 0/20 filled prompts]
+  -> Auto-generating 10-level escalation prompts (10 Image + 10 Video)...
+
+[Hierarchy Step 3 -> 4] Generating 10-Level Escalation Prompts for Idea #44: 'Rootway Titan' (Topic: Giant Tree)...
+
+[CloakBrowser] Launching stealth anti-detect Chrome browser window (Full Screen)...
+[CloakBrowser] Navigating to https://chatgpt.com...
+[CloakBrowser] Successfully inserted prompt into visible ChatGPT input box.
+[CloakBrowser] Clicked active send button successfully.
+[CloakBrowser] Waiting for ChatGPT response to stream completely (max 300s)...
+[CloakBrowser] ChatGPT response stream started (detected at 2s)...
+[CloakBrowser] Streaming in progress... (2294 chars)
+[CloakBrowser] Streaming in progress... (4306 chars)
+[CloakBrowser] Streaming in progress... (6282 chars)
+[CloakBrowser] Streaming in progress... (8137 chars)
+[CloakBrowser] Streaming in progress... (10009 chars)
+[CloakBrowser] Streaming in progress... (12634 chars)
+[CloakBrowser] Streaming in progress... (14548 chars)
+[CloakBrowser] Streaming in progress... (16775 chars)
+[CloakBrowser] Streaming in progress... (19198 chars)
+[CloakBrowser] Streaming in progress... (20960 chars)
+[CloakBrowser] Streaming in progress... (24070 chars)
+[CloakBrowser] Streaming in progress... (27087 chars)
+[CloakBrowser] Streaming in progress... (27724 chars)
+[CloakBrowser] Streaming in progress... (31355 chars)
+[CloakBrowser] Streaming in progress... (33396 chars)
+[CloakBrowser] Streaming in progress... (38145 chars)
+[CloakBrowser] Response generation completed successfully! (38145 chars)
+[CloakBrowser] Browser window closed cleanly.
+[Success] Inserted 20 prompts (10 Image + 10 Video in 9:16 vertical) for Idea #44 into `prompts` table!
+
+================================================================================
+✅ [CYCLE #1 COMPLETE] PRODUCTION-READY PROMPT GENERATED & SAVED:
+================================================================================
+  • Idea ID:              #44
+  • Idea Title:           Rootway Titan
+  • Element/Topic:        Giant Tree
+  • Dependency Resolved:  GENERATED_ESCALATION_FOR_IDEA_44_Rootway Titan
+  • Level 10 Video Title: Rootway Titan - Level 10 - Alien Level / Maximum (Video 8s)
+  • Level 10 Video Text:  Exactly 8 seconds, 9:16 vertical aspect ratio, photorealistic cinematic render, smooth continuous motion, no cuts, maxim...
+================================================================================
+[Auto-Sync] Refreshing progress and unified master CSV exports...
+[Notice] 'unified_master_pipeline.csv' is currently open in another app (e.g. Excel). Saved updated version to: unified_master_pipeline_updated.csv
+
+[Success] Unified Master CSV generated successfully!
+  Path: C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\unified_master_pipeline_updated.csv
+  Total Rows: 656
+  Total Columns: 33
+
+[Auto-Sync] All CSV exports updated successfully.
+📊 [DATABASE TOTALS] Elements: 100 | Ideas: 132 | Prompts: 460
+
+⏳ Waiting 3s before starting next fresh Chrome cycle (Cycle #2)... (Press Ctrl+C to stop)
+
+################################################################################
+▶ [CYCLE #2 | 2026-08-22 16:50:55] PROMPT FILLUP ENGINE: Resolving Next Dependency...
+################################################################################
+======================================================================
+BACKWARD DEPENDENCY CHAIN CHECK: SEQUENTIAL HIERARCHY (ELEMENTS 1 -> 100)
+======================================================================
+
+[Hierarchy: Element #3 'Giant Tree' -> Idea #45 'Sun Harvester Colossus' has 0/20 filled prompts]
+  -> Auto-generating 10-level escalation prompts (10 Image + 10 Video)...
+
+[Hierarchy Step 3 -> 4] Generating 10-Level Escalation Prompts for Idea #45: 'Sun Harvester Colossus' (Topic: Giant Tree)...
+
+[CloakBrowser] Launching stealth anti-detect Chrome browser window (Full Screen)...
+[CloakBrowser] Navigating to https://chatgpt.com...
+[CloakBrowser] Successfully inserted prompt into visible ChatGPT input box.
+[CloakBrowser] Clicked active send button successfully.
+[CloakBrowser] Waiting for ChatGPT response to stream completely (max 300s)...
+[CloakBrowser] ChatGPT response stream started (detected at 2s)...
+[CloakBrowser] Streaming in progress... (2409 chars)
+[CloakBrowser] Streaming in progress... (4392 chars)
+[CloakBrowser] Streaming in progress... (6296 chars)
+[CloakBrowser] Streaming in progress... (8391 chars)
+[CloakBrowser] Streaming in progress... (10412 chars)
+[CloakBrowser] Streaming in progress... (12375 chars)
+[CloakBrowser] Streaming in progress... (14336 chars)
+[CloakBrowser] Streaming in progress... (15772 chars)
+[CloakBrowser] Streaming in progress... (18657 chars)
+[CloakBrowser] Streaming in progress... (21395 chars)
+[CloakBrowser] Streaming in progress... (23521 chars)
+[CloakBrowser] Streaming in progress... (28877 chars)
+[CloakBrowser] Streaming in progress... (33870 chars)
+[CloakBrowser] Streaming in progress... (35654 chars)
+[CloakBrowser] Response generation completed successfully! (35654 chars)
+[CloakBrowser] Browser window closed cleanly.
+[Success] Inserted 20 prompts (10 Image + 10 Video in 9:16 vertical) for Idea #45 into `prompts` table!
+
+================================================================================
+✅ [CYCLE #2 COMPLETE] PRODUCTION-READY PROMPT GENERATED & SAVED:
+================================================================================
+  • Idea ID:              #45
+  • Idea Title:           Sun Harvester Colossus
+  • Element/Topic:        Giant Tree
+  • Dependency Resolved:  GENERATED_ESCALATION_FOR_IDEA_45_Sun Harvester Colossus
+  • Level 10 Video Title: Sun Harvester Colossus - Level 10 - Alien Level / Maximum: Infinite Sun Harvester (Video 8s)
+  • Level 10 Video Text:  Exactly 8 seconds, 9:16 vertical aspect ratio, photorealistic cinematic render, smooth continuous motion, no cuts, maxim...
+================================================================================
+[Auto-Sync] Refreshing progress and unified master CSV exports...
+[Notice] 'unified_master_pipeline.csv' is currently open in another app (e.g. Excel). Saved updated version to: unified_master_pipeline_updated.csv
+
+[Success] Unified Master CSV generated successfully!
+  Path: C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\unified_master_pipeline_updated.csv
+  Total Rows: 675
+  Total Columns: 33
+
+[Auto-Sync] All CSV exports updated successfully.
+📊 [DATABASE TOTALS] Elements: 100 | Ideas: 132 | Prompts: 480
+
+⏳ Waiting 3s before starting next fresh Chrome cycle (Cycle #3)... (Press Ctrl+C to stop)
+
+################################################################################
+▶ [CYCLE #3 | 2026-08-22 16:52:04] PROMPT FILLUP ENGINE: Resolving Next Dependency...
+################################################################################
+======================================================================
+BACKWARD DEPENDENCY CHAIN CHECK: SEQUENTIAL HIERARCHY (ELEMENTS 1 -> 100)
+======================================================================
+
+[Hierarchy: Element #3 'Giant Tree' -> Idea #46 'Cloud Rooter' has 0/20 filled prompts]
+  -> Auto-generating 10-level escalation prompts (10 Image + 10 Video)...
+
+[Hierarchy Step 3 -> 4] Generating 10-Level Escalation Prompts for Idea #46: 'Cloud Rooter' (Topic: Giant Tree)...
+
+[CloakBrowser] Launching stealth anti-detect Chrome browser window (Full Screen)...
+[CloakBrowser] Navigating to https://chatgpt.com...
+[CloakBrowser] Successfully inserted prompt into visible ChatGPT input box.
+[CloakBrowser] Clicked active send button successfully.
+[CloakBrowser] Waiting for ChatGPT response to stream completely (max 300s)...
+[CloakBrowser] ChatGPT response stream started (detected at 2s)...
+[CloakBrowser] Browser window closed cleanly.
+[Error] ChatGPT did not return complete 10 levels for Idea #46 ('Cloud Rooter'). Keeping idea unfilled for live LLM generation.
+
+================================================================================
+⏳ [CYCLE #3] LLM Response Pending / Retrying next cycle...
+================================================================================
+[Auto-Sync] Refreshing progress and unified master CSV exports...
+[Notice] 'unified_master_pipeline.csv' is currently open in another app (e.g. Excel). Saved updated version to: unified_master_pipeline_updated.csv
+
+[Success] Unified Master CSV generated successfully!
+  Path: C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\unified_master_pipeline_updated.csv
+  Total Rows: 675
+  Total Columns: 33
+
+[Auto-Sync] All CSV exports updated successfully.
+📊 [DATABASE TOTALS] Elements: 100 | Ideas: 132 | Prompts: 480
+
+⏳ Waiting 3s before starting next fresh Chrome cycle (Cycle #4)... (Press Ctrl+C to stop)
+
+################################################################################
+▶ [CYCLE #4 | 2026-08-22 16:57:33] PROMPT FILLUP ENGINE: Resolving Next Dependency...
+################################################################################
+======================================================================
+BACKWARD DEPENDENCY CHAIN CHECK: SEQUENTIAL HIERARCHY (ELEMENTS 1 -> 100)
+======================================================================
+
+[Hierarchy: Element #3 'Giant Tree' -> Idea #46 'Cloud Rooter' has 0/20 filled prompts]
+  -> Auto-generating 10-level escalation prompts (10 Image + 10 Video)...
+
+[Hierarchy Step 3 -> 4] Generating 10-Level Escalation Prompts for Idea #46: 'Cloud Rooter' (Topic: Giant Tree)...
+
+[CloakBrowser] Launching stealth anti-detect Chrome browser window (Full Screen)...
+[CloakBrowser] Navigating to https://chatgpt.com...
+[CloakBrowser] Successfully inserted prompt into visible ChatGPT input box.
+[CloakBrowser] Clicked active send button successfully.
+[CloakBrowser] Waiting for ChatGPT response to stream completely (max 300s)...
+[CloakBrowser] ChatGPT response stream started (detected at 2s)...
+[CloakBrowser] Browser window closed cleanly.
+[Error] ChatGPT did not return complete 10 levels for Idea #46 ('Cloud Rooter'). Keeping idea unfilled for live LLM generation.
+
+================================================================================
+⏳ [CYCLE #4] LLM Response Pending / Retrying next cycle...
+================================================================================
+[Auto-Sync] Refreshing progress and unified master CSV exports...
+
+[Success] Unified Master CSV generated successfully!
+  Path: C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\unified_master_pipeline.csv
+  Total Rows: 675
+  Total Columns: 33
+
+[Auto-Sync] All CSV exports updated successfully.
+📊 [DATABASE TOTALS] Elements: 100 | Ideas: 132 | Prompts: 480
+
+⏳ Waiting 3s before starting next fresh Chrome cycle (Cycle #5)... (Press Ctrl+C to stop)
+
+################################################################################
+▶ [CYCLE #5 | 2026-08-22 17:03:02] PROMPT FILLUP ENGINE: Resolving Next Dependency...
+################################################################################
+======================================================================
+BACKWARD DEPENDENCY CHAIN CHECK: SEQUENTIAL HIERARCHY (ELEMENTS 1 -> 100)
+======================================================================
+
+[Hierarchy: Element #3 'Giant Tree' -> Idea #46 'Cloud Rooter' has 0/20 filled prompts]
+  -> Auto-generating 10-level escalation prompts (10 Image + 10 Video)...
+
+[Hierarchy Step 3 -> 4] Generating 10-Level Escalation Prompts for Idea #46: 'Cloud Rooter' (Topic: Giant Tree)...
+
+[CloakBrowser] Launching stealth anti-detect Chrome browser window (Full Screen)...
+[CloakBrowser] Navigating to https://chatgpt.com...
+[CloakBrowser] Successfully inserted prompt into visible ChatGPT input box.
+[CloakBrowser] Clicked active send button successfully.
+[CloakBrowser] Waiting for ChatGPT response to stream completely (max 300s)...
+[CloakBrowser] ChatGPT response stream started (detected at 2s)...

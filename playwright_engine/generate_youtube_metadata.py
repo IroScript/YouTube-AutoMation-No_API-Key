@@ -15,8 +15,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 CHATGPT_URL = "https://chatgpt.com"
 
 
-def fetch_youtube_metadata_via_playwright(video_title: str, topic: str = "", level_info: str = "Level 10 - ALIEN LEVEL / MAXIMUM") -> dict:
+def fetch_youtube_metadata_via_playwright(video_title: str, topic: str = "", level_info: str = "Level 10 - ALIEN LEVEL / MAXIMUM", skip_browser: bool = False) -> dict:
     """Generates standard structured YouTube metadata JSON."""
+    if skip_browser:
+        return {
+            "title": f"🚨 INSANE: {video_title} - Level 10 Impossible Megastructure 🌾",
+            "seo_description": f"Witness the ultimate Level 10 Alien-Scale {video_title}! Operating at colossal scale across entire landscapes with automated harvesting arms and quantum telemetry.\n\n⏱️ TIMESTAMPS:\n0:00 - Step 1: Core Startup\n0:02 - Step 2: Mechanical Deployment\n0:04 - Step 3: Intake Acceleration\n0:06 - Step 4: Full Stabilization\n\n#ImpossibleMachine #AI #Veo #Megastructure #SciFiEngineering",
+            "tags": [video_title, f"{topic} Machine", "Impossible Engineering", "AI Video", "Veo", "Megastructure", "Titan Harvester", "SciFi Concept", "Future Technology", "Colossal Machines"],
+            "category": "Science & Technology",
+            "default_language": "en"
+        }
     prompt_text = f"""
 Given the following AI-generated impossible giant machine video:
 Video Subject: {video_title}

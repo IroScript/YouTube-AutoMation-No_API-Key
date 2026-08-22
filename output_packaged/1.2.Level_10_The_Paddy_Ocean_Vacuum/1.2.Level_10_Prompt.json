@@ -1,0 +1,18 @@
+{
+  "idea_id": 2,
+  "idea_title": "The Paddy Ocean Vacuum",
+  "idea_topic": "Paddy Harvesting",
+  "element_id": 1,
+  "idea_index_in_element": 2,
+  "target_generation": "10-Second Veo Video",
+  "escalation_level": 10,
+  "level_name": "Level 10 - ALIEN LEVEL / MAXIMUM",
+  "primary_video_prompt_used": "STEP 1: Core Startup | STEP 2: Harvester Deployment | STEP 3: Intake Acceleration | STEP 4: Processing Wave | STEP 5: Full Output Stabilization. Camera smoothly pans across The Paddy Ocean Vacuum for 8 seconds.",
+  "video_prompt_title": "The Paddy Ocean Vacuum - Level 10 - ALIEN LEVEL / MAXIMUM (Video 8s)",
+  "model": "Veo 3.1 Lower Priority / 1Video10Sec",
+  "duration": "8s",
+  "aspect_ratio": "9:16",
+  "reference_image_prompt": "Layer 1: Core The Paddy Ocean Vacuum titan subject. Layer 2: Paddy Harvesting environment. Layer 3: Titanic chassis architecture. Layer 4: Quantum energy field glows. Layer 5: 16k photorealistic cinematic camera framing.",
+  "source_pipeline": "PromptDatabase Hierarchical Chain (SQLite Verified)",
+  "exported_from_sqlite_at": "2026-08-18T09:00:57.335856+00:00"
+}

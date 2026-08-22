@@ -8,24 +8,25 @@ collections,0,6,BLANK / EMPTY,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatab
 content_history,0,11,BLANK / EMPTY,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\content_history.csv
 duplicate_checks,0,18,BLANK / EMPTY,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\duplicate_checks.csv
 elements,100,6,FILLED,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\elements.csv
-generated_videos,6,21,FILLED,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\generated_videos.csv
+generated_videos,5,21,FILLED,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\generated_videos.csv
 generation_jobs,2,18,FILLED,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\generation_jobs.csv
 idea_assets,6,15,FILLED,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\idea_assets.csv
-idea_elements,32,3,FILLED,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\idea_elements.csv
+idea_elements,132,3,FILLED,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\idea_elements.csv
 idea_embeddings,0,8,BLANK / EMPTY,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\idea_embeddings.csv
 idea_features,0,26,BLANK / EMPTY,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\idea_features.csv
 idea_tags,0,2,BLANK / EMPTY,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\idea_tags.csv
 idea_versions,0,9,BLANK / EMPTY,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\idea_versions.csv
-ideas,32,31,FILLED,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\ideas.csv
+ideas,132,31,FILLED,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\ideas.csv
 models,0,7,BLANK / EMPTY,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\models.csv
 pipeline_runs,8,8,FILLED,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\pipeline_runs.csv
 pipeline_stage_audits,160,13,FILLED,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\pipeline_stage_audits.csv
 prompt_versions,0,8,BLANK / EMPTY,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\prompt_versions.csv
 prompting_style_master,6,15,FILLED,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\prompting_style_master.csv
-prompts,240,22,FILLED,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\prompts.csv
+prompts,680,22,FILLED,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\prompts.csv
 publishing,0,22,BLANK / EMPTY,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\publishing.csv
 schedules,0,13,BLANK / EMPTY,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\schedules.csv
 settings,0,5,BLANK / EMPTY,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\settings.csv
 tags,0,5,BLANK / EMPTY,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\tags.csv
-task_attempts,23,9,FILLED,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\task_attempts.csv
+task_attempts,30,9,FILLED,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\task_attempts.csv
 tasks,13,16,FILLED,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\tasks.csv
+youtube_metadata,7,16,FILLED,C:\Users\Irak\Desktop\Youtube Pipeline\PromptDatabase\exports\csv_tables\youtube_metadata.csv

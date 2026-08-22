@@ -193,3 +193,25 @@ class PromptingStyleMaster(YouTubeBaseModel, table=True):
     version: int = 1
     created_at: datetime = Field(default_factory=_utcnow)
     updated_at: datetime = Field(default_factory=_utcnow)
+
+
+class YouTubeMetadata(YouTubeBaseModel, table=True):
+    __tablename__ = "youtube_metadata"
+
+    id: Optional[int] = Field(default=None, primary_key=True)
+    uuid: str = Field(index=True, unique=True)
+    idea_id: int = Field(foreign_key="ideas.id", index=True)
+    element_id: Optional[int] = Field(default=None, foreign_key="elements.id", index=True)
+    title: str
+    seo_description: str
+    tags: str  # JSON string array of tags
+    category: str = "Science & Technology"
+    default_language: str = "en"
+    video_prompt_used: Optional[str] = None
+    image_prompt_used: Optional[str] = None
+    video_file_path: Optional[str] = None
+    package_folder_path: Optional[str] = None
+    status: str = "ready"  # ready, uploaded, archived
+    created_at: datetime = Field(default_factory=_utcnow)
+    updated_at: datetime = Field(default_factory=_utcnow)
+

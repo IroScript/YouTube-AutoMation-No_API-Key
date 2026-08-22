@@ -1,18 +1,22 @@
 @echo off
-title Prompt Fillup Engine (Part 1)
+title Autonomous Prompt Fillup Loop Engine (Part 1)
 cd /d "%~dp0"
 echo ======================================================================
-echo           PROMPT FILLUP ENGINE (PART 1: AUTONOMOUS HIERARCHY)
+echo           AUTONOMOUS PROMPT FILLUP LOOP ENGINE (PART 1)
 echo ======================================================================
 echo.
-echo Checking backward dependencies: categories -^> elements -^> ideas -^> prompts...
+echo Running continuous backward dependency loop (Fresh Chrome per cycle)...
+echo Press Ctrl+C at any time to stop gracefully.
 echo.
 
+set PYTHONUNBUFFERED=1
+
 if exist ".venv\Scripts\python.exe" (
-    ".venv\Scripts\python.exe" run_prompt_fillup.py %*
+    ".venv\Scripts\python.exe" -u run_prompt_fillup.py %*
 ) else (
-    python run_prompt_fillup.py %*
+    python -u run_prompt_fillup.py %*
 )
 
 echo.
 pause
+

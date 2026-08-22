@@ -21,6 +21,7 @@ engine = create_engine(
 
 def init_db():
     """Initializes and creates tables if not existing."""
+    from database import models  # noqa: F401
     SQLModel.metadata.create_all(engine)
 
 
